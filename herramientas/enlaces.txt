@@ -1,3 +1,3 @@
 # Pegar aquí los enlaces públicos y volver a ejecutar: python herramientas/compilar_informe.py
-tablero=
-repositorio=
+tablero=https://renewable-energy-performance.streamlit.app
+repositorio=https://github.com/codemotozu/energias-renovables-ml-multicriterio-streamlit

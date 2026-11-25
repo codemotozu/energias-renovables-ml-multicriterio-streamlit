@@ -1,5 +1,10 @@
 # Desempeño integral de las energías renovables
 
+[![Pruebas del tablero](https://github.com/codemotozu/energias-renovables-ml-multicriterio-streamlit/actions/workflows/pruebas.yml/badge.svg)](https://github.com/codemotozu/energias-renovables-ml-multicriterio-streamlit/actions/workflows/pruebas.yml)
+[![Abrir el tablero en Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://renewable-energy-performance.streamlit.app)
+
+**Tablero en línea:** <https://renewable-energy-performance.streamlit.app>
+
 Proyecto integrador de Ciencia de Datos · Maestría en Inteligencia Artificial · Universidad de La Salle
 Autora: Carolina Rodríguez Chacón · Docente: Fabián Camilo Castro Riveros · Curso 2026-2_Ciencia de Datos_G2
 
@@ -28,7 +33,16 @@ pip install -r dashboard/requirements.txt
 streamlit run dashboard/app.py
 ```
 
-**Publicarlo en Streamlit Community Cloud:** en [share.streamlit.io](https://share.streamlit.io), *Create app* → elegir este repositorio, rama `main`, archivo principal `dashboard/app.py` → en *Advanced settings* elegir Python 3.13 → *Deploy*.
+**Publicarlo en Streamlit Community Cloud:** en [share.streamlit.io](https://share.streamlit.io), *Create app* → elegir este repositorio, rama `main`, archivo principal `dashboard/app.py` → en *Advanced settings* elegir Python 3.13 → *Deploy*. Después, cada `push` a `main` lo vuelve a publicar solo.
+
+## Pruebas automáticas
+
+`tests/test_tablero.py` abre las nueve vistas con el probador oficial de Streamlit (`AppTest`) y mueve sus controles, incluidos casos límite como filtros vacíos o todos los pesos en cero. Una prueba falla si alguna vista lanza una excepción. GitHub Actions las ejecuta en cada `push` y en cada *pull request*; la insignia de arriba muestra el último resultado. Para ejecutarlas en local:
+
+```bash
+pip install -r tests/requirements.txt
+pytest tests -v
+```
 
 ## Vistas del tablero
 
@@ -56,6 +70,7 @@ streamlit run dashboard/app.py
 ├── src/renovables/  Datos, preprocesamiento, multicriterio, recomendación por país
 ├── herramientas/    Descarga de datos, construcción del cuaderno y compilación del informe
 ├── reports/         Informe final en PDF, guion de la sustentación y figuras
+├── tests/           Pruebas del tablero (las ejecuta GitHub Actions)
 └── requirements.txt Versiones exactas de todo el proyecto
 ```
 

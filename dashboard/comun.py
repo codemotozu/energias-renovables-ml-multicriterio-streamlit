@@ -22,7 +22,7 @@ from renovables.datos import ANIO_REFERENCIA, NIVELES, PREDICTORES, R_TIERRA_KM,
 PROC = RAIZ / "data" / "processed"
 PREGUNTA = ("¿Qué tecnología renovable presenta el mejor desempeño integral a escala de planta "
             "y qué factores técnicos y geográficos explican las diferencias entre plantas?")
-ENLACE_REPOSITORIO = ""          # se completa al publicar en GitHub
+ENLACE_REPOSITORIO = "https://github.com/codemotozu/energias-renovables-ml-multicriterio-streamlit"
 
 _COLOR_CLARO = {"Solar": "#eda100", "Eólica": "#1baf7a", "Hidroeléctrica": "#2a78d6", "Geotérmica": "#e34948", "Biomasa": "#008300"}
 _COLOR_OSCURO = {"Solar": "#c98500", "Eólica": "#199e70", "Hidroeléctrica": "#3987e5", "Geotérmica": "#e66767", "Biomasa": "#0ca30c"}

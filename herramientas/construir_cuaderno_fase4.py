@@ -55,10 +55,10 @@ from pathlib import Path
 
 RAIZ = Path("..").resolve() if Path("../src").exists() else Path(".").resolve()
 if not (RAIZ / "src").exists():                     # Google Colab: se trae el repositorio público
-    URL_REPOSITORIO = "<<URL_REPOSITORIO>>"
+    URL_REPOSITORIO = "https://github.com/codemotozu/energias-renovables-ml-multicriterio-streamlit"
     subprocess.run(["git", "clone", "--depth", "1", URL_REPOSITORIO, "repo"], check=True)
     RAIZ = Path("repo").resolve()
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "kaleido==0.2.1"], check=True)
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "scikit-learn==1.7.0", "joblib==1.5.1", "kaleido==0.2.1"], check=True)   # misma versión que entrenó los modelos
 sys.path.insert(0, str(RAIZ / "src"))
 
 import joblib
