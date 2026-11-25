@@ -1,0 +1,343 @@
+{
+  "semilla": 42,
+  "predictores": [
+    "tecnologia",
+    "country",
+    "log_capacidad",
+    "irradiacion_relativa",
+    "densidad_misma_tec",
+    "edad_planta",
+    "latitude",
+    "longitude"
+  ],
+  "regresion": {
+    "elegido": "Random Forest",
+    "validacion": {
+      "Dummy (media)": {
+        "R² CV (media)": 0.0,
+        "R² validación": -0.0002,
+        "RMSE validación": 0.1538,
+        "MAE validación": 0.1206
+      },
+      "Lineal base de la Fase 2": {
+        "R² CV (media)": 0.4688,
+        "R² validación": 0.4887,
+        "RMSE validación": 0.1099,
+        "MAE validación": 0.0738
+      },
+      "Ridge": {
+        "R² CV (media)": 0.4674,
+        "R² validación": 0.4913,
+        "RMSE validación": 0.1097,
+        "MAE validación": 0.0736
+      },
+      "Lasso": {
+        "R² CV (media)": 0.4673,
+        "R² validación": 0.4914,
+        "RMSE validación": 0.1097,
+        "MAE validación": 0.0736
+      },
+      "ElasticNet": {
+        "R² CV (media)": 0.4673,
+        "R² validación": 0.4911,
+        "RMSE validación": 0.1097,
+        "MAE validación": 0.0736
+      },
+      "Random Forest": {
+        "R² CV (media)": 0.6092,
+        "R² validación": 0.6305,
+        "RMSE validación": 0.0935,
+        "MAE validación": 0.0595
+      },
+      "XGBoost": {
+        "R² CV (media)": 0.5856,
+        "R² validación": 0.6182,
+        "RMSE validación": 0.095,
+        "MAE validación": 0.0612
+      },
+      "MLP (PyTorch)": {
+        "R² CV (media)": 0.5279,
+        "R² validación": 0.5676,
+        "RMSE validación": 0.1011,
+        "MAE validación": 0.0664
+      }
+    },
+    "prueba": {
+      "Dummy (media)": {
+        "R²": -0.0002,
+        "RMSE": 0.1545,
+        "MAE": 0.1201
+      },
+      "Lineal base de la Fase 2": {
+        "R²": 0.4485,
+        "RMSE": 0.1147,
+        "MAE": 0.0771
+      },
+      "Ridge": {
+        "R²": 0.4466,
+        "RMSE": 0.1149,
+        "MAE": 0.0773
+      },
+      "Lasso": {
+        "R²": 0.4473,
+        "RMSE": 0.1148,
+        "MAE": 0.0773
+      },
+      "ElasticNet": {
+        "R²": 0.4467,
+        "RMSE": 0.1149,
+        "MAE": 0.0773
+      },
+      "Random Forest": {
+        "R²": 0.6229,
+        "RMSE": 0.0948,
+        "MAE": 0.06
+      },
+      "XGBoost": {
+        "R²": 0.6082,
+        "RMSE": 0.0967,
+        "MAE": 0.0622
+      },
+      "MLP (PyTorch)": {
+        "R²": 0.5303,
+        "RMSE": 0.1059,
+        "MAE": 0.0694
+      }
+    },
+    "ic95_r2_prueba": [
+      0.5727,
+      0.669
+    ]
+  },
+  "clasificacion": {
+    "elegido": "Random Forest",
+    "validacion": {
+      "Dummy (clase más frecuente)": {
+        "F1 CV (media)": 0.1563,
+        "F1-macro validación": 0.1672,
+        "AUC-ROC validación": 0.5
+      },
+      "Logística base de la Fase 2": {
+        "F1 CV (media)": 0.6738,
+        "F1-macro validación": 0.6815,
+        "AUC-ROC validación": 0.8574
+      },
+      "SVM (RBF)": {
+        "F1 CV (media)": 0.7208,
+        "F1-macro validación": 0.7405,
+        "AUC-ROC validación": 0.8757
+      },
+      "Random Forest": {
+        "F1 CV (media)": 0.7488,
+        "F1-macro validación": 0.765,
+        "AUC-ROC validación": 0.9105
+      },
+      "XGBoost": {
+        "F1 CV (media)": 0.7415,
+        "F1-macro validación": 0.7559,
+        "AUC-ROC validación": 0.9082
+      },
+      "MLP (PyTorch)": {
+        "F1 CV (media)": 0.7227,
+        "F1-macro validación": 0.7318,
+        "AUC-ROC validación": 0.8953
+      }
+    },
+    "prueba": {
+      "Dummy (clase más frecuente)": {
+        "accuracy": 0.3275,
+        "precisión": 0.1092,
+        "recall": 0.3333,
+        "F1-macro": 0.1645,
+        "AUC-ROC": 0.5,
+        "F1-macro validación": 0.1672
+      },
+      "Logística base de la Fase 2": {
+        "accuracy": 0.6781,
+        "precisión": 0.6786,
+        "recall": 0.6774,
+        "F1-macro": 0.6712,
+        "AUC-ROC": 0.864,
+        "F1-macro validación": 0.6815
+      },
+      "SVM (RBF)": {
+        "accuracy": 0.7299,
+        "precisión": 0.7351,
+        "recall": 0.7291,
+        "F1-macro": 0.7283,
+        "AUC-ROC": 0.8804,
+        "F1-macro validación": 0.7405
+      },
+      "Random Forest": {
+        "accuracy": 0.7607,
+        "precisión": 0.7647,
+        "recall": 0.7603,
+        "F1-macro": 0.7596,
+        "AUC-ROC": 0.916,
+        "F1-macro validación": 0.765
+      },
+      "XGBoost": {
+        "accuracy": 0.753,
+        "precisión": 0.7575,
+        "recall": 0.7524,
+        "F1-macro": 0.7505,
+        "AUC-ROC": 0.9124,
+        "F1-macro validación": 0.7559
+      },
+      "MLP (PyTorch)": {
+        "accuracy": 0.7387,
+        "precisión": 0.7442,
+        "recall": 0.738,
+        "F1-macro": 0.7358,
+        "AUC-ROC": 0.9004,
+        "F1-macro validación": 0.7318
+      }
+    },
+    "ic95_f1_prueba": [
+      0.7339,
+      0.7855
+    ]
+  },
+  "hiperparametros": {
+    "Regresión · Ridge": "alpha=0.001",
+    "Regresión · Lasso": "alpha=1e-05",
+    "Regresión · ElasticNet": "alpha=1e-05, l1_ratio=0.2",
+    "Regresión · Random Forest": "min_samples_leaf=2, max_features=0.5, max_depth=20",
+    "Regresión · XGBoost": "subsample=0.85, reg_lambda=10, n_estimators=900, min_child_weight=1, max_depth=6, learning_rate=0.02, colsample_bytree=0.6",
+    "Regresión · MLP (PyTorch)": "capas=(128, 64), dropout=0.1",
+    "Clasificación · SVM (RBF)": "C=10, gamma=0.3",
+    "Clasificación · Random Forest": "min_samples_leaf=2, max_features=0.7, max_depth=12",
+    "Clasificación · XGBoost": "subsample=0.7, reg_lambda=3, n_estimators=300, min_child_weight=3, max_depth=4, learning_rate=0.05, colsample_bytree=1.0",
+    "Clasificación · MLP (PyTorch)": "capas=(128, 64), dropout=0.1"
+  },
+  "clustering": {
+    "k": 2,
+    "silueta_kmeans": 0.2966,
+    "silueta_ward": 0.2296,
+    "ari_kmeans_ward": 0.1547,
+    "dbscan_eps": 0.9973,
+    "dbscan_ruido_pct": 3.78
+  },
+  "estabilidad_10_semillas": {
+    "R² base": {
+      "mean": 0.4663,
+      "std": 0.0219
+    },
+    "R² elegido": {
+      "mean": 0.6161,
+      "std": 0.0312
+    },
+    "F1 base": {
+      "mean": 0.6677,
+      "std": 0.02
+    },
+    "F1 elegido": {
+      "mean": 0.7485,
+      "std": 0.0141
+    }
+  },
+  "multicriterio": {
+    "Eólica": {
+      "% n.º 1 (SAW)": 35.91,
+      "% n.º 1 (TOPSIS)": 32.44,
+      "% entre las 2 mejores (SAW)": 83.09,
+      "puesto promedio (SAW)": 1.87,
+      "% n.º 1 sin baterías (SAW)": 31.45,
+      "crec. anual 2015–2024 (%)": 11.76,
+      "tendencia del FP (pp/década)": 2.7
+    },
+    "Solar": {
+      "% n.º 1 (SAW)": 45.72,
+      "% n.º 1 (TOPSIS)": 36.57,
+      "% entre las 2 mejores (SAW)": 79.81,
+      "puesto promedio (SAW)": 1.87,
+      "% n.º 1 sin baterías (SAW)": 57.23,
+      "crec. anual 2015–2024 (%)": 26.53,
+      "tendencia del FP (pp/década)": 1.96
+    },
+    "Hidroeléctrica": {
+      "% n.º 1 (SAW)": 12.4,
+      "% n.º 1 (TOPSIS)": 17.34,
+      "% entre las 2 mejores (SAW)": 21.57,
+      "puesto promedio (SAW)": 3.23,
+      "% n.º 1 sin baterías (SAW)": 7.6,
+      "crec. anual 2015–2024 (%)": 1.66,
+      "tendencia del FP (pp/década)": -2.02
+    },
+    "Geotérmica": {
+      "% n.º 1 (SAW)": 3.68,
+      "% n.º 1 (TOPSIS)": 7.85,
+      "% entre las 2 mejores (SAW)": 9.09,
+      "puesto promedio (SAW)": 3.82,
+      "% n.º 1 sin baterías (SAW)": 2.29,
+      "crec. anual 2015–2024 (%)": 2.93,
+      "tendencia del FP (pp/década)": -2.78
+    },
+    "Biomasa": {
+      "% n.º 1 (SAW)": 2.29,
+      "% n.º 1 (TOPSIS)": 5.8,
+      "% entre las 2 mejores (SAW)": 6.44,
+      "puesto promedio (SAW)": 4.21,
+      "% n.º 1 sin baterías (SAW)": 1.42,
+      "crec. anual 2015–2024 (%)": 5.34,
+      "tendencia del FP (pp/década)": -2.23
+    }
+  },
+  "fin_de_vida": {
+    "Solar": {
+      "reciclabilidad (% de la masa)": 85.0,
+      "vida útil (años)": 25,
+      "minerales críticos sin baterías (kg/GWh)": 174.11,
+      "minerales críticos con baterías (kg/GWh)": 356.33,
+      "puntaje del pilar (0–1)": 0.36,
+      "% n.º 1 solo reciclabilidad": 27.26,
+      "% n.º 1 solo pilar de circularidad": 0.26,
+      "% n.º 1 general sin el pilar": 55.48,
+      "% n.º 1 general (14 criterios)": 45.72
+    },
+    "Eólica": {
+      "reciclabilidad (% de la masa)": 87.5,
+      "vida útil (años)": 25,
+      "minerales críticos sin baterías (kg/GWh)": 136.76,
+      "minerales críticos con baterías (kg/GWh)": 227.87,
+      "puntaje del pilar (0–1)": 0.41,
+      "% n.º 1 solo reciclabilidad": 32.64,
+      "% n.º 1 solo pilar de circularidad": 0.22,
+      "% n.º 1 general sin el pilar": 37.41,
+      "% n.º 1 general (14 criterios)": 35.91
+    },
+    "Hidroeléctrica": {
+      "reciclabilidad (% de la masa)": 75.0,
+      "vida útil (años)": 50,
+      "minerales críticos sin baterías (kg/GWh)": 15.28,
+      "minerales críticos con baterías (kg/GWh)": 15.28,
+      "puntaje del pilar (0–1)": 0.9,
+      "% n.º 1 solo reciclabilidad": 3.6,
+      "% n.º 1 solo pilar de circularidad": 59.54,
+      "% n.º 1 general sin el pilar": 1.15,
+      "% n.º 1 general (14 criterios)": 12.4
+    },
+    "Geotérmica": {
+      "reciclabilidad (% de la masa)": 85.0,
+      "vida útil (años)": 30,
+      "minerales críticos sin baterías (kg/GWh)": 1071.81,
+      "minerales críticos con baterías (kg/GWh)": 1071.81,
+      "puntaje del pilar (0–1)": 0.35,
+      "% n.º 1 solo reciclabilidad": 15.07,
+      "% n.º 1 solo pilar de circularidad": 0.18,
+      "% n.º 1 general sin el pilar": 5.74,
+      "% n.º 1 general (14 criterios)": 3.68
+    },
+    "Biomasa": {
+      "reciclabilidad (% de la masa)": 85.0,
+      "vida útil (años)": 40,
+      "minerales críticos sin baterías (kg/GWh)": 11.7,
+      "minerales críticos con baterías (kg/GWh)": 11.7,
+      "puntaje del pilar (0–1)": 0.82,
+      "% n.º 1 solo reciclabilidad": 21.44,
+      "% n.º 1 solo pilar de circularidad": 39.79,
+      "% n.º 1 general sin el pilar": 0.22,
+      "% n.º 1 general (14 criterios)": 2.29
+    }
+  }
+}

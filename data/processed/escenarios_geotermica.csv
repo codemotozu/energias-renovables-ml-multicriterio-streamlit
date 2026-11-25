@@ -1,0 +1,76 @@
+tecnologia,% n.º 1,% entre las 2 mejores,puesto promedio,escenario,metodo,con_baterias
+Solar,45.72,79.805,1.8694,Hoy (datos de la Fase 3),SAW,True
+Eólica,35.91,83.09,1.8659,Hoy (datos de la Fase 3),SAW,True
+Hidroeléctrica,12.395,21.57,3.2324,Hoy (datos de la Fase 3),SAW,True
+Geotérmica,3.685,9.09,3.81915,Hoy (datos de la Fase 3),SAW,True
+Biomasa,2.29,6.444999999999999,4.21315,Hoy (datos de la Fase 3),SAW,True
+Solar,36.165000000000006,67.525,2.2493,Hoy (datos de la Fase 3),TOPSIS,True
+Eólica,32.385000000000005,70.065,2.1281,Hoy (datos de la Fase 3),TOPSIS,True
+Hidroeléctrica,17.595,28.735,3.1859,Hoy (datos de la Fase 3),TOPSIS,True
+Geotérmica,7.89,16.88,3.5948,Hoy (datos de la Fase 3),TOPSIS,True
+Biomasa,5.965,16.794999999999998,3.8419,Hoy (datos de la Fase 3),TOPSIS,True
+Solar,57.54,88.41,1.5947,Hoy (datos de la Fase 3),SAW,False
+Eólica,31.069999999999997,86.995,1.85375,Hoy (datos de la Fase 3),SAW,False
+Hidroeléctrica,7.5600000000000005,14.75,3.36195,Hoy (datos de la Fase 3),SAW,False
+Geotérmica,2.305,6.1,3.90015,Hoy (datos de la Fase 3),SAW,False
+Biomasa,1.525,3.7449999999999997,4.28945,Hoy (datos de la Fase 3),SAW,False
+Solar,43.705,75.11,1.9661,Solo llega a todos los países,SAW,True
+Eólica,31.669999999999998,75.52,2.0477,Solo llega a todos los países,SAW,True
+Hidroeléctrica,11.434999999999999,20.54,3.3827,Solo llega a todos los países,SAW,True
+Geotérmica,11.360000000000001,23.465,3.1858,Solo llega a todos los países,SAW,True
+Biomasa,1.83,5.365,4.4177,Solo llega a todos los países,SAW,True
+Solar,34.57,63.305,2.33005,Solo llega a todos los países,TOPSIS,True
+Eólica,29.765000000000004,65.015,2.2889,Solo llega a todos los países,TOPSIS,True
+Hidroeléctrica,15.840000000000002,27.250000000000004,3.27455,Solo llega a todos los países,TOPSIS,True
+Geotérmica,14.67,29.005,3.1298,Solo llega a todos los países,TOPSIS,True
+Biomasa,5.155,15.425,3.9767,Solo llega a todos los países,TOPSIS,True
+Solar,55.87,85.195,1.65865,Solo llega a todos los países,SAW,False
+Eólica,27.755000000000003,80.08999999999999,2.0064,Solo llega a todos los países,SAW,False
+Hidroeléctrica,7.285,14.194999999999999,3.51665,Solo llega a todos los países,SAW,False
+Geotérmica,7.925,17.275,3.31935,Solo llega a todos los países,SAW,False
+Biomasa,1.165,3.245,4.49895,Solo llega a todos los países,SAW,False
+Solar,43.65,71.00999999999999,2.02015,Solo baja el costo (20–35 USD/MWh),SAW,True
+Eólica,28.134999999999998,75.47,2.0496,Solo baja el costo (20–35 USD/MWh),SAW,True
+Hidroeléctrica,11.110000000000001,18.94,3.5488,Solo baja el costo (20–35 USD/MWh),SAW,True
+Geotérmica,15.245000000000001,28.925,2.9439,Solo baja el costo (20–35 USD/MWh),SAW,True
+Biomasa,1.8599999999999999,5.655,4.43755,Solo baja el costo (20–35 USD/MWh),SAW,True
+Solar,34.635,60.35,2.374,Solo baja el costo (20–35 USD/MWh),TOPSIS,True
+Eólica,27.095000000000002,66.025,2.24535,Solo baja el costo (20–35 USD/MWh),TOPSIS,True
+Hidroeléctrica,16.405,26.61,3.38915,Solo baja el costo (20–35 USD/MWh),TOPSIS,True
+Geotérmica,16.88,31.175000000000004,2.9797,Solo baja el costo (20–35 USD/MWh),TOPSIS,True
+Biomasa,4.984999999999999,15.840000000000002,4.0118,Solo baja el costo (20–35 USD/MWh),TOPSIS,True
+Solar,56.169999999999995,82.525,1.688,Solo baja el costo (20–35 USD/MWh),SAW,False
+Eólica,25.7,80.66,1.98755,Solo baja el costo (20–35 USD/MWh),SAW,False
+Hidroeléctrica,7.015000000000001,13.41,3.6743,Solo baja el costo (20–35 USD/MWh),SAW,False
+Geotérmica,9.875,19.96,3.1354,Solo baja el costo (20–35 USD/MWh),SAW,False
+Biomasa,1.24,3.4450000000000003,4.51475,Solo baja el costo (20–35 USD/MWh),SAW,False
+Solar,41.975,71.78999999999999,2.0281,Prueba de concepto,SAW,True
+Eólica,28.294999999999998,70.83,2.14235,Prueba de concepto,SAW,True
+Hidroeléctrica,9.975000000000001,18.310000000000002,3.5537,Prueba de concepto,SAW,True
+Geotérmica,18.22,34.375,2.7649,Prueba de concepto,SAW,True
+Biomasa,1.5350000000000001,4.695,4.51095,Prueba de concepto,SAW,True
+Solar,33.6,60.724999999999994,2.37435,Prueba de concepto,TOPSIS,True
+Eólica,27.63,62.64999999999999,2.34335,Prueba de concepto,TOPSIS,True
+Hidroeléctrica,14.399999999999999,25.540000000000003,3.39905,Prueba de concepto,TOPSIS,True
+Geotérmica,19.865,36.445,2.81795,Prueba de concepto,TOPSIS,True
+Biomasa,4.505,14.64,4.0653,Prueba de concepto,TOPSIS,True
+Solar,54.765,82.715,1.69935,Prueba de concepto,SAW,False
+Eólica,25.424999999999997,76.06,2.07985,Prueba de concepto,SAW,False
+Hidroeléctrica,6.370000000000001,12.78,3.6892,Prueba de concepto,SAW,False
+Geotérmica,12.43,25.590000000000003,2.9439,Prueba de concepto,SAW,False
+Biomasa,1.01,2.855,4.5877,Prueba de concepto,SAW,False
+Solar,30.775000000000002,61.245000000000005,2.27475,Madura (meta de la industria),SAW,True
+Eólica,18.07,53.410000000000004,2.4523,Madura (meta de la industria),SAW,True
+Hidroeléctrica,7.090000000000001,16.075,3.70155,Madura (meta de la industria),SAW,True
+Geotérmica,42.89,65.145,2.00945,Madura (meta de la industria),SAW,True
+Biomasa,1.175,4.125,4.56195,Madura (meta de la industria),SAW,True
+Solar,27.235,53.105000000000004,2.5414,Madura (meta de la industria),TOPSIS,True
+Eólica,21.14,52.56999999999999,2.537,Madura (meta de la industria),TOPSIS,True
+Hidroeléctrica,12.68,23.885,3.507,Madura (meta de la industria),TOPSIS,True
+Geotérmica,34.97,56.635000000000005,2.28385,Madura (meta de la industria),TOPSIS,True
+Biomasa,3.975,13.805,4.13075,Madura (meta de la industria),TOPSIS,True
+Solar,44.800000000000004,74.235,1.90095,Madura (meta de la industria),SAW,False
+Eólica,18.0,57.830000000000005,2.3628,Madura (meta de la industria),SAW,False
+Hidroeléctrica,4.825,11.055,3.8369,Madura (meta de la industria),SAW,False
+Geotérmica,31.605,54.325,2.25915,Madura (meta de la industria),SAW,False
+Biomasa,0.77,2.555,4.6402,Madura (meta de la industria),SAW,False

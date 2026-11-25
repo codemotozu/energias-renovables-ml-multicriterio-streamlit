@@ -1,0 +1,117 @@
+{
+  "verificacion_multicriterio": {
+    "Solar": [
+      45.72,
+      36.57,
+      57.23
+    ],
+    "Eólica": [
+      35.91,
+      32.44,
+      31.45
+    ],
+    "Hidroeléctrica": [
+      12.4,
+      17.34,
+      7.6
+    ],
+    "Geotérmica": [
+      3.68,
+      7.85,
+      2.29
+    ],
+    "Biomasa": [
+      2.29,
+      5.8,
+      1.42
+    ]
+  },
+  "cortes_niveles": [
+    0.2054,
+    0.3234
+  ],
+  "clustering": {
+    "silueta_k2": 0.29657715003667506,
+    "silueta_k5": 0.2637194108248822,
+    "pca_varianza": [
+      0.3424,
+      0.2329,
+      0.2268
+    ],
+    "eps_dbscan": 0.9972915440930747,
+    "pct_atipicas": 3.7840332256575913,
+    "n_plantas": 4334,
+    "cargas_pca": {
+      "Escala (log₁₀ MW)": [
+        0.212,
+        0.765,
+        -0.071
+      ],
+      "Distancia al ecuador (°)": [
+        0.206,
+        -0.453,
+        0.644
+      ],
+      "Edad (años)": [
+        0.677,
+        -0.114,
+        -0.121
+      ],
+      "Factor de planta": [
+        0.521,
+        0.291,
+        0.435
+      ],
+      "Inestabilidad (log CV)": [
+        0.427,
+        -0.335,
+        -0.614
+      ]
+    }
+  },
+  "calibracion": [
+    {
+      "tecnologia": "Solar",
+      "variable": "ghi_kwh_m2_dia",
+      "paises": 99,
+      "pendiente": 0.03270644165188258,
+      "intercepto": 0.019770823858647618,
+      "rho_spearman": 0.7190352504638219,
+      "MAE_cv": 0.025050603606458086,
+      "MAE_media_cv": 0.037334564212097875,
+      "se_usa": true
+    },
+    {
+      "tecnologia": "Eólica",
+      "variable": "viento_medio_ms",
+      "paises": 81,
+      "pendiente": -0.0013402715603639435,
+      "intercepto": 0.29762336622233615,
+      "rho_spearman": -0.021205962059620595,
+      "MAE_cv": 0.06007690428063605,
+      "MAE_media_cv": 0.05872646034660685,
+      "se_usa": false
+    },
+    {
+      "tecnologia": "Eólica",
+      "variable": "viento_max_ms",
+      "paises": 81,
+      "pendiente": 0.010763153011013821,
+      "intercepto": 0.22323053237389096,
+      "rho_spearman": 0.14708290300226112,
+      "MAE_cv": 0.05795372033019624,
+      "MAE_media_cv": 0.05872646034660685,
+      "se_usa": false
+    }
+  ],
+  "recursos_validados": [
+    "Solar"
+  ],
+  "fp_solar_descartados": 25,
+  "fp_eolica_descartados": 8,
+  "paises_recomendados": 166,
+  "n_plantas": 6011,
+  "n_universo": 24784,
+  "n_renovables": 24794,
+  "n_paises_gppd": 150
+}

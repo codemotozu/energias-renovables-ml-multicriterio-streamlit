@@ -1,0 +1,36 @@
+{
+  "quiebre_con_crecimiento": 39.02932254802831,
+  "quiebre_sin_crecimiento": 27.289017341040463,
+  "quiebre_fp_070": 36.044117647058826,
+  "tasa_geotermica_2015_2025": 2.8087426902128954,
+  "potencial_2050": {
+    "Sigue como hoy": {
+      "gw": 31.23,
+      "twh": 232.52,
+      "pct_demanda_2025": 0.73,
+      "gt_co2_gas": 0.11,
+      "gt_co2_carbon": 0.18
+    },
+    "Como la eólica desde 2035": {
+      "gw": 505.97,
+      "twh": 3767.45,
+      "pct_demanda_2025": 11.87,
+      "gt_co2_gas": 1.7,
+      "gt_co2_carbon": 2.95
+    },
+    "Como la eólica desde 2030": {
+      "gw": 775.79,
+      "twh": 5776.54,
+      "pct_demanda_2025": 18.2,
+      "gt_co2_gas": 2.61,
+      "gt_co2_carbon": 4.52
+    },
+    "Como la solar desde 2035": {
+      "gw": 1927.09,
+      "twh": 14349.14,
+      "pct_demanda_2025": 45.2,
+      "gt_co2_gas": 6.49,
+      "gt_co2_carbon": 11.22
+    }
+  }
+}

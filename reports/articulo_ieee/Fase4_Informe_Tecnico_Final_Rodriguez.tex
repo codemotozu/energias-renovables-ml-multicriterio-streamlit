@@ -1,0 +1,481 @@
+\documentclass[journal,letterpaper]{IEEEtran}
+% ---------------------------------------------------------------------------
+% Proyecto Integrador de Ciencia de Datos · Fase 4 (actividades 7, 8 y 9) · Informe técnico final
+% Maestría en Inteligencia Artificial · Universidad de La Salle
+% Este archivo es la plantilla: herramientas/compilar_informe.py agrega la bibliografía y compila.
+% ---------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-nodecimaldot,es-tabla]{babel}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx,booktabs,array,multirow,amsmath,xcolor}
+\usepackage{cite}
+\usepackage{float}
+\usepackage{flafter}   % ninguna figura o tabla aparece antes del texto que la presenta
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{../figuras/}}
+\addto\captionsspanish{\renewcommand{\figurename}{Fig.}\renewcommand{\tablename}{Tabla}}
+\renewcommand{\IEEEkeywordsname}{Índice de Términos}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\urlstyle{same}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\dblfloatpagefraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\setcounter{topnumber}{3}
+\setcounter{dbltopnumber}{2}
+\setcounter{totalnumber}{4}
+\raggedbottom
+\hypersetup{pdftitle={Desempeño integral de las energías renovables: informe técnico final}, pdfauthor={Carolina Rodríguez Chacón}}
+\makeatletter\def\markboth#1#2{\def\leftmark{#1}\def\rightmark{#2}}\makeatother
+\markboth{Proyecto integrador de Ciencia de Datos. Informe técnico final (Fase 4)}{Proyecto integrador de Ciencia de Datos. Informe técnico final (Fase 4)}
+
+\newcommand{\enlaceTablero}{\textit{(Enlace pendiente: se agrega al publicar.)}}
+\newcommand{\enlaceRepo}{\textit{(Enlace pendiente: se agrega al publicar.)}}
+
+\begin{document}
+
+\title{Desempeño integral de las energías renovables: aprendizaje automático, análisis multicriterio y un tablero de decisión con 24\,794 plantas}
+
+\author{Carolina~Rodríguez~Chacón\\
+Maestría en Inteligencia Artificial, Universidad de La Salle\\
+2026-2\_Ciencia de Datos\_G2 --- Proyecto integrador, informe técnico final\\
+Fase 4 · Actividades 7, 8 y 9 · Entregable 4\\
+Docente: Fabián Camilo Castro Riveros\\
+carodriguez03@unisalle.edu.co\\
+Noviembre de 2026}
+
+\maketitle
+
+\begin{abstract}
+¿Qué tecnología renovable tiene el mejor desempeño integral y qué explica las diferencias entre plantas? Este informe recorre el ciclo completo de ciencia de datos con la Global Power Plant Database (24\,794 plantas renovables en 150 países). Un Random Forest predice el factor de planta (FP) de plantas no vistas con R$^2 = 0.623$ (IC 95\%: 0.573--0.669) y clasifica su nivel de desempeño con F1-macro = 0.760 (0.734--0.786), frente a 0.449 y 0.671 del modelo base; la mejora se repite en 10 de 10 particiones. La tecnología es el factor que más pesa, seguida de la edad y la ubicación. El clustering separa un parque antiguo, hidroeléctrico y variable de uno nuevo, solar y eólico y estable (silueta 0.297, por debajo de la meta de 0.35). Al combinar 14 criterios en 20\,000 escenarios, la solar (45.7\%) y la eólica (35.9\%) comparten el primer lugar, aunque no son las mejores en reciclaje, terreno ni energía por MW. Con el rendimiento real de IRENA y el recurso de NASA POWER, la solar se recomienda en 141 de 166 países y la eólica en 25; la ventaja es clara en 73. Un escenario hipotético muestra que la geotérmica de roca supercaliente solo pasaría al primer lugar si llega a todos los países, crece como la eólica y cuesta menos de 39 USD/MWh; su mayor valor sería entregar energía a toda hora, y podría alcanzar unos 780 GW en 2050. Los resultados se comunican en un tablero interactivo.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Energías renovables, factor de planta, Random Forest, perceptrón multicapa, clustering, SHAP, análisis multicriterio, Monte Carlo, tablero interactivo, Streamlit.
+\end{IEEEkeywords}
+
+\begin{table}[!t]
+\centering
+{\small\textbf{Productos del proyecto}}\\[3pt]
+\footnotesize
+\begin{tabular}{@{}L{2.0cm}L{6.1cm}@{}}
+\toprule
+\textbf{Tablero} & \enlaceTablero \\
+\textbf{Repositorio} & \enlaceRepo\newline Carpetas \texttt{/data}, \texttt{/notebooks}, \texttt{/src}, \texttt{/dashboard} y \texttt{requirements.txt} con versiones exactas \\
+\textbf{Cuadernos en Colab} & Fase 2: \url{https://colab.research.google.com/drive/1RZ1l0rdIp4dHq1ZbgQP2unDcjxZekDt-?usp=sharing}\newline Fase 3: \url{https://colab.research.google.com/drive/1fIM--nFyrCg1XkamdNKnKDWAo__NpKxT?usp=sharing} \\
+\textbf{Datos} & GPPD v1.3.0 (WRI, CC BY 4.0), IRENASTAT 2026-H2 y NASA POWER 2001--2025 \\
+\textbf{Reproducibilidad} & Semilla 42, huella SHA-256 y verificación entre fases \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Introducción}
+\IEEEPARstart{L}{a} generación de electricidad es una de las principales fuentes de emisiones de CO$_2$. En la COP28 los países acordaron triplicar la capacidad renovable mundial a 2030~\cite{unfccc2023}, lo que obliga a decidir en qué tecnologías concentrar inversión y política pública. En Colombia, cuya matriz depende de la hidroelectricidad y es vulnerable a las sequías de El Niño, esa decisión afecta directamente la seguridad energética.
+
+La pregunta de cuál renovable es la «mejor» suele responderse con una sola cifra, como la eficiencia de un panel, que no es comparable entre recursos distintos. La medida comparable a escala de planta es el factor de planta (FP), la fracción de la energía máxima teórica que una planta entrega en un año:
+\begin{equation}
+FP_{i,t} = \frac{E_{i,t}}{P_i \cdot 8.76},
+\end{equation}
+donde $E_{i,t}$ es la generación de la planta $i$ en el año $t$ (GWh) y $P_i$ su capacidad (MW). Pero rendir mucho no basta: una planta también debe ser barata, limpia, segura y sostenible.
+
+\textbf{Pregunta de investigación.} \emph{¿Qué tecnología renovable presenta el mejor desempeño integral a escala de planta y qué factores técnicos y geográficos explican las diferencias de desempeño entre plantas?} De ella se derivan tres preguntas secundarias. \emph{PS1 (regresión):} ¿en qué medida la tecnología, la capacidad, la ubicación y la antigüedad explican y permiten predecir el FP? \emph{PS2 (clasificación):} ¿es posible clasificar el nivel de desempeño (bajo, medio o alto) sin usar la generación observada? \emph{PS3 (clustering):} ¿qué segmentos naturales de plantas emergen? Para quien decide, la pregunta se traduce en tres preguntas prácticas: qué renovable tiene más ventajas que desventajas, cuál tiene mejor futuro tecnológico y cuál conviene a cada país.
+
+\textbf{Objetivos.} El objetivo general es determinar, a más tardar el 28 de noviembre de 2026, qué tecnología renovable ofrece el mejor desempeño integral, y comunicarlo en un índice y un tablero interactivo. La Tabla~\ref{tab:smart} presenta los objetivos específicos, su meta y el resultado obtenido; la última columna anticipa que tres de las cuatro metas se cumplieron.
+
+\begin{table}[!htb]
+\centering
+\caption{Objetivos SMART y resultado obtenido}
+\label{tab:smart}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{3.25cm}L{1.55cm}L{2.0cm}c@{}}
+\toprule
+Objetivo específico & Meta & Resultado & ¿Cumple? \\
+\midrule
+OE1. Caracterizar las plantas y probar si el FP difiere entre tecnologías & Pruebas con $\alpha = 0.05$ & $H = 2\,268$, $p < 0.001$, $\varepsilon^2 = 0.38$ & Sí \\
+OE2. Predecir el FP y clasificar su nivel sin fuga de datos & R$^2 \geq 0.55$; F1 $\geq 0.70$ & R$^2 = 0.623$; F1 = 0.760 & Sí \\
+OE3a. Segmentar las plantas & Silueta $\geq 0.35$ & Silueta = 0.297 & \textbf{No} \\
+OE3b. Presentar resultados en un tablero & Cuatro módulos & Cuatro módulos y cinco vistas adicionales & Sí \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Aportes.} 1) Un flujo reproducible y sin fuga de datos, desde los datos crudos hasta el modelo desplegado. 2) Una comparación de seis regresores y cuatro clasificadores con búsqueda de hiperparámetros, incluida una red neuronal en PyTorch. 3) Una evaluación integral de 14 criterios que incluye fin de vida y productividad por recurso. 4) Una recomendación por país que combina rendimiento real y recurso físico, con una validación que descarta lo que no predice. 5) Un escenario de geotérmica de nueva generación que mide qué cambiaría, cómo operaría hora a hora y cuál sería su potencial. 6) Un tablero interactivo para explorar todo lo anterior. El recuadro de la primera página reúne los enlaces a estos productos.
+
+\section{Datos}
+La fuente principal es la Global Power Plant Database (GPPD) v1.3.0 del World Resources Institute~\cite{byers2021,gppd}, elegida entre cuatro candidatas por ser la única con detalle por planta, varias tecnologías y generación anual. Tiene 34\,936 plantas y 36 variables en 167 países; el universo renovable son 24\,794 plantas en 150 países. La Tabla~\ref{tab:fuentes} resume esta y las demás fuentes, con el uso que tuvo cada una en el proyecto.
+
+\begin{table}[!htb]
+\centering
+\caption{Fuentes de datos y uso en el proyecto}
+\label{tab:fuentes}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{2.35cm}L{2.95cm}L{2.5cm}@{}}
+\toprule
+Fuente & Contenido & Uso \\
+\midrule
+GPPD v1.3.0~\cite{gppd} & Plantas, capacidad, ubicación, año, generación 2013--2019 & Modelos y clustering \\
+IRENASTAT~\cite{irenastat} & Capacidad y generación por país y tecnología, 2000--2025 & Trayectoria y FP de cada país \\
+NASA POWER~\cite{nasapower} & Radiación, viento a 50 m y lluvia, 2001--2025; datos horarios 2022--2024 de seis países & Recurso de cada país y operación horaria \\
+IRENA~\cite{irena2025,irena2026}, IPCC~\cite{schlomer2014} & Costo nivelado, baterías, emisiones y vida útil & Multicriterio y energía firme \\
+Agencia Internacional de la Energía (AIE)~\cite{iea2024geo}, Ember~\cite{ember2026} & Potencial geotérmico y electricidad mundial & Escenario geotérmico \\
+AIE~\cite{iea2021}, Lovering~\cite{lovering2022}, DOE~\cite{doe2015} & Minerales, uso de suelo, materiales & Multicriterio y productividad \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La calidad de los datos condicionó el diseño. La generación falta en el 75.7\% de las plantas, y la falta no es aleatoria: depende del país (V de Cramér = 0.84). EE.\,UU. reporta el 87.4\% de sus plantas y el resto del mundo, el 3.8\%, de modo que el 88\% de las plantas con FP válido está en EE.\,UU. Por ser un mecanismo MAR con posible componente MNAR~\cite{rubin1976}, el objetivo \emph{no se imputa}. Se detectaron además 71 centrales de bombeo, 61 valores de FP $> 1$ y 1\,014 registros de generación anteriores a la puesta en marcha.
+
+\section{Metodología}
+\subsection{Exploración (Fase 1)}
+Se calcularon medidas de tendencia, dispersión, asimetría y curtosis; correlaciones de Pearson y Spearman; pruebas $\chi^2$ con V de Cramér~\cite{cramer1946}; y la prueba de Kruskal-Wallis~\cite{kruskal1952} con su tamaño de efecto para comparar el FP entre tecnologías. Los atípicos se identificaron con la regla de Tukey~\cite{tukey1977} y $|z| > 3$.
+
+\subsection{Preparación sin fuga de datos (Fase 2)}
+Todo paso que aprende de los datos se ajusta \emph{solo con entrenamiento}~\cite{kaufman2012}. El orden fue: 1) limpieza con reglas físicas fijadas de antemano (solar $\leq 0.40$, eólica $\leq 0.65$, FP $\geq 0.01$), que deja 6\,011 plantas; 2) variables derivadas del dominio: $\log_{10}$ de la capacidad, edad, irradiación relativa ($\cos$ de la latitud) y densidad de plantas de la misma tecnología a 100 km; 3) partición 70/15/15 (4\,202 / 902 / 907), estratificada por tecnología y nivel, y agrupada por sitio para que una central no quede a ambos lados~\cite{roberts2017}; 4) dentro de un \textit{pipeline}: One-Hot de la tecnología, \textit{Target Encoding} del país con \textit{cross-fitting}~\cite{microbarreca2001}, winsorización p0.5--p99.5~\cite{dixon1960}, estandarización e imputación KNN ($k = 20$)~\cite{troyanskaya2001} con indicador de falta, elegida con un experimento de enmascaramiento; 5) modelos base: regresión lineal y logística. Las tres clases son terciles del FP de entrenamiento, así que no hizo falta remuestreo.
+
+\subsection{Modelos avanzados (Fase 3)}
+Se agregaron la latitud y la longitud como predictores, porque el viento y el agua dependen de corredores regionales. Para la regresión se compararon Ridge~\cite{hoerl1970}, Lasso~\cite{tibshirani1996}, ElasticNet~\cite{zou2005}, Random Forest~\cite{breiman2001}, XGBoost~\cite{chen2016} y un perceptrón multicapa (MLP) en PyTorch~\cite{paszke2019}. Para la clasificación, SVM con núcleo RBF~\cite{cortes1995}, Random Forest, XGBoost y la MLP. La MLP usa capas densas con ReLU, \textit{dropout}~\cite{srivastava2014}, AdamW~\cite{loshchilov2019} y parada temprana~\cite{prechelt1998} sobre el 15\% del conjunto de ajuste.
+
+El protocolo se fijó antes de entrenar: los hiperparámetros se buscan con validación cruzada (CV) de cinco pliegues agrupada por sitio~\cite{bergstra2012}; los modelos se comparan en validación; y la prueba se usa \emph{una sola vez}, con la elección ya hecha. Se reportan R$^2$, RMSE, MAE, \textit{accuracy}, precisión, \textit{recall}, F1-macro y AUC-ROC, con intervalos \textit{bootstrap}~\cite{efron1993}. La robustez se midió con ablación de coordenadas, CV por bloques geográficos de 2$^\circ$ y diez particiones. La interpretación usa importancia por permutación~\cite{fisher2019} y valores SHAP~\cite{lundberg2017,lundberg2020}.
+
+\subsection{Segmentación}
+Se agruparon 4\,334 plantas con edad conocida y al menos tres años de generación, con cinco variables estandarizadas: escala, $|$latitud$|$, edad, FP y estabilidad. K-Means~\cite{lloyd1982} eligió $k$ con el codo~\cite{satopaa2011} y la silueta~\cite{rousseeuw1987}, y se comparó con Ward~\cite{ward1963} mediante el índice de Rand ajustado~\cite{hubert1985} y con DBSCAN~\cite{ester1996} para detectar atípicas.
+
+\subsection{Evaluación integral}
+El rendimiento es solo una parte del desempeño. Se evaluaron 14 criterios en cinco pilares: \emph{confiabilidad} (rendimiento, estabilidad, despachabilidad), \emph{economía y acceso} (costo nivelado, versatilidad), \emph{ambiente y seguridad} (emisiones, uso de suelo, muertes por TWh), \emph{materiales y circularidad} (minerales críticos, reciclabilidad, vida útil) y \emph{trayectoria} (caída del costo, crecimiento, mejora del FP). Cada criterio se normaliza a $[0, 1]$. En 20\,000 escenarios de Monte Carlo se sortean los pesos con una distribución de Dirichlet uniforme y los datos dentro de su incertidumbre, y se ordenan las tecnologías con suma ponderada (SAW) y TOPSIS~\cite{hwang1981}.
+
+\subsection{Recomendación por país (Fase 4)}
+La Fase 2 advirtió que recomendar por país exige datos del recurso de cada país. Para cada uno de los 166 países se repite el análisis con dos criterios locales. El \emph{rendimiento} es el FP real de 2020--2024 según IRENA, con la capacidad media de cada año:
+\begin{equation}
+FP_{c,k} = \frac{\sum_t E_{c,k,t}}{8.76 \sum_t \tfrac{1}{2}(P_{c,k,t} + P_{c,k,t-1})}.
+\end{equation}
+El \emph{costo} se ajusta en proporción inversa al rendimiento, limitado a entre la mitad y el doble del costo mundial $C_k$:
+\begin{equation}
+C_{c,k} = C_k \cdot \operatorname{clip}\!\left(\frac{FP_k}{FP_{c,k}},\ 0.5,\ 2\right).
+\end{equation}
+Antes de ver las recomendaciones se fijaron tres reglas. Primera: un FP solar se descarta si no es compatible con la radiación $G$ del país (kWh/m$^2$/día), es decir, si $FP/(G/24)$ está fuera de $[0.50, 1.25]$. Segunda: el recurso de NASA~\cite{nasapower} solo sirve para estimar el FP de un país sin plantas si, con CV de cinco pliegues, reduce el error al menos 5\% frente a predecir la media. Tercera: la hidroeléctrica, la geotérmica y la biomasa solo compiten donde ya existen, como evidencia de que hay recurso. Una recomendación es \emph{clara} si la primera gana en al menos 50\% de los escenarios y aventaja a la segunda en 20 puntos; \emph{moderada} si la ventaja es de 10 a 20 puntos, y \emph{reñida} si es menor. Se marca como \emph{provisional} si la tecnología recomendada tiene menos de 50 MW en el país. Una auditoría posterior detectó FP eólicos imposibles (0.01 en Sudáfrica y 0.02 en Kenia), por lo que se descarta el FP eólico nacional fuera de $[0.10, 0.55]$ (8 países). Este filtro se definió después de ver los datos, pero no cambió el número de países por tecnología.
+
+\subsection{Escenario de geotérmica de nueva generación}\label{sec:metgeo}
+La perforación con ondas milimétricas busca alcanzar roca supercaliente casi en cualquier lugar. El escenario responde tres preguntas.
+
+\emph{¿Qué pasaría?} Se simulan una \emph{prueba de concepto} (todos los países, 45--70 USD/MWh, FP de 0.90) y una geotérmica \emph{madura} (20--35 USD/MWh~\cite{catf2022} y crecimiento igual al de la eólica). Se busca el costo con el que iguala a su mejor rival y se prueba qué ocurre si la solar y la eólica también se abaratan hasta 60\%. Emisiones, minerales, vida útil y seguridad se mantienen como los de la geotérmica actual.
+
+\emph{¿Cómo se comportaría?} Se simula un consumo constante de 100 MW en seis países durante 2022--2024 (26\,304 horas) con 95\% de confiabilidad, el nivel de energía firme que usa IRENA~\cite{irena2026}. La forma horaria viene de NASA POWER y se reescala al FP anual del país; donde no hay al menos 50 MW se usa el FP mundial de plantas nuevas. En cada país se busca la combinación de solar, eólica y baterías de menor costo (batería de 4 h a 140 USD/kWh~\cite{irena2026}, 85\% de eficiencia, 15 años y tasa del 7\%), pagando también la energía vertida. En ventanas de 45 días, la búsqueda coincide con un programa lineal exacto (diferencia $\leq 0.03\%$). A 2035, la solar y las baterías bajan 40\%~\cite{irena2026} y la mezcla se vuelve a optimizar.
+
+\emph{¿Cuál sería su potencial?} Se proyecta la capacidad a 2050 si, desde 2030 o 2035, la geotérmica repite la expansión observada de la eólica o de la solar desde que tenían su tamaño actual (16 GW), con un FP de 0.85.
+
+\subsection{Tablero y reproducibilidad}
+El tablero se construyó en Streamlit~\cite{streamlit} con gráficos interactivos de Plotly. Carga los mismos modelos de la Fase 3, verificados planta por planta (diferencia máxima de $10^{-16}$), y los comprime de 67 a 16 MB. El código está organizado en un paquete (\texttt{src/renovables}) que usan el cuaderno y el tablero, y cada fase comprueba con aserciones que reproduce la anterior.
+
+\section{Resultados}
+\subsection{Exploración}
+El primer paso fue comparar cómo rinde cada tecnología y qué tan estable es su rendimiento de un año a otro. La Fig.~\ref{fig:eda} presenta ambas medidas para las cinco tecnologías.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f1_rendimiento_estabilidad.png}
+\caption{Rendimiento y estabilidad por tecnología: (a) factor de planta promedio 2013--2019 y (b) coeficiente de variación interanual. Las cajas muestran el rango intercuartílico y la línea, la mediana.}
+\label{fig:eda}
+\end{figure}
+
+En la Fig.~\ref{fig:eda}a, la biomasa y la geotérmica tienen el FP mediano más alto (0.52), seguidas por la hidroeléctrica (0.39), la eólica (0.32) y la solar (0.20). La Fig.~\ref{fig:eda}b muestra un orden distinto: la solar es la más estable (CV de 0.06) y la hidroeléctrica, la más variable (0.22). Rendimiento y estabilidad no están correlacionados ($\rho = 0.01$), de modo que ninguna tecnología domina en ambas y la elección depende de las prioridades. Esa conclusión motiva tanto los modelos de esta sección como la evaluación integral de la Sección~\ref{sec:resintegral}.
+
+\subsection{Modelos supervisados}
+El modelo lineal base fijó el umbral: R$^2 = 0.449$ y F1-macro = 0.671 en prueba, y sus curvas de aprendizaje planas indicaron subajuste. A partir de ese umbral se compararon los modelos avanzados; la Tabla~\ref{tab:modelos} reúne su desempeño en el conjunto de prueba.
+
+\begin{table}[!htb]
+\centering
+\caption{Desempeño de los modelos en el conjunto de prueba}
+\label{tab:modelos}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{2.2cm}ccc|cc@{}}
+\toprule
+ & \multicolumn{3}{c|}{Regresión} & \multicolumn{2}{c}{Clasificación} \\
+Modelo & R$^2$ & RMSE & MAE & F1-macro & AUC \\
+\midrule
+Trivial (Dummy) & 0.000 & 0.154 & 0.120 & 0.164 & 0.500 \\
+Base (Fase 2) & 0.449 & 0.115 & 0.077 & 0.671 & 0.864 \\
+Lineales regulariz. & 0.447 & 0.115 & 0.077 & --- & --- \\
+SVM (RBF) & --- & --- & --- & 0.728 & 0.880 \\
+\textbf{Random Forest} & \textbf{0.623} & \textbf{0.095} & \textbf{0.060} & \textbf{0.760} & \textbf{0.916} \\
+XGBoost & 0.608 & 0.097 & 0.062 & 0.751 & 0.912 \\
+MLP (PyTorch) & 0.530 & 0.106 & 0.069 & 0.736 & 0.900 \\
+\midrule
+IC 95\% elegido & \multicolumn{3}{c|}{0.573--0.669} & \multicolumn{2}{c}{0.734--0.786} \\
+Meta SMART & \multicolumn{3}{c|}{R$^2 \geq 0.55$: se cumple} & \multicolumn{2}{c}{F1 $\geq 0.70$: se cumple} \\
+\bottomrule
+\end{tabular}\\[2pt]
+\parbox{\columnwidth}{\scriptsize Prueba: 907 plantas, una sola evaluación. Intervalos \textit{bootstrap} de 1\,000 remuestreos. Hiperparámetros de Random Forest: regresión, profundidad 20, hoja $\geq 2$, 50\% de variables; clasificación, profundidad 12, hoja $\geq 2$, 70\%.}
+\end{table}
+
+La Tabla~\ref{tab:modelos} muestra tres resultados. Primero, la regularización no ayuda (R$^2 = 0.447$), lo que confirma que el límite era el sesgo y no la varianza. Segundo, los árboles capturan las interacciones que la física impone y superan ambas metas. Tercero, Random Forest es el mejor en las dos tareas (fila en negrita); su brecha entre entrenamiento y validación (0.24) es normal en un bosque profundo, y la coincidencia entre CV (0.609), validación (0.630) y prueba (0.623) indica que no hay sobreajuste dañino.
+
+La MLP quedó por debajo de los árboles, pero no por un mal entrenamiento. La Fig.~\ref{fig:perdida} muestra su pérdida por época (dos capas de 128 y 64 neuronas, \textit{dropout} de 0.1).
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f3_curvas_perdida_mlp.png}
+\caption{Entrenamiento de la MLP en PyTorch: pérdida por época en (a) regresión y (b) clasificación. La línea discontinua marca la época cuyos pesos se conservan.}
+\label{fig:perdida}
+\end{figure}
+
+En ambos paneles de la Fig.~\ref{fig:perdida}, la pérdida de validación se aplana tras unas 20 épocas, y la parada temprana conservó los pesos de las épocas 61 (Fig.~\ref{fig:perdida}a) y 68 (Fig.~\ref{fig:perdida}b). En regresión, la MLP alcanza R$^2 = 0.568$ en validación y 0.530 en prueba, como suele ocurrir con datos tabulares de este tamaño.
+
+\textbf{Robustez.} En diez particiones distintas, Random Forest supera a la base en las diez (R$^2 = 0.616 \pm 0.031$; F1 = $0.748 \pm 0.014$). En regiones que el modelo nunca vio (CV por bloques de 2$^\circ$), el R$^2$ baja a 0.526 pero sigue por encima de la base (0.432).
+
+\textbf{Dónde falla.} Un buen promedio puede esconder errores grandes en algunos grupos. La Fig.~\ref{fig:errores} muestra dónde acierta y dónde falla el modelo elegido.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f3_errores_prueba.png}
+\caption{Errores en el conjunto de prueba: (a) FP predicho por Random Forest frente al observado; (b) RMSE del modelo base y del elegido por tecnología y región.}
+\label{fig:errores}
+\end{figure}
+
+En la Fig.~\ref{fig:errores}a, las plantas solares y eólicas se agrupan cerca de la diagonal, mientras que las de FP alto se dispersan más. La Fig.~\ref{fig:errores}b lo cuantifica: el RMSE es menor en la solar (0.032) y la eólica (0.055), y mayor en la hidroeléctrica (0.145) y la biomasa (0.191), cuyo FP depende de la hidrología, el tipo de central y el despacho, que la GPPD no incluye. Las barras de región confirman el sesgo geográfico: fuera de EE.\,UU. el R$^2$ baja de 0.65 a 0.41.
+
+\textbf{Qué variables pesan más.} Para responder la PS1 se interpretó el modelo con tres técnicas complementarias, que reúne la Fig.~\ref{fig:interp}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f3_interpretabilidad.png}
+\caption{Interpretación de los modelos: (a) importancia por permutación en validación; (b) valores SHAP del regresor XGBoost por planta; (c) aporte SHAP de la edad según la tecnología.}
+\label{fig:interp}
+\end{figure}
+
+En la Fig.~\ref{fig:interp}a, la tecnología domina: al desordenarla, el R$^2$ cae 0.56 y el F1, 0.26. Le siguen la edad (0.11), la longitud (0.10), la irradiación (0.07), la capacidad (0.07), el país (0.06), la latitud (0.06) y la densidad (0.03). La Fig.~\ref{fig:interp}b confirma ese orden planta por planta, y la Fig.~\ref{fig:interp}c muestra que el efecto de la edad cambia según la tecnología: en la eólica, cada década de antigüedad resta unos 1.9 puntos de FP, lo que es compatible con el avance de las turbinas, mientras que las hidroeléctricas más antiguas rinden algo más.
+
+\subsection{Segmentación}
+Para responder la PS3 se buscaron grupos naturales de plantas sin usar la tecnología. La Fig.~\ref{fig:cluster} muestra cómo se eligió el número de grupos y cuáles resultaron.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f4_clustering.png}
+\caption{Segmentación de las plantas: (a) inercia de K-Means; (b) silueta de K-Means y Ward, con la meta punteada; (c) grupos en los dos primeros componentes principales y dirección de cada variable.}
+\label{fig:cluster}
+\end{figure}
+
+El codo de la inercia aparece cerca de $k = 5$ (Fig.~\ref{fig:cluster}a), pero la silueta es máxima con $k = 2$ (0.297; Fig.~\ref{fig:cluster}b), por debajo de la meta de 0.35: las plantas forman un continuo más que grupos nítidos. Ward produce grupos distintos (silueta de 0.23, línea gris; ARI = 0.16). En el plano principal (Fig.~\ref{fig:cluster}c), los dos grupos se separan a lo largo del primer componente, asociado a la edad y al FP, y tienen sentido físico. \emph{G1, parque antiguo y gestionable:} 1\,437 plantas, 90\% hidroeléctricas, de unos 59 años, con FP de 0.42 y variabilidad alta (CV = 0.22). \emph{G2, parque nuevo y estable:} 2\,897 plantas, 57\% solares y 31\% eólicas, de 6 años, con FP de 0.22 y muy estables (CV = 0.07). DBSCAN marca como atípicas al 3.8\% de las plantas, sobre todo biomasa, geotérmica e hidroeléctricas grandes: justamente las que los modelos predicen peor.
+
+\subsection{Evaluación integral}\label{sec:resintegral}
+Los modelos explican el rendimiento, pero no dicen qué tecnología es mejor en conjunto. La Tabla~\ref{tab:integral} resume la evaluación de 14 criterios en tres bloques: el porcentaje de escenarios en que cada tecnología queda primera, el puntaje de cada pilar y la energía que entrega por unidad de recurso.
+
+\begin{table}[!htb]
+\centering
+\caption{Evaluación integral: 14 criterios y 20\,000 escenarios}
+\label{tab:integral}
+\scriptsize
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & Solar & Eólica & Hidro. & Geot. & Biom. \\
+\midrule
+\% n.\textordmasculine\ 1 (SAW) & \textbf{45.7} & \textbf{35.9} & 12.4 & 3.7 & 2.3 \\
+\% n.\textordmasculine\ 1 (TOPSIS) & \textbf{36.6} & \textbf{32.4} & 17.3 & 7.8 & 5.8 \\
+Puesto medio (SAW) & 1.87 & 1.87 & 3.23 & 3.82 & 4.21 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Puntaje por pilar (promedio de sus criterios; 1 = mejor)}} \\
+Confiabilidad & 0.50 & 0.64 & 0.49 & \textbf{0.92} & 0.87 \\
+Economía y acceso & 0.73 & 0.67 & \textbf{0.74} & 0.00 & 0.10 \\
+Ambiente y seguridad & 0.53 & \textbf{0.88} & 0.44 & 0.74 & 0.00 \\
+Materiales y circularidad & 0.36 & 0.41 & \textbf{0.90} & 0.35 & 0.82 \\
+Trayectoria & \textbf{0.96} & 0.76 & 0.07 & 0.02 & 0.21 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Energía por unidad de recurso}} \\
+MWh por MW al año & 1\,560 & 2\,970 & 3\,600 & \textbf{6\,000} & 5\,700 \\
+MWh por 1\,000 USD & 22.7 & \textbf{30.3} & 16.1 & 11.2 & 11.6 \\
+GWh/año por cancha & 0.36 & 0.06--5.5 & 1.1 & \textbf{15.9} & 0.01--5.5 \\
+\bottomrule
+\end{tabular}\\[2pt]
+\parbox{\columnwidth}{\scriptsize Cancha de fútbol de 105 $\times$ 68 m. En la eólica, del área total al área de los equipos; en la biomasa, de cultivos dedicados a residuos.}
+\end{table}
+
+El primer bloque de la Tabla~\ref{tab:integral} muestra que la solar queda primera en el 45.7\% de los escenarios y la eólica en el 35.9\%, con el mismo puesto promedio (1.87). El segundo bloque explica por qué ninguna gana en todos los criterios: la solar lidera la trayectoria, porque crece 26.5\% al año y su costo cayó 89\% desde 2010; la eólica lidera ambiente y seguridad, porque es la más limpia; la hidroeléctrica lidera materiales y circularidad, y la geotérmica, confiabilidad. La Fig.~\ref{fig:multi} muestra la distribución completa de puestos con los dos métodos de agregación.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f4_multicriterio.png}
+\caption{Puesto de cada tecnología en 20\,000 escenarios con (a) suma ponderada (SAW) y (b) TOPSIS. El número indica el porcentaje de escenarios.}
+\label{fig:multi}
+\end{figure}
+
+En la Fig.~\ref{fig:multi}a, la eólica es la más consistente: queda entre las dos mejores en el 83\% de los escenarios. Con TOPSIS (Fig.~\ref{fig:multi}b) el orden se mantiene, aunque la ventaja de la solar y la eólica se reduce.
+
+\textbf{Fin de vida.} El pilar de materiales y circularidad de la Tabla~\ref{tab:integral} es el punto débil de la solar y la eólica. Por masa se reciclan como las demás (85--88\%), pero duran 25 años frente a 50 de una hidroeléctrica y usan más minerales críticos. Lo que casi no se recupera son la plata y el silicio de los paneles~\cite{heath2020} y las aspas, de las que se proyectan 43 millones de toneladas de residuos hacia 2050~\cite{liu2017}. Sin este pilar, la solar ganaría en el 55.5\% de los escenarios; con él, en el 45.7\%: le cuesta diez puntos, pero no el primer lugar.
+
+\textbf{Productividad.} El último bloque de la Tabla~\ref{tab:integral} muestra que no hay una sola ganadora. La eólica entrega más energía por dólar (30.3 MWh por cada 1\,000 USD). La geotérmica entrega más por MW (6\,000 MWh al año), por terreno (15.9 GWh por cancha) y por material a granel~\cite{doe2015}, pero es cara y hoy solo es viable donde hay calor cerca de la superficie.
+
+\subsection{Recomendación por país}
+\textbf{Validación del recurso.} Antes de usar el recurso de NASA para estimar el rendimiento de los países sin plantas, se comprobó si predice el FP real. La Fig.~\ref{fig:recurso} muestra esa comparación.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f4_recurso.png}
+\caption{Recurso de NASA POWER frente al FP de cada país: (a) la radiación predice el FP solar; (b) el viento a 50 m no predice el FP eólico (línea punteada: ajuste descartado).}
+\label{fig:recurso}
+\end{figure}
+
+En la Fig.~\ref{fig:recurso}a, la radiación predice el FP solar de los países ($\rho = 0.72$; el error baja de 0.037 a 0.025, un 33\%). En la Fig.~\ref{fig:recurso}b, el viento \emph{no} predice el FP eólico ($\rho = 0.15$; el error baja solo 1\%). Por la regla fijada, ese dato no se usa: donde no hay parques suficientes, la eólica toma el valor mundial y se advierte. Además, 25 FP solares reportados se descartaron por ser físicamente incompatibles con la radiación del país, entre ellos el de Colombia (0.35 frente a una radiación que permite cerca de 0.19), y 8 eólicos por estar fuera del rango creíble.
+
+\textbf{Resultado.} Con el rendimiento validado, se repitió la evaluación integral en cada país. La Fig.~\ref{fig:mapa} muestra la renovable recomendada.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f4_mapa_paises.png}
+\caption{Renovable recomendada en cada país: la que queda primera en más escenarios (4\,000 por país, SAW). En gris, territorios sin datos.}
+\label{fig:mapa}
+\end{figure}
+
+La Fig.~\ref{fig:mapa} muestra que la solar se recomienda en 141 de 166 países y la eólica en 25, de los cuales 14 están en Europa, como el Reino Unido, Irlanda, los Países Bajos y Polonia. La ventaja es clara en 73 países, moderada en 52 y reñida en 41; en 33 la recomendación es provisional. Los datos locales importan: sin ellos, la solar ganaría en los 166 países; con ellos, cambia la recomendación de 25. El resultado es estable: el 95.2\% de los países mantiene su recomendación con cinco semillas distintas, y SAW y TOPSIS coinciden en el 87.3\%. Como el mapa no muestra qué tan reñida es cada decisión, la Tabla~\ref{tab:paises} detalla diez ejemplos con su segunda opción.
+
+\begin{table}[!htb]
+\centering
+\caption{Ejemplos de recomendación por país}
+\label{tab:paises}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lllc@{}}
+\toprule
+País & Primera (\% esc.) & Segunda (\% esc.) & Ventaja \\
+\midrule
+Colombia & Solar (41.2) & Eólica (40.2) & Reñida \\
+Brasil & Solar (43.9) & Eólica (40.2) & Reñida \\
+Argentina & Eólica (53.5) & Solar (35.9) & Moderada \\
+Chile & Solar (66.4) & Eólica (15.4) & Clara \\
+México & Solar (61.1) & Eólica (26.0) & Clara \\
+EE.\,UU. & Solar (52.2) & Eólica (27.3) & Clara \\
+Alemania & Solar (42.7) & Eólica (27.1) & Moderada \\
+Reino Unido & Eólica (48.0) & Solar (36.3) & Moderada \\
+India & Solar (63.9) & Hidroeléctrica (19.4) & Clara \\
+Kenia & Solar (52.5) & Eólica (24.7) & Clara \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+En la Tabla~\ref{tab:paises}, la eólica gana en Argentina y el Reino Unido, y la solar en los demás ejemplos. Colombia y Brasil son los casos más reñidos: en Colombia, la solar (41.2\%) y la eólica (40.2\%) casi empatan, de modo que lo razonable es combinarlas para diversificar una matriz expuesta a las sequías.
+
+\subsection{Escenario geotérmico}
+El escenario responde las tres preguntas planteadas en la Sección~\ref{sec:metgeo}. La Fig.~\ref{fig:geo} las resume en cuatro paneles, que se comentan en orden.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f4_geotermica.png}
+\caption{Escenario geotérmico: (a) porcentaje de escenarios en primer lugar según lo que le ocurra (SAW, 20\,000 escenarios; el número es el valor de la geotérmica); (b) costo que necesita para superar a la solar; (c) costo de abastecer 100 MW constantes con solar, eólica y baterías, hoy y en 2035, frente a la meta de 20--35 USD/MWh (franja), la proyección de la AIE y el costo actual de la geotérmica; (d) capacidad proyectada según cómo crezca.}
+\label{fig:geo}
+\end{figure}
+
+\textbf{¿Qué pasaría?} La Fig.~\ref{fig:geo}a muestra que una sola mejora no alcanza. Si la geotérmica solo llegara a todos los países, quedaría primera en el 11.4\% de los escenarios; si solo se abaratara, en el 15.2\%. En el escenario \emph{madura} sube del 3.7\% al 42.9\%, supera a la solar (30.8\%) y sería la primera opción en 160 de 166 países, aunque en 51 por poco margen. Ese resultado exige tres condiciones. Debe costar menos de 39 USD/MWh, donde se cruzan las curvas de la Fig.~\ref{fig:geo}b: con los 50 USD/MWh que la AIE proyecta a 2035~\cite{iea2024geo} quedaría en 27.3\%, frente a 37.6\% de la solar. Debe crecer como la eólica: sin ese impulso, el costo de empate baja a 27 USD/MWh. Y sus rivales no deben seguir cayendo: si la solar y la eólica se abaratan otro 40\%, queda un empate técnico (35.8\% contra 35.2\%). Sin contar las baterías, la solar sigue adelante (44.8\% contra 31.6\%).
+
+\textbf{¿Cómo se comportaría?} Su mayor valor no aparece en un ranking anual: entrega energía a toda hora. La Fig.~\ref{fig:geo}c compara ese servicio con su alternativa: abastecer 100 MW constantes con solar, eólica y baterías cuesta hoy desde 52 USD/MWh en Kenia y Colombia hasta 129 en Alemania, y de 40 a 100 en 2035. Solo con solar y baterías, el costo es de 69 a 99 USD/MWh en cinco países, un rango compatible con los 54--82 que IRENA reporta en sitios de alta calidad~\cite{irena2026}, y de 332 en Alemania por su invierno. Por eso, como energía firme, una geotérmica de 50 USD/MWh ya sería más barata hoy en los seis países; en 2035 lo sería con claridad solo en Alemania y empataría en India. En Colombia, 100 MW constantes exigen 410 MW de solar y eólica, 207 MWh de baterías y 423 ha; la geotérmica necesitaría 111 MW y 39 ha, pero cinco veces más minerales críticos (21\,400 t frente a 4\,200 t).
+
+\textbf{¿Cuál sería su potencial?} El calor no es el límite: la AIE estima casi 600 TW de potencial técnico a menos de 8 km~\cite{iea2024geo}. El límite es la velocidad de construcción, que muestra la Fig.~\ref{fig:geo}d. Si despega en 2030 y crece como la eólica, tendría unos 780 GW en 2050, cerca de los 800 GW de la AIE (rombo), y generaría unos 5\,800 TWh al año, el equivalente al 18\% de la electricidad mundial de 2025~\cite{ember2026}. Evitaría de 2.6 a 4.5 Gt de CO$_2$ al año si reemplaza gas o carbón. Si despega en 2035 llegaría a 506 GW, y si mantiene su tendencia actual, a 31 GW (0.7\%). Hoy está lejos de esa meta: en 2025 se perforaron unos 118 m con ondas milimétricas~\cite{quaise2025}; en julio de 2026 la empresa informó que se acerca a 1 km, sin confirmación independiente, y ningún pozo perforado así ha producido electricidad~\cite{geoinsider2026}.
+
+\subsection{Tablero interactivo}
+El tablero organiza los resultados anteriores como una historia en nueve vistas y muestra la pregunta de investigación desde la primera pantalla. La Fig.~\ref{fig:tablero} presenta cuatro de esas vistas.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\columnwidth]{f4_tablero.png}
+\caption{Cuatro de las nueve vistas del tablero interactivo: (a) pregunta y respuesta; (b) predicción en vivo; (c) segmentación en espacio PCA; (d) recomendación por país.}
+\label{fig:tablero}
+\end{figure}
+
+La Fig.~\ref{fig:tablero}a abre con la pregunta y la respuesta; la Fig.~\ref{fig:tablero}b permite estimar una planta nueva con el modelo de la Tabla~\ref{tab:modelos}; la Fig.~\ref{fig:tablero}c muestra los mismos grupos de la Fig.~\ref{fig:cluster}c, y la Fig.~\ref{fig:tablero}d, el mapa de la Fig.~\ref{fig:mapa}. La Tabla~\ref{tab:tablero} relaciona cada módulo que exige la guía con su implementación.
+
+\begin{table}[!htb]
+\centering
+\caption{Módulos del tablero}
+\label{tab:tablero}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{2.5cm}L{5.3cm}@{}}
+\toprule
+Módulo & Implementación \\
+\midrule
+Filtros dinámicos & Año de operación, tecnología, región, país, capacidad y FP \\
+Tarjetas KPI & Plantas, capacidad, FP, edad, países y métricas de modelos \\
+Predicción en vivo & Random Forest: FP, energía anual, nivel, probabilidades, rango de los árboles, alerta de extrapolación y sensibilidad \\
+Segmentación & Dispersión 2D/3D en espacio PCA, $k = 2$ o 5, perfiles y atípicas \\
+Vistas adicionales & Comparación de modelos, importancia, errores por región, prioridades ajustables, recomendación por país y escenario geotérmico (qué pasaría, operación horaria y potencial) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Discusión}
+\textbf{¿Qué explica el desempeño de una planta?} La tecnología, la capacidad, la ubicación y la antigüedad explican el 62\% de la variación del FP en plantas no vistas, frente al 45\% del modelo lineal. Esos diecisiete puntos son el costo de suponer efectos aditivos donde la física impone interacciones: una misma latitud favorece a la solar y no a la hidroeléctrica. El nivel de desempeño también se puede anticipar sin usar la generación: tres de cada cuatro plantas se clasifican bien. El parque renovable se divide, sobre todo, por edad y estabilidad.
+
+\textbf{Impacto práctico.} Quien evalúa un proyecto puede estimar su rendimiento antes de construirlo. El error absoluto medio baja de 7.7 a 6.0 puntos de FP: en una planta de 100 MW son unos 15 GWh al año de error menor en la energía esperada, equivalentes a USD 0.5--0.7 millones anuales a los costos actuales de la eólica y la solar. Para un planificador, el tablero permite probar distintas prioridades y ver si la conclusión se sostiene.
+
+\textbf{Las tres preguntas prácticas.} 1) \emph{¿Cuál tiene más ventajas que desventajas?} La solar y la eólica. No son las mejores en reciclaje, terreno ni energía por MW, pero de manera holística quedan primeras porque su bajo costo, su seguridad y su trayectoria compensan esas debilidades. 2) \emph{¿Cuál tiene mejor futuro tecnológico?} También la eólica y la solar: son las únicas cuyo rendimiento mundial sube (+2.7 y +2.0 puntos por década), las que más crecen y aquellas cuyo costo más cayó. La geotérmica de nueva generación es la principal incógnita: no las reemplazaría, pero podría aportar la energía a toda hora que a ellas les falta. Aún no se ha demostrado. 3) \emph{¿Cuál conviene a cada país?} Depende del recurso: la solar en la mayoría, la eólica donde su rendimiento local es muy alto. En uno de cada cuatro países la decisión está reñida, y ahí conviene combinar tecnologías.
+
+\textbf{Visión de sistema.} El resultado no significa que deba construirse una sola tecnología. La solar y la eólica son variables, y la hidroeléctrica y la geotérmica entregan energía gestionable. Para que su ventaja sea sostenible hacen falta reciclar a escala lo valioso de paneles y aspas, aprovechar techos y suelos ya intervenidos, y complementarlas con almacenamiento y con la hidroeléctrica existente.
+
+\section{Limitaciones}
+1) \emph{Sesgo geográfico:} el 88\% de las plantas con generación está en EE.\,UU.; fuera de allí el R$^2$ baja a 0.41. 2) \emph{Variables ausentes:} la hidrología, el tipo de central, el combustible y el despacho limitan la predicción en la hidroeléctrica y la biomasa. 3) \emph{Datos hasta 2019} en la GPPD: el FP actual de la solar y la eólica probablemente es mayor. 4) \emph{Clustering:} no alcanza la meta de silueta. 5) \emph{Multicriterio:} usa supuestos con rangos amplios (baterías, reciclabilidad), y el crecimiento refleja también el impulso del mercado. 6) \emph{Recomendación por país:} es orientativa. No incluye red, demanda, financiamiento ni política; el costo local supone que invertir cuesta lo mismo en todos los países; y exigir capacidad instalada excluye recursos hidroeléctricos o geotérmicos aún sin explotar. 7) \emph{Recurso eólico:} el dato de NASA, de unos 50 km de resolución y a 50 m de altura, no capta los sitios donde se ubican los parques. 8) \emph{Escenario geotérmico:} es hipotético y su costo es una meta de la industria. Supone el mismo costo en todos los países, aunque la profundidad necesaria depende de la geología. La simulación horaria cubre seis países, usa un consumo constante y no incluye la red, la hidroeléctrica ni el gas, de modo que su costo firme es una cota superior. El potencial es una analogía con la expansión de otras tecnologías, no un pronóstico.
+
+\section{Conclusiones y trabajo futuro}
+El proyecto cumplió tres de sus cuatro metas SMART. Random Forest supera al modelo base en un conjunto de prueba usado una sola vez (R$^2 = 0.623$; F1-macro = 0.760), y la tecnología, la edad y la ubicación son lo que más explica el rendimiento de una planta. La meta de silueta no se alcanzó, y esa es también una conclusión: las plantas forman un continuo. De manera holística, \textbf{la solar y la eólica tienen el mejor desempeño integral}, a pesar de no ser las mejores en reciclabilidad, uso de suelo ni energía por MW. La solar se recomienda en 141 de 166 países y la eólica en 25, con una ventaja clara en 73. La geotérmica de roca supercaliente es la tecnología por vigilar: solo ganaría el ranking si cuesta menos de 39 USD/MWh, llega a todos los países y crece como la eólica. Aun sin ganarlo, podría aportar la energía a toda hora que complementa a la solar y la eólica, con unos 780 GW en 2050 si despega en 2030.
+
+Como trabajo futuro se propone: 1) medir el recurso eólico a la altura de la turbina y con mayor resolución, para recomendar en los 74 países sin parques suficientes; 2) sumar generación de más países e hidrología; 3) agregar red, demanda y costo de capital por país; 4) extender la simulación horaria a todos los países, con demanda y red reales, y 5) actualizar el escenario geotérmico a medida que se publiquen resultados de campo.
+
+\begin{thebibliography}{99}
+\footnotesize\setlength{\itemsep}{0pt}
+\bibitem{unfccc2023} UNFCCC, «Outcome of the first global stocktake», Decisión 1/CMA.5, FCCC/PA/CMA/2023/16/Add.1, COP28, Dubái, Emiratos Árabes Unidos, dic. 2023. [En línea]. Disponible: \url{https://unfccc.int/sites/default/files/resource/cma2023_16a01E.pdf}
+\bibitem{byers2021} L. Byers, J. Friedrich, R. Hennig, A. Kressig, X. Li, C. McCormick y L. Malaguzzi Valeri, «A global database of power plants», World Resources Institute, Washington, DC, EE.\,UU., Nota técnica, mar. 2021. [En línea]. Disponible: \url{https://www.wri.org/research/global-database-power-plants}
+\bibitem{gppd} Global Energy Observatory, Google, KTH Royal Institute of Technology in Stockholm, Enipedia y World Resources Institute, «Global Power Plant Database», v1.3.0, 2021. [En línea]. Disponible: \url{https://datasets.wri.org/datasets/global-power-plant-database}
+\bibitem{irenastat} IRENA, «IRENASTAT: Electricity statistics», ed. 2026-H2, base de datos. [En línea]. Disponible: \url{https://pxweb.irena.org/pxweb/en/IRENASTAT}
+\bibitem{nasapower} NASA Langley Research Center, «POWER: Prediction of Worldwide Energy Resources», climatología 2001--2025 y datos horarios 2022--2024, API v2. [En línea]. Disponible: \url{https://power.larc.nasa.gov/}
+\bibitem{irena2025} IRENA, \emph{Renewable Power Generation Costs in 2024}. Abu Dabi, EAU: IRENA, 2025. [En línea]. Disponible: \url{https://www.irena.org/Publications/2025/Jun/Renewable-Power-Generation-Costs-in-2024}
+\bibitem{irena2026} IRENA, \emph{Renewable Power Generation Costs in 2025}. Abu Dabi, EAU: IRENA, 2026. [En línea]. Disponible: \url{https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2026/Jul/IRENA_TEC_RPGC_in_2025_2026.pdf}
+\bibitem{schlomer2014} S. Schlömer \emph{et al.}, «Annex III: Technology-specific cost and performance parameters», en \emph{Climate Change 2014: Mitigation of Climate Change. Contribution of Working Group III to the Fifth Assessment Report of the IPCC}. Cambridge, R.\,U.: Cambridge Univ. Press, 2014, pp. 1329--1356. [En línea]. Disponible: \url{https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf}
+\bibitem{iea2024geo} Agencia Internacional de la Energía (AIE), \emph{The Future of Geothermal Energy}. París, Francia: IEA, dic. 2024. [En línea]. Disponible: \url{https://www.iea.org/reports/the-future-of-geothermal-energy}
+\bibitem{ember2026} Ember, \emph{Global Electricity Review 2026}. Londres, R.\,U.: Ember, 2026. [En línea]. Disponible: \url{https://ember-energy.org/latest-insights/global-electricity-review-2026/}
+\bibitem{iea2021} IEA, \emph{The Role of Critical Minerals in Clean Energy Transitions}. París, Francia: IEA, 2021. [En línea]. Disponible: \url{https://www.iea.org/reports/the-role-of-critical-minerals-in-clean-energy-transitions}
+\bibitem{lovering2022} J. Lovering, M. Swain, L. Blomqvist y R. R. Hernandez, «Land-use intensity of electricity production and tomorrow's energy landscape», \emph{PLoS ONE}, vol. 17, n.º 7, art. e0270155, 2022, doi: 10.1371/journal.pone.0270155.
+\bibitem{doe2015} U.S. Department of Energy, «Chapter 10: Concepts in integrated analysis», en \emph{Quadrennial Technology Review 2015}. Washington, DC, EE.\,UU.: DOE, 2015, tabla 10.4. [En línea]. Disponible: \url{https://www.energy.gov/sites/prod/files/2017/03/f34/qtr-2015-chapter10.pdf}
+\bibitem{rubin1976} D. B. Rubin, «Inference and missing data», \emph{Biometrika}, vol. 63, n.º 3, pp. 581--592, 1976, doi: 10.1093/biomet/63.3.581.
+\bibitem{cramer1946} H. Cramér, \emph{Mathematical Methods of Statistics}. Princeton, NJ, EE.\,UU.: Princeton Univ. Press, 1946, doi: 10.1515/9781400883868.
+\bibitem{kruskal1952} W. H. Kruskal y W. A. Wallis, «Use of ranks in one-criterion variance analysis», \emph{J. Amer. Statist. Assoc.}, vol. 47, n.º 260, pp. 583--621, 1952, doi: 10.1080/01621459.1952.10483441.
+\bibitem{tukey1977} J. W. Tukey, \emph{Exploratory Data Analysis}. Reading, MA, EE.\,UU.: Addison-Wesley, 1977.
+\bibitem{kaufman2012} S. Kaufman, S. Rosset, C. Perlich y O. Stitelman, «Leakage in data mining: Formulation, detection, and avoidance», \emph{ACM Trans. Knowl. Discov. Data}, vol. 6, n.º 4, art. 15, 2012, doi: 10.1145/2382577.2382579.
+\bibitem{roberts2017} D. R. Roberts \emph{et al.}, «Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure», \emph{Ecography}, vol. 40, n.º 8, pp. 913--929, 2017, doi: 10.1111/ecog.02881.
+\bibitem{microbarreca2001} D. Micci-Barreca, «A preprocessing scheme for high-cardinality categorical attributes in classification and prediction problems», \emph{ACM SIGKDD Explor. Newsl.}, vol. 3, n.º 1, pp. 27--32, 2001, doi: 10.1145/507533.507538.
+\bibitem{dixon1960} W. J. Dixon, «Simplified estimation from censored normal samples», \emph{Ann. Math. Statist.}, vol. 31, n.º 2, pp. 385--391, 1960, doi: 10.1214/aoms/1177705900.
+\bibitem{troyanskaya2001} O. Troyanskaya \emph{et al.}, «Missing value estimation methods for DNA microarrays», \emph{Bioinformatics}, vol. 17, n.º 6, pp. 520--525, 2001, doi: 10.1093/bioinformatics/17.6.520.
+\bibitem{hoerl1970} A. E. Hoerl y R. W. Kennard, «Ridge regression: Biased estimation for nonorthogonal problems», \emph{Technometrics}, vol. 12, n.º 1, pp. 55--67, 1970, doi: 10.1080/00401706.1970.10488634.
+\bibitem{tibshirani1996} R. Tibshirani, «Regression shrinkage and selection via the lasso», \emph{J. Roy. Statist. Soc. Ser. B}, vol. 58, n.º 1, pp. 267--288, 1996, doi: 10.1111/j.2517-6161.1996.tb02080.x.
+\bibitem{zou2005} H. Zou y T. Hastie, «Regularization and variable selection via the elastic net», \emph{J. Roy. Statist. Soc. Ser. B}, vol. 67, n.º 2, pp. 301--320, 2005, doi: 10.1111/j.1467-9868.2005.00503.x.
+\bibitem{breiman2001} L. Breiman, «Random forests», \emph{Mach. Learn.}, vol. 45, n.º 1, pp. 5--32, 2001, doi: 10.1023/A:1010933404324.
+\bibitem{chen2016} T. Chen y C. Guestrin, «XGBoost: A scalable tree boosting system», en \emph{Proc. 22nd ACM SIGKDD Int. Conf. Knowl. Discov. Data Min.}, 2016, pp. 785--794, doi: 10.1145/2939672.2939785.
+\bibitem{paszke2019} A. Paszke \emph{et al.}, «PyTorch: An imperative style, high-performance deep learning library», en \emph{Adv. Neural Inf. Process. Syst. 32}, 2019, pp. 8024--8035, doi: 10.48550/arXiv.1912.01703.
+\bibitem{cortes1995} C. Cortes y V. Vapnik, «Support-vector networks», \emph{Mach. Learn.}, vol. 20, n.º 3, pp. 273--297, 1995, doi: 10.1007/BF00994018.
+\bibitem{srivastava2014} N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever y R. Salakhutdinov, «Dropout: A simple way to prevent neural networks from overfitting», \emph{J. Mach. Learn. Res.}, vol. 15, pp. 1929--1958, 2014. [En línea]. Disponible: \url{https://jmlr.org/papers/v15/srivastava14a.html}
+\bibitem{loshchilov2019} I. Loshchilov y F. Hutter, «Decoupled weight decay regularization», en \emph{Proc. Int. Conf. Learn. Represent. (ICLR)}, 2019. [En línea]. Disponible: \url{https://openreview.net/forum?id=Bkg6RiCqY7}
+\bibitem{prechelt1998} L. Prechelt, «Early stopping---But when?», en \emph{Neural Networks: Tricks of the Trade}, G. B. Orr y K.-R. Müller, Eds. Berlín, Alemania: Springer, 1998, pp. 55--69, doi: 10.1007/3-540-49430-8\_3.
+\bibitem{bergstra2012} J. Bergstra e Y. Bengio, «Random search for hyper-parameter optimization», \emph{J. Mach. Learn. Res.}, vol. 13, pp. 281--305, 2012. [En línea]. Disponible: \url{https://jmlr.org/papers/v13/bergstra12a.html}
+\bibitem{efron1993} B. Efron y R. J. Tibshirani, \emph{An Introduction to the Bootstrap}. Nueva York, NY, EE.\,UU.: Chapman \& Hall/CRC, 1993, doi: 10.1201/9780429246593.
+\bibitem{fisher2019} A. Fisher, C. Rudin y F. Dominici, «All models are wrong, but many are useful: Learning a variable's importance by studying an entire class of prediction models simultaneously», \emph{J. Mach. Learn. Res.}, vol. 20, n.º 177, pp. 1--81, 2019. [En línea]. Disponible: \url{https://jmlr.org/papers/v20/18-760.html}
+\bibitem{lundberg2017} S. M. Lundberg y S.-I. Lee, «A unified approach to interpreting model predictions», en \emph{Adv. Neural Inf. Process. Syst. 30}, 2017, pp. 4765--4774, doi: 10.48550/arXiv.1705.07874.
+\bibitem{lundberg2020} S. M. Lundberg \emph{et al.}, «From local explanations to global understanding with explainable AI for trees», \emph{Nat. Mach. Intell.}, vol. 2, n.º 1, pp. 56--67, 2020, doi: 10.1038/s42256-019-0138-9.
+\bibitem{lloyd1982} S. Lloyd, «Least squares quantization in PCM», \emph{IEEE Trans. Inf. Theory}, vol. 28, n.º 2, pp. 129--137, 1982, doi: 10.1109/TIT.1982.1056489.
+\bibitem{satopaa2011} V. Satopää, J. Albrecht, D. Irwin y B. Raghavan, «Finding a ``kneedle'' in a haystack: Detecting knee points in system behavior», en \emph{Proc. 31st Int. Conf. Distrib. Comput. Syst. Workshops}, 2011, pp. 166--171, doi: 10.1109/ICDCSW.2011.20.
+\bibitem{rousseeuw1987} P. J. Rousseeuw, «Silhouettes: A graphical aid to the interpretation and validation of cluster analysis», \emph{J. Comput. Appl. Math.}, vol. 20, pp. 53--65, 1987, doi: 10.1016/0377-0427(87)90125-7.
+\bibitem{ward1963} J. H. Ward, «Hierarchical grouping to optimize an objective function», \emph{J. Amer. Statist. Assoc.}, vol. 58, n.º 301, pp. 236--244, 1963, doi: 10.1080/01621459.1963.10500845.
+\bibitem{hubert1985} L. Hubert y P. Arabie, «Comparing partitions», \emph{J. Classif.}, vol. 2, n.º 1, pp. 193--218, 1985, doi: 10.1007/BF01908075.
+\bibitem{ester1996} M. Ester, H.-P. Kriegel, J. Sander y X. Xu, «A density-based algorithm for discovering clusters in large spatial databases with noise», en \emph{Proc. 2nd Int. Conf. Knowl. Discov. Data Min. (KDD)}, 1996, pp. 226--231. [En línea]. Disponible: \url{https://cdn.aaai.org/KDD/1996/KDD96-037.pdf}
+\bibitem{hwang1981} C.-L. Hwang y K. Yoon, \emph{Multiple Attribute Decision Making: Methods and Applications}. Berlín, Alemania: Springer, 1981, doi: 10.1007/978-3-642-48318-9.
+\bibitem{catf2022} LucidCatalyst y Hotrock Research Organization, \emph{A Preliminary Techno-Economic Model of Superhot Rock Energy}. Boston, MA, EE.\,UU.: Clean Air Task Force, nov. 2022. [En línea]. Disponible: \url{https://cdn.catf.us/wp-content/uploads/2022/12/30135200/SHRTechnoEconomic_Report.pdf}
+\bibitem{streamlit} Snowflake Inc., «Streamlit», v1.66.1, biblioteca de código abierto, 2026. [En línea]. Disponible: \url{https://streamlit.io}
+\bibitem{heath2020} G. A. Heath \emph{et al.}, «Research and development priorities for silicon photovoltaic module recycling to support a circular economy», \emph{Nat. Energy}, vol. 5, n.º 7, pp. 502--510, 2020, doi: 10.1038/s41560-020-0645-2.
+\bibitem{liu2017} P. Liu y C. Y. Barlow, «Wind turbine blade waste in 2050», \emph{Waste Manag.}, vol. 62, pp. 229--240, 2017, doi: 10.1016/j.wasman.2017.02.007.
+\bibitem{quaise2025} Quaise Energy, «Quaise Energy achieves drilling milestone with millimeter wave technology», 2025. [En línea]. Disponible: \url{https://www.quaise.com/news/quaise-energy-achieves-drilling-milestone-with-millimeter-wave-technology}
+\bibitem{geoinsider2026} Geothermal Insider, «Quaise Energy: millimeter-wave drilling profile», 1 sep. 2026. [En línea]. Disponible: \url{https://geothermalinsider.com/learn/quaise-energy/}
+\end{thebibliography}
+
+\end{document}

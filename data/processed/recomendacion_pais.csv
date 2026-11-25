@@ -1,0 +1,499 @@
+iso3,provisional,recomendada,pct_primera,segunda,pct_segunda,certeza,recomendada_topsis,pct_Solar,pct_Eólica,pct_Hidroeléctrica,pct_Geotérmica,pct_Biomasa,escenario,pais,region,ingreso
+AFG,False,Solar,55.68,Eólica,37.1,Moderada,Solar,55.68,37.1,7.22,0.0,0.0,Hoy (datos de la Fase 3),Afganistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+AGO,False,Solar,51.45,Eólica,31.28,Clara,Solar,51.45,31.28,16.75,0.0,0.52,Hoy (datos de la Fase 3),Angola,África al sur del Sahara,Países de ingreso mediano bajo
+ALB,True,Eólica,44.2,Solar,42.48,Reñida,Eólica,42.48,44.2,9.9,0.0,3.42,Hoy (datos de la Fase 3),Albania,Europa y Asia central,Ingreso mediano alto
+ARE,False,Solar,80.05,Eólica,13.52,Clara,Solar,80.05,13.52,0.0,0.0,6.42,Hoy (datos de la Fase 3),Emiratos Árabes Unidos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ARG,False,Eólica,53.45,Solar,35.85,Moderada,Eólica,35.85,53.45,8.95,0.0,1.75,Hoy (datos de la Fase 3),Argentina,América Latina y el Caribe,Ingreso mediano alto
+ARM,False,Solar,48.78,Eólica,45.02,Reñida,Eólica,48.78,45.02,6.2,0.0,0.0,Hoy (datos de la Fase 3),Armenia,Europa y Asia central,Ingreso mediano alto
+AUS,False,Solar,53.9,Eólica,32.5,Clara,Solar,53.9,32.5,12.52,0.0,1.08,Hoy (datos de la Fase 3),Australia,Asia oriental y el Pacífico,Ingreso alto
+AUT,False,Solar,50.85,Eólica,26.3,Clara,Solar,50.85,26.3,22.4,0.0,0.45,Hoy (datos de la Fase 3),Austria,Europa y Asia central,Ingreso alto
+AZE,False,Solar,75.42,Eólica,13.28,Clara,Solar,75.42,13.28,6.28,0.0,5.03,Hoy (datos de la Fase 3),Azerbaiyán,Europa y Asia central,Ingreso mediano alto
+BDI,False,Solar,45.88,Eólica,27.65,Moderada,Solar,45.88,27.65,25.4,0.0,1.08,Hoy (datos de la Fase 3),Burundi,África al sur del Sahara,Países de ingreso bajo
+BEL,False,Eólica,42.2,Solar,40.7,Reñida,Eólica,40.7,42.2,14.4,0.0,2.7,Hoy (datos de la Fase 3),Bélgica,Europa y Asia central,Ingreso alto
+BEN,True,Solar,56.32,Eólica,43.68,Moderada,Eólica,56.32,43.68,0.0,0.0,0.0,Hoy (datos de la Fase 3),Benin,África al sur del Sahara,Países de ingreso mediano bajo
+BFA,False,Solar,50.05,Eólica,36.45,Moderada,Solar,50.05,36.45,10.02,0.0,3.48,Hoy (datos de la Fase 3),Burkina Faso,África al sur del Sahara,Países de ingreso bajo
+BGD,False,Solar,66.27,Hidroeléctrica,17.97,Clara,Solar,66.27,15.75,17.97,0.0,0.0,Hoy (datos de la Fase 3),Bangladesh,Asia meridional,Países de ingreso mediano bajo
+BGR,False,Solar,64.32,Eólica,23.9,Clara,Solar,64.32,23.9,4.8,0.0,6.98,Hoy (datos de la Fase 3),Bulgaria,Europa y Asia central,Ingreso alto
+BHR,True,Solar,65.05,Eólica,34.95,Clara,Solar,65.05,34.95,0.0,0.0,0.0,Hoy (datos de la Fase 3),Bahrein,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+BIH,False,Solar,52.28,Eólica,33.95,Moderada,Solar,52.28,33.95,12.68,0.0,1.1,Hoy (datos de la Fase 3),Bosnia y Herzegovina,Europa y Asia central,Ingreso mediano alto
+BLR,False,Solar,49.65,Eólica,25.28,Moderada,Solar,49.65,25.28,23.0,0.0,2.08,Hoy (datos de la Fase 3),Belarús,Europa y Asia central,Ingreso mediano alto
+BOL,False,Solar,53.9,Eólica,28.88,Clara,Solar,53.9,28.88,17.18,0.0,0.05,Hoy (datos de la Fase 3),Bolivia,América Latina y el Caribe,Países de ingreso mediano bajo
+BRA,False,Solar,43.92,Eólica,40.25,Reñida,Eólica,43.92,40.25,15.48,0.0,0.35,Hoy (datos de la Fase 3),Brasil,América Latina y el Caribe,Ingreso mediano alto
+BRN,False,Solar,57.42,Eólica,42.58,Moderada,Solar,57.42,42.58,0.0,0.0,0.0,Hoy (datos de la Fase 3),Brunei Darussalam,Asia oriental y el Pacífico,Ingreso alto
+BTN,False,Solar,42.62,Eólica,37.15,Reñida,Solar,42.62,37.15,20.23,0.0,0.0,Hoy (datos de la Fase 3),Bhután,Asia meridional,Países de ingreso mediano bajo
+BWA,False,Solar,60.6,Eólica,39.4,Clara,Solar,60.6,39.4,0.0,0.0,0.0,Hoy (datos de la Fase 3),Botswana,África al sur del Sahara,Ingreso mediano alto
+CAF,True,Solar,49.5,Hidroeléctrica,29.33,Moderada,Solar,49.5,21.18,29.33,0.0,0.0,Hoy (datos de la Fase 3),República Centroafricana,África al sur del Sahara,Países de ingreso bajo
+CAN,False,Solar,48.2,Eólica,29.2,Moderada,Solar,48.2,29.2,22.28,0.0,0.32,Hoy (datos de la Fase 3),Canadá,América del Norte,Ingreso alto
+CHE,False,Solar,47.25,Eólica,29.5,Moderada,Solar,47.25,29.5,18.35,0.0,4.9,Hoy (datos de la Fase 3),Suiza,Europa y Asia central,Ingreso alto
+CHL,False,Solar,66.38,Eólica,15.38,Clara,Solar,66.38,15.38,10.25,3.4,4.6,Hoy (datos de la Fase 3),Chile,América Latina y el Caribe,Ingreso alto
+CHN,False,Solar,50.28,Eólica,25.7,Clara,Solar,50.28,25.7,18.0,4.75,1.27,Hoy (datos de la Fase 3),China,Asia oriental y el Pacífico,Ingreso mediano alto
+CIV,True,Solar,47.95,Eólica,39.1,Reñida,Solar,47.95,39.1,12.95,0.0,0.0,Hoy (datos de la Fase 3),Côte d'Ivoire,África al sur del Sahara,Países de ingreso mediano bajo
+CMR,True,Eólica,38.82,Solar,34.83,Reñida,Eólica,34.83,38.82,26.35,0.0,0.0,Hoy (datos de la Fase 3),Camerún,África al sur del Sahara,Países de ingreso mediano bajo
+COD,True,Solar,39.95,Eólica,39.22,Reñida,Eólica,39.95,39.22,19.02,0.0,1.8,Hoy (datos de la Fase 3),"Congo, República Democrática del",África al sur del Sahara,Países de ingreso bajo
+COG,False,Solar,44.28,Eólica,32.35,Moderada,Solar,44.28,32.35,23.3,0.0,0.08,Hoy (datos de la Fase 3),"Congo, República del",África al sur del Sahara,Países de ingreso mediano bajo
+COL,False,Solar,41.2,Eólica,40.22,Reñida,Eólica,41.2,40.22,17.68,0.0,0.9,Hoy (datos de la Fase 3),Colombia,América Latina y el Caribe,Ingreso mediano alto
+CPV,False,Solar,73.55,Eólica,26.45,Clara,Solar,73.55,26.45,0.0,0.0,0.0,Hoy (datos de la Fase 3),Cabo Verde,África al sur del Sahara,Ingreso mediano alto
+CRI,False,Solar,45.42,Eólica,35.93,Reñida,Solar,45.42,35.93,14.8,3.82,0.02,Hoy (datos de la Fase 3),Costa Rica,América Latina y el Caribe,Ingreso alto
+CUB,True,Eólica,46.4,Solar,45.48,Reñida,Eólica,45.48,46.4,8.05,0.0,0.08,Hoy (datos de la Fase 3),Cuba,América Latina y el Caribe,Ingreso mediano alto
+CYP,False,Solar,79.55,Eólica,15.08,Clara,Solar,79.55,15.08,0.0,0.0,5.38,Hoy (datos de la Fase 3),Chipre,Europa y Asia central,Ingreso alto
+CZE,False,Solar,54.97,Eólica,31.8,Clara,Solar,54.97,31.8,6.52,0.0,6.7,Hoy (datos de la Fase 3),República Checa,Europa y Asia central,Ingreso alto
+DEU,False,Solar,42.72,Eólica,27.15,Moderada,Solar,42.72,27.15,26.12,2.3,1.7,Hoy (datos de la Fase 3),Alemania,Europa y Asia central,Ingreso alto
+DJI,False,Solar,67.18,Eólica,32.82,Clara,Solar,67.18,32.82,0.0,0.0,0.0,Hoy (datos de la Fase 3),Djibouti,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+DNK,False,Solar,44.2,Eólica,41.9,Reñida,Eólica,44.2,41.9,13.05,0.0,0.85,Hoy (datos de la Fase 3),Dinamarca,Europa y Asia central,Ingreso alto
+DOM,False,Solar,57.63,Eólica,31.48,Clara,Solar,57.63,31.48,6.5,0.0,4.4,Hoy (datos de la Fase 3),República Dominicana,América Latina y el Caribe,Ingreso mediano alto
+DZA,False,Solar,85.4,Eólica,11.52,Clara,Solar,85.4,11.52,3.08,0.0,0.0,Hoy (datos de la Fase 3),Argelia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ECU,True,Eólica,40.42,Solar,38.38,Reñida,Eólica,38.38,40.42,21.12,0.0,0.08,Hoy (datos de la Fase 3),Ecuador,América Latina y el Caribe,Ingreso mediano alto
+EGY,False,Solar,45.85,Eólica,30.55,Moderada,Solar,45.85,30.55,23.52,0.0,0.08,Hoy (datos de la Fase 3),"Egipto, República Árabe de","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+ERI,True,Solar,62.8,Eólica,37.2,Clara,Solar,62.8,37.2,0.0,0.0,0.0,Hoy (datos de la Fase 3),Eritrea,África al sur del Sahara,Países de ingreso bajo
+ESH,False,Solar,63.72,Eólica,36.28,Clara,Solar,63.72,36.28,0.0,0.0,0.0,Hoy (datos de la Fase 3),Sáhara Occidental,"Oriente Medio, Norte de África, Afganistán y Pakistán",
+ESP,False,Solar,67.68,Eólica,21.1,Clara,Solar,67.68,21.1,6.35,0.0,4.88,Hoy (datos de la Fase 3),España,Europa y Asia central,Ingreso alto
+EST,False,Solar,42.95,Eólica,38.02,Reñida,Solar,42.95,38.02,17.52,0.0,1.5,Hoy (datos de la Fase 3),Estonia,Europa y Asia central,Ingreso alto
+ETH,True,Solar,63.82,Eólica,15.62,Clara,Solar,63.82,15.62,15.18,0.38,5.0,Hoy (datos de la Fase 3),Etiopía,África al sur del Sahara,Países de ingreso bajo
+FIN,False,Eólica,38.67,Solar,36.68,Reñida,Eólica,36.68,38.67,24.3,0.0,0.35,Hoy (datos de la Fase 3),Finlandia,Europa y Asia central,Ingreso alto
+FJI,True,Solar,45.15,Eólica,34.85,Moderada,Solar,45.15,34.85,19.95,0.0,0.05,Hoy (datos de la Fase 3),Fiji,Asia oriental y el Pacífico,Ingreso mediano alto
+FRA,False,Solar,53.12,Eólica,25.4,Clara,Solar,53.12,25.4,12.32,7.98,1.18,Hoy (datos de la Fase 3),Francia,Europa y Asia central,Ingreso alto
+GAB,False,Solar,44.7,Eólica,42.9,Reñida,Eólica,44.7,42.9,8.7,0.0,3.7,Hoy (datos de la Fase 3),Gabón,África al sur del Sahara,Ingreso mediano alto
+GBR,False,Eólica,47.98,Solar,36.28,Moderada,Eólica,36.28,47.98,13.32,0.0,2.43,Hoy (datos de la Fase 3),Reino Unido,Europa y Asia central,Ingreso alto
+GEO,True,Eólica,56.5,Solar,34.0,Clara,Eólica,34.0,56.5,9.5,0.0,0.0,Hoy (datos de la Fase 3),Georgia,Europa y Asia central,Ingreso mediano alto
+GHA,False,Solar,44.28,Eólica,31.1,Moderada,Solar,44.28,31.1,24.55,0.0,0.08,Hoy (datos de la Fase 3),Ghana,África al sur del Sahara,Países de ingreso mediano bajo
+GIN,True,Solar,48.25,Eólica,36.43,Moderada,Solar,48.25,36.43,15.32,0.0,0.0,Hoy (datos de la Fase 3),Guinea,África al sur del Sahara,Países de ingreso mediano bajo
+GMB,False,Solar,61.38,Eólica,38.62,Clara,Solar,61.38,38.62,0.0,0.0,0.0,Hoy (datos de la Fase 3),Gambia,África al sur del Sahara,Países de ingreso bajo
+GNB,False,Solar,60.52,Eólica,39.48,Clara,Solar,60.52,39.48,0.0,0.0,0.0,Hoy (datos de la Fase 3),Guinea-Bissau,África al sur del Sahara,Países de ingreso bajo
+GNQ,False,Solar,44.32,Eólica,42.35,Reñida,Eólica,44.32,42.35,13.32,0.0,0.0,Hoy (datos de la Fase 3),Guinea Ecuatorial,África al sur del Sahara,Ingreso mediano alto
+GRC,False,Solar,62.02,Eólica,28.35,Clara,Solar,62.02,28.35,5.38,0.0,4.25,Hoy (datos de la Fase 3),Grecia,Europa y Asia central,Ingreso alto
+GTM,False,Solar,49.15,Eólica,29.2,Moderada,Solar,49.15,29.2,16.55,4.98,0.12,Hoy (datos de la Fase 3),Guatemala,América Latina y el Caribe,Ingreso mediano alto
+GUF,False,Solar,50.82,Eólica,31.35,Moderada,Solar,50.82,31.35,16.4,0.0,1.42,Hoy (datos de la Fase 3),Guayana Francesa,América Latina y el Caribe,
+GUY,True,Solar,50.28,Eólica,33.17,Moderada,Solar,50.28,33.17,16.55,0.0,0.0,Hoy (datos de la Fase 3),Guyana,América Latina y el Caribe,Ingreso alto
+HND,False,Solar,53.85,Eólica,22.52,Clara,Solar,53.85,22.52,15.22,8.2,0.2,Hoy (datos de la Fase 3),Honduras,América Latina y el Caribe,Países de ingreso mediano bajo
+HRV,False,Solar,48.95,Eólica,31.55,Moderada,Solar,48.95,31.55,11.05,4.3,4.15,Hoy (datos de la Fase 3),Croacia,Europa y Asia central,Ingreso alto
+HUN,False,Solar,55.7,Eólica,18.45,Clara,Solar,55.7,18.45,17.82,7.48,0.55,Hoy (datos de la Fase 3),Hungría,Europa y Asia central,Ingreso alto
+IDN,False,Solar,47.95,Eólica,32.3,Moderada,Solar,47.95,32.3,12.72,3.6,3.42,Hoy (datos de la Fase 3),Indonesia,Asia oriental y el Pacífico,Ingreso mediano alto
+IND,False,Solar,63.85,Hidroeléctrica,19.4,Clara,Solar,63.85,16.6,19.4,0.0,0.15,Hoy (datos de la Fase 3),India,Asia meridional,Países de ingreso mediano bajo
+IRL,False,Eólica,52.3,Solar,30.22,Clara,Eólica,30.22,52.3,14.35,0.0,3.12,Hoy (datos de la Fase 3),Irlanda,Europa y Asia central,Ingreso alto
+IRN,False,Solar,60.82,Eólica,29.25,Clara,Solar,60.82,29.25,9.57,0.0,0.35,Hoy (datos de la Fase 3),"Irán, República Islámica del","Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+IRQ,False,Solar,55.95,Eólica,38.12,Moderada,Solar,55.95,38.12,5.92,0.0,0.0,Hoy (datos de la Fase 3),Iraq,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ISL,True,Eólica,43.0,Hidroeléctrica,27.98,Moderada,Eólica,25.22,43.0,27.98,3.8,0.0,Hoy (datos de la Fase 3),Islandia,Europa y Asia central,Ingreso alto
+ISR,False,Solar,54.1,Eólica,27.38,Clara,Solar,54.1,27.38,18.15,0.0,0.38,Hoy (datos de la Fase 3),Israel,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ITA,False,Solar,59.4,Eólica,19.5,Clara,Solar,59.4,19.5,10.52,9.07,1.5,Hoy (datos de la Fase 3),Italia,Europa y Asia central,Ingreso alto
+JAM,False,Solar,49.12,Eólica,30.15,Moderada,Solar,49.12,30.15,20.72,0.0,0.0,Hoy (datos de la Fase 3),Jamaica,América Latina y el Caribe,Ingreso mediano alto
+JOR,False,Solar,62.0,Eólica,22.42,Clara,Solar,62.0,22.42,15.58,0.0,0.0,Hoy (datos de la Fase 3),Jordania,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+JPN,False,Solar,50.78,Eólica,29.75,Clara,Solar,50.78,29.75,10.92,3.02,5.52,Hoy (datos de la Fase 3),Japón,Asia oriental y el Pacífico,Ingreso alto
+KAZ,False,Solar,51.8,Eólica,34.72,Moderada,Solar,51.8,34.72,13.3,0.0,0.18,Hoy (datos de la Fase 3),Kazajstán,Europa y Asia central,Ingreso mediano alto
+KEN,False,Solar,52.48,Eólica,24.7,Clara,Solar,52.48,24.7,16.78,6.02,0.02,Hoy (datos de la Fase 3),Kenia,África al sur del Sahara,Países de ingreso mediano bajo
+KGZ,False,Solar,45.52,Eólica,38.82,Reñida,Eólica,45.52,38.82,15.65,0.0,0.0,Hoy (datos de la Fase 3),Kirguistán,Europa y Asia central,Países de ingreso mediano bajo
+KHM,False,Solar,51.9,Eólica,30.12,Clara,Solar,51.9,30.12,17.95,0.0,0.02,Hoy (datos de la Fase 3),Camboya,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+KOR,False,Solar,67.77,Eólica,19.58,Clara,Solar,67.77,19.58,10.92,0.0,1.72,Hoy (datos de la Fase 3),"Corea, República de",Asia oriental y el Pacífico,Ingreso alto
+KOS,True,Eólica,65.08,Solar,34.92,Clara,Eólica,34.92,65.08,0.0,0.0,0.0,Hoy (datos de la Fase 3),Kosovo,Europa y Asia central,
+KWT,True,Eólica,62.92,Solar,37.08,Clara,Eólica,37.08,62.92,0.0,0.0,0.0,Hoy (datos de la Fase 3),Kuwait,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+LAO,False,Solar,48.68,Eólica,31.82,Moderada,Solar,48.68,31.82,19.18,0.0,0.32,Hoy (datos de la Fase 3),República Democrática Popular Lao,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+LBN,False,Solar,52.92,Eólica,35.65,Moderada,Solar,52.92,35.65,9.07,0.0,2.35,Hoy (datos de la Fase 3),Líbano,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+LBR,False,Solar,47.7,Eólica,42.78,Reñida,Eólica,47.7,42.78,9.52,0.0,0.0,Hoy (datos de la Fase 3),Liberia,África al sur del Sahara,Países de ingreso bajo
+LBY,True,Eólica,55.8,Solar,44.2,Moderada,Eólica,44.2,55.8,0.0,0.0,0.0,Hoy (datos de la Fase 3),Libia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+LCA,False,Solar,61.28,Eólica,38.72,Clara,Solar,61.28,38.72,0.0,0.0,0.0,Hoy (datos de la Fase 3),Santa Lucía,América Latina y el Caribe,Ingreso mediano alto
+LKA,False,Solar,43.53,Eólica,39.1,Reñida,Eólica,43.53,39.1,17.18,0.0,0.2,Hoy (datos de la Fase 3),Sri Lanka,Asia meridional,Ingreso mediano alto
+LSO,False,Solar,47.92,Hidroeléctrica,27.72,Moderada,Solar,47.92,24.35,27.72,0.0,0.0,Hoy (datos de la Fase 3),Lesotho,África al sur del Sahara,Países de ingreso mediano bajo
+LTU,False,Eólica,49.4,Solar,30.63,Moderada,Eólica,30.63,49.4,16.88,0.0,3.1,Hoy (datos de la Fase 3),Lituania,Europa y Asia central,Ingreso alto
+LUX,False,Eólica,48.08,Solar,36.78,Moderada,Eólica,36.78,48.08,10.78,0.0,4.38,Hoy (datos de la Fase 3),Luxemburgo,Europa y Asia central,Ingreso alto
+LVA,False,Solar,52.52,Eólica,35.93,Moderada,Solar,52.52,35.93,6.78,0.0,4.78,Hoy (datos de la Fase 3),Letonia,Europa y Asia central,Ingreso alto
+MAR,False,Eólica,46.88,Solar,46.85,Reñida,Eólica,46.85,46.88,2.75,0.0,3.52,Hoy (datos de la Fase 3),Marruecos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+MDA,False,Solar,61.32,Hidroeléctrica,21.1,Clara,Solar,61.32,17.42,21.1,0.0,0.15,Hoy (datos de la Fase 3),República de Moldova,Europa y Asia central,Ingreso mediano alto
+MDG,True,Solar,51.08,Eólica,27.55,Clara,Solar,51.08,27.55,21.38,0.0,0.0,Hoy (datos de la Fase 3),Madagascar,África al sur del Sahara,Países de ingreso bajo
+MEX,False,Solar,61.15,Eólica,26.02,Clara,Solar,61.15,26.02,8.7,4.08,0.05,Hoy (datos de la Fase 3),México,América Latina y el Caribe,Ingreso mediano alto
+MKD,False,Solar,47.32,Eólica,42.32,Reñida,Eólica,47.32,42.32,7.72,0.0,2.62,Hoy (datos de la Fase 3),Macedonia del Norte,Europa y Asia central,Ingreso mediano alto
+MLI,False,Solar,52.18,Eólica,36.98,Moderada,Solar,52.18,36.98,10.8,0.0,0.05,Hoy (datos de la Fase 3),Malí,África al sur del Sahara,Países de ingreso bajo
+MMR,False,Solar,58.88,Eólica,31.5,Clara,Solar,58.88,31.5,7.1,0.0,2.53,Hoy (datos de la Fase 3),Myanmar,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+MNE,True,Solar,57.45,Eólica,33.7,Clara,Solar,57.45,33.7,8.85,0.0,0.0,Hoy (datos de la Fase 3),Montenegro,Europa y Asia central,Ingreso mediano alto
+MNG,False,Solar,48.18,Eólica,44.12,Reñida,Eólica,48.18,44.12,7.7,0.0,0.0,Hoy (datos de la Fase 3),Mongolia,Asia oriental y el Pacífico,Ingreso mediano alto
+MOZ,False,Solar,44.22,Hidroeléctrica,28.88,Moderada,Solar,44.22,26.9,28.88,0.0,0.0,Hoy (datos de la Fase 3),Mozambique,África al sur del Sahara,Países de ingreso bajo
+MRT,False,Eólica,51.05,Solar,48.95,Reñida,Eólica,48.95,51.05,0.0,0.0,0.0,Hoy (datos de la Fase 3),Mauritania,África al sur del Sahara,Países de ingreso mediano bajo
+MUS,False,Solar,70.08,Eólica,17.22,Clara,Solar,70.08,17.22,10.27,0.0,2.43,Hoy (datos de la Fase 3),Mauricio,África al sur del Sahara,Ingreso mediano alto
+MWI,False,Solar,50.6,Eólica,28.78,Clara,Solar,50.6,28.78,20.55,0.0,0.08,Hoy (datos de la Fase 3),Malawi,África al sur del Sahara,Países de ingreso bajo
+MYS,False,Solar,51.55,Eólica,25.02,Clara,Solar,51.55,25.02,23.12,0.0,0.3,Hoy (datos de la Fase 3),Malasia,Asia oriental y el Pacífico,Ingreso mediano alto
+NAM,False,Solar,44.25,Eólica,42.6,Reñida,Eólica,44.25,42.6,11.28,0.0,1.88,Hoy (datos de la Fase 3),Namibia,África al sur del Sahara,Países de ingreso mediano bajo
+NER,True,Solar,56.32,Eólica,43.68,Moderada,Eólica,56.32,43.68,0.0,0.0,0.0,Hoy (datos de la Fase 3),Níger,África al sur del Sahara,Países de ingreso bajo
+NGA,False,Solar,48.3,Eólica,32.05,Moderada,Solar,48.3,32.05,19.45,0.0,0.2,Hoy (datos de la Fase 3),Nigeria,África al sur del Sahara,Países de ingreso mediano bajo
+NIC,True,Solar,43.68,Eólica,36.4,Reñida,Solar,43.68,36.4,16.5,2.72,0.7,Hoy (datos de la Fase 3),Nicaragua,América Latina y el Caribe,Países de ingreso mediano bajo
+NLD,False,Eólica,42.92,Solar,42.6,Reñida,Eólica,42.6,42.92,5.42,0.0,9.05,Hoy (datos de la Fase 3),Países Bajos,Europa y Asia central,Ingreso alto
+NOR,False,Eólica,42.65,Solar,35.45,Reñida,Eólica,35.45,42.65,21.72,0.0,0.18,Hoy (datos de la Fase 3),Noruega,Europa y Asia central,Ingreso alto
+NPL,False,Solar,40.28,Eólica,36.78,Reñida,Eólica,40.28,36.78,22.9,0.0,0.05,Hoy (datos de la Fase 3),Nepal,Asia meridional,Países de ingreso mediano bajo
+NZL,False,Solar,41.7,Eólica,34.7,Reñida,Solar,41.7,34.7,16.95,6.0,0.65,Hoy (datos de la Fase 3),Nueva Zelandia,Asia oriental y el Pacífico,Ingreso alto
+OMN,False,Solar,79.05,Eólica,20.95,Clara,Solar,79.05,20.95,0.0,0.0,0.0,Hoy (datos de la Fase 3),Omán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+PAK,False,Solar,58.32,Eólica,23.4,Clara,Solar,58.32,23.4,14.7,0.0,3.58,Hoy (datos de la Fase 3),Pakistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+PAN,False,Solar,57.12,Hidroeléctrica,21.48,Clara,Solar,57.12,21.15,21.48,0.0,0.25,Hoy (datos de la Fase 3),Panamá,América Latina y el Caribe,Ingreso alto
+PER,False,Solar,42.7,Eólica,34.25,Reñida,Eólica,42.7,34.25,22.98,0.0,0.08,Hoy (datos de la Fase 3),Perú,América Latina y el Caribe,Ingreso mediano alto
+PHL,False,Solar,49.32,Eólica,31.57,Moderada,Solar,49.32,31.57,13.4,5.58,0.12,Hoy (datos de la Fase 3),Filipinas,Asia oriental y el Pacífico,Ingreso mediano alto
+PNG,True,Eólica,43.88,Solar,38.6,Reñida,Eólica,38.6,43.88,17.15,0.35,0.02,Hoy (datos de la Fase 3),Papua Nueva Guinea,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+POL,False,Eólica,51.25,Solar,32.45,Moderada,Eólica,32.45,51.25,11.38,0.0,4.92,Hoy (datos de la Fase 3),Polonia,Europa y Asia central,Ingreso alto
+PRK,False,Solar,44.95,Eólica,43.4,Reñida,Eólica,44.95,43.4,11.65,0.0,0.0,Hoy (datos de la Fase 3),"Corea, República Popular Democrática de",Asia oriental y el Pacífico,Países de ingreso bajo
+PRT,False,Solar,58.03,Eólica,25.92,Clara,Solar,58.03,25.92,6.48,6.72,2.85,Hoy (datos de la Fase 3),Portugal,Europa y Asia central,Ingreso alto
+PRY,False,Solar,48.48,Eólica,31.13,Moderada,Solar,48.48,31.13,16.73,0.0,3.68,Hoy (datos de la Fase 3),Paraguay,América Latina y el Caribe,Ingreso mediano alto
+PSE,False,Solar,58.63,Eólica,41.38,Moderada,Solar,58.63,41.38,0.0,0.0,0.0,Hoy (datos de la Fase 3),Ribera Occidental y Gaza,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+QAT,False,Solar,65.55,Eólica,27.05,Clara,Solar,65.55,27.05,0.0,0.0,7.4,Hoy (datos de la Fase 3),Qatar,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ROU,False,Solar,50.55,Eólica,35.6,Moderada,Solar,50.55,35.6,12.9,0.0,0.95,Hoy (datos de la Fase 3),Rumania,Europa y Asia central,Ingreso alto
+RUS,False,Solar,46.65,Eólica,25.9,Moderada,Solar,46.65,25.9,22.35,4.68,0.43,Hoy (datos de la Fase 3),Federación de Rusia,Europa y Asia central,Ingreso alto
+RWA,True,Solar,43.82,Eólica,38.88,Reñida,Eólica,43.82,38.88,17.3,0.0,0.0,Hoy (datos de la Fase 3),Rwanda,África al sur del Sahara,Países de ingreso bajo
+SAU,False,Eólica,58.88,Solar,41.12,Moderada,Eólica,41.12,58.88,0.0,0.0,0.0,Hoy (datos de la Fase 3),Arabia Saudita,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+SDN,False,Solar,53.9,Hidroeléctrica,25.12,Clara,Solar,53.9,20.98,25.12,0.0,0.0,Hoy (datos de la Fase 3),Sudán,África al sur del Sahara,Países de ingreso bajo
+SEN,False,Solar,60.42,Eólica,21.15,Clara,Solar,60.42,21.15,18.38,0.0,0.05,Hoy (datos de la Fase 3),Senegal,África al sur del Sahara,Países de ingreso mediano bajo
+SGP,True,Eólica,50.7,Solar,45.92,Reñida,Eólica,45.92,50.7,0.0,0.0,3.38,Hoy (datos de la Fase 3),Singapur,Asia oriental y el Pacífico,Ingreso alto
+SLE,True,Solar,51.55,Eólica,31.6,Moderada,Solar,51.55,31.6,16.85,0.0,0.0,Hoy (datos de la Fase 3),Sierra Leona,África al sur del Sahara,Países de ingreso bajo
+SLV,False,Solar,58.9,Eólica,19.23,Clara,Solar,58.9,19.23,13.08,8.65,0.15,Hoy (datos de la Fase 3),El Salvador,América Latina y el Caribe,Ingreso mediano alto
+SRB,False,Solar,47.7,Eólica,30.95,Moderada,Solar,47.7,30.95,18.4,0.0,2.95,Hoy (datos de la Fase 3),Serbia,Europa y Asia central,Ingreso mediano alto
+SUR,True,Solar,41.65,Eólica,30.98,Moderada,Solar,41.65,30.98,26.4,0.0,0.98,Hoy (datos de la Fase 3),Suriname,América Latina y el Caribe,Ingreso mediano alto
+SVK,True,Eólica,47.15,Solar,40.08,Reñida,Eólica,40.08,47.15,8.38,0.0,4.4,Hoy (datos de la Fase 3),República Eslovaca,Europa y Asia central,Ingreso alto
+SVN,False,Solar,40.65,Eólica,40.33,Reñida,Eólica,40.65,40.33,18.38,0.0,0.65,Hoy (datos de la Fase 3),Eslovenia,Europa y Asia central,Ingreso alto
+SWE,False,Solar,43.25,Eólica,33.65,Reñida,Solar,43.25,33.65,22.92,0.0,0.18,Hoy (datos de la Fase 3),Suecia,Europa y Asia central,Ingreso alto
+SWZ,True,Solar,54.08,Eólica,23.55,Clara,Solar,54.08,23.55,22.35,0.0,0.02,Hoy (datos de la Fase 3),Eswatini,África al sur del Sahara,Países de ingreso mediano bajo
+SYR,False,Solar,57.12,Eólica,36.4,Clara,Solar,57.12,36.4,2.95,0.0,3.52,Hoy (datos de la Fase 3),República Árabe Siria,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+TGO,True,Solar,60.22,Eólica,35.68,Clara,Solar,60.22,35.68,4.1,0.0,0.0,Hoy (datos de la Fase 3),Togo,África al sur del Sahara,Países de ingreso mediano bajo
+THA,False,Solar,66.27,Eólica,18.08,Clara,Solar,66.27,18.08,11.9,0.0,3.75,Hoy (datos de la Fase 3),Tailandia,Asia oriental y el Pacífico,Ingreso mediano alto
+TJK,False,Solar,47.9,Eólica,39.02,Reñida,Solar,47.9,39.02,13.08,0.0,0.0,Hoy (datos de la Fase 3),Tayikistán,Europa y Asia central,Países de ingreso mediano bajo
+TKM,False,Solar,49.32,Eólica,36.7,Moderada,Solar,49.32,36.7,13.98,0.0,0.0,Hoy (datos de la Fase 3),Turkmenistán,Europa y Asia central,Ingreso mediano alto
+TTO,False,Solar,58.42,Eólica,41.58,Moderada,Solar,58.42,41.58,0.0,0.0,0.0,Hoy (datos de la Fase 3),Trinidad y Tobago,América Latina y el Caribe,Ingreso alto
+TUN,False,Solar,77.32,Eólica,18.75,Clara,Solar,77.32,18.75,3.92,0.0,0.0,Hoy (datos de la Fase 3),Túnez,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+TUR,False,Solar,54.52,Eólica,30.75,Clara,Solar,54.52,30.75,6.98,6.32,1.42,Hoy (datos de la Fase 3),Turquía,Europa y Asia central,Ingreso mediano alto
+TWN,False,Solar,44.18,Eólica,40.65,Reñida,Eólica,44.18,40.65,6.58,6.18,2.43,Hoy (datos de la Fase 3),Taiwán,Asia oriental y el Pacífico,
+TZA,True,Solar,52.08,Eólica,28.32,Clara,Solar,52.08,28.32,19.55,0.0,0.05,Hoy (datos de la Fase 3),Tanzanía,África al sur del Sahara,Países de ingreso mediano bajo
+UGA,False,Solar,53.18,Eólica,31.67,Clara,Solar,53.18,31.67,14.48,0.0,0.68,Hoy (datos de la Fase 3),Uganda,África al sur del Sahara,Países de ingreso bajo
+UKR,False,Solar,67.22,Eólica,20.82,Clara,Solar,67.22,20.82,8.08,0.0,3.88,Hoy (datos de la Fase 3),Ucrania,Europa y Asia central,Ingreso mediano alto
+URY,False,Solar,47.65,Eólica,38.05,Reñida,Solar,47.65,38.05,11.1,0.0,3.2,Hoy (datos de la Fase 3),Uruguay,América Latina y el Caribe,Ingreso alto
+USA,False,Solar,52.25,Eólica,27.32,Clara,Solar,52.25,27.32,13.05,6.45,0.92,Hoy (datos de la Fase 3),Estados Unidos,América del Norte,Ingreso alto
+UZB,False,Solar,55.28,Eólica,35.65,Moderada,Solar,55.28,35.65,9.07,0.0,0.0,Hoy (datos de la Fase 3),Uzbekistán,Europa y Asia central,Países de ingreso mediano bajo
+VEN,False,Solar,51.12,Eólica,29.95,Clara,Solar,51.12,29.95,18.9,0.0,0.02,Hoy (datos de la Fase 3),Venezuela,América Latina y el Caribe,Países de ingreso mediano bajo
+VNM,False,Solar,60.5,Hidroeléctrica,21.05,Clara,Solar,60.5,18.38,21.05,0.0,0.08,Hoy (datos de la Fase 3),Viet Nam,Asia oriental y el Pacífico,Ingreso mediano alto
+YEM,False,Solar,60.92,Eólica,39.07,Clara,Solar,60.92,39.07,0.0,0.0,0.0,Hoy (datos de la Fase 3),"Yemen, Rep. del","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+ZAF,False,Solar,57.32,Eólica,31.57,Clara,Solar,57.32,31.57,11.02,0.0,0.08,Hoy (datos de la Fase 3),Sudáfrica,África al sur del Sahara,Ingreso mediano alto
+ZMB,False,Solar,44.4,Eólica,30.98,Moderada,Solar,44.4,30.98,24.58,0.0,0.05,Hoy (datos de la Fase 3),Zambia,África al sur del Sahara,Países de ingreso mediano bajo
+ZWE,True,Solar,52.6,Hidroeléctrica,27.9,Clara,Solar,52.6,19.5,27.9,0.0,0.0,Hoy (datos de la Fase 3),Zimbabwe,África al sur del Sahara,Países de ingreso mediano bajo
+AFG,False,Solar,49.5,Geotérmica,23.95,Moderada,Solar,49.5,21.65,4.9,23.95,0.0,Prueba de concepto,Afganistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+AGO,False,Solar,46.38,Geotérmica,23.45,Moderada,Solar,46.38,18.8,11.1,23.45,0.27,Prueba de concepto,Angola,África al sur del Sahara,Países de ingreso mediano bajo
+ALB,False,Solar,38.98,Eólica,29.58,Reñida,Solar,38.98,29.58,7.55,22.7,1.2,Prueba de concepto,Albania,Europa y Asia central,Ingreso mediano alto
+ARE,False,Solar,65.4,Geotérmica,23.98,Clara,Solar,65.4,8.18,0.0,23.98,2.45,Prueba de concepto,Emiratos Árabes Unidos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ARG,False,Eólica,37.05,Solar,36.15,Reñida,Eólica,36.15,37.05,7.68,18.3,0.82,Prueba de concepto,Argentina,América Latina y el Caribe,Ingreso mediano alto
+ARM,False,Solar,42.92,Geotérmica,26.52,Moderada,Solar,42.92,26.42,4.12,26.52,0.0,Prueba de concepto,Armenia,Europa y Asia central,Ingreso mediano alto
+AUS,False,Solar,46.12,Geotérmica,26.28,Moderada,Solar,46.12,18.38,8.75,26.28,0.48,Prueba de concepto,Australia,Asia oriental y el Pacífico,Ingreso alto
+AUT,False,Solar,44.22,Geotérmica,26.0,Moderada,Solar,44.22,15.9,13.63,26.0,0.25,Prueba de concepto,Austria,Europa y Asia central,Ingreso alto
+AZE,False,Solar,57.75,Geotérmica,29.28,Clara,Solar,57.75,7.38,3.98,29.28,1.62,Prueba de concepto,Azerbaiyán,Europa y Asia central,Ingreso mediano alto
+BDI,False,Solar,43.82,Eólica,19.98,Moderada,Solar,43.82,19.98,17.82,17.92,0.45,Prueba de concepto,Burundi,África al sur del Sahara,Países de ingreso bajo
+BEL,False,Solar,36.45,Eólica,27.25,Reñida,Solar,36.45,27.25,9.93,25.52,0.85,Prueba de concepto,Bélgica,Europa y Asia central,Ingreso alto
+BEN,True,Solar,48.85,Eólica,26.0,Moderada,Solar,48.85,26.0,0.0,25.15,0.0,Prueba de concepto,Benin,África al sur del Sahara,Países de ingreso mediano bajo
+BFA,False,Solar,46.08,Eólica,23.5,Moderada,Solar,46.08,23.5,7.58,21.75,1.1,Prueba de concepto,Burkina Faso,África al sur del Sahara,Países de ingreso bajo
+BGD,False,Solar,55.12,Geotérmica,23.1,Clara,Solar,55.12,9.75,12.02,23.1,0.0,Prueba de concepto,Bangladesh,Asia meridional,Países de ingreso mediano bajo
+BGR,False,Solar,53.05,Geotérmica,27.38,Clara,Solar,53.05,13.63,3.18,27.38,2.78,Prueba de concepto,Bulgaria,Europa y Asia central,Ingreso alto
+BHR,True,Solar,56.03,Geotérmica,24.38,Clara,Solar,56.03,19.6,0.0,24.38,0.0,Prueba de concepto,Bahrein,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+BIH,False,Solar,45.92,Geotérmica,24.85,Moderada,Solar,45.92,19.53,9.25,24.85,0.45,Prueba de concepto,Bosnia y Herzegovina,Europa y Asia central,Ingreso mediano alto
+BLR,False,Solar,40.78,Geotérmica,30.98,Reñida,Solar,40.78,14.45,13.2,30.98,0.6,Prueba de concepto,Belarús,Europa y Asia central,Ingreso mediano alto
+BOL,False,Solar,48.85,Geotérmica,23.25,Moderada,Solar,48.85,16.65,11.22,23.25,0.02,Prueba de concepto,Bolivia,América Latina y el Caribe,Países de ingreso mediano bajo
+BRA,False,Solar,41.92,Eólica,24.3,Moderada,Solar,41.92,24.3,11.02,22.52,0.22,Prueba de concepto,Brasil,América Latina y el Caribe,Ingreso mediano alto
+BRN,False,Solar,50.2,Geotérmica,25.02,Clara,Solar,50.2,24.78,0.0,25.02,0.0,Prueba de concepto,Brunei Darussalam,Asia oriental y el Pacífico,Ingreso alto
+BTN,False,Solar,40.0,Eólica,26.02,Moderada,Solar,40.0,26.02,13.6,20.38,0.0,Prueba de concepto,Bhután,Asia meridional,Países de ingreso mediano bajo
+BWA,False,Solar,52.62,Geotérmica,24.75,Clara,Solar,52.62,22.62,0.0,24.75,0.0,Prueba de concepto,Botswana,África al sur del Sahara,Ingreso mediano alto
+CAF,True,Solar,46.02,Hidroeléctrica,23.7,Moderada,Solar,46.02,15.58,23.7,14.7,0.0,Prueba de concepto,República Centroafricana,África al sur del Sahara,Países de ingreso bajo
+CAN,False,Solar,44.22,Geotérmica,23.28,Moderada,Solar,44.22,18.38,13.95,23.28,0.18,Prueba de concepto,Canadá,América del Norte,Ingreso alto
+CHE,False,Solar,37.7,Geotérmica,30.58,Reñida,Solar,37.7,17.65,11.92,30.58,2.15,Prueba de concepto,Suiza,Europa y Asia central,Ingreso alto
+CHL,False,Solar,59.72,Geotérmica,21.82,Clara,Solar,59.72,10.08,7.28,21.82,1.1,Prueba de concepto,Chile,América Latina y el Caribe,Ingreso alto
+CHN,False,Solar,44.75,Geotérmica,26.62,Moderada,Solar,44.75,16.55,11.6,26.62,0.48,Prueba de concepto,China,Asia oriental y el Pacífico,Ingreso mediano alto
+CIV,True,Solar,44.35,Eólica,24.75,Moderada,Solar,44.35,24.75,9.1,21.8,0.0,Prueba de concepto,Côte d'Ivoire,África al sur del Sahara,Países de ingreso mediano bajo
+CMR,False,Solar,32.28,Eólica,29.42,Reñida,Solar,32.28,29.42,19.1,19.2,0.0,Prueba de concepto,Camerún,África al sur del Sahara,Países de ingreso mediano bajo
+COD,True,Solar,37.45,Eólica,27.88,Reñida,Solar,37.45,27.88,13.2,20.75,0.73,Prueba de concepto,"Congo, República Democrática del",África al sur del Sahara,Países de ingreso bajo
+COG,False,Solar,41.35,Geotérmica,22.9,Moderada,Solar,41.35,20.67,15.02,22.9,0.05,Prueba de concepto,"Congo, República del",África al sur del Sahara,Países de ingreso mediano bajo
+COL,False,Solar,40.55,Eólica,26.25,Moderada,Solar,40.55,26.25,12.3,20.52,0.38,Prueba de concepto,Colombia,América Latina y el Caribe,Ingreso mediano alto
+CPV,False,Solar,59.38,Geotérmica,26.22,Clara,Solar,59.38,14.4,0.0,26.22,0.0,Prueba de concepto,Cabo Verde,África al sur del Sahara,Ingreso mediano alto
+CRI,False,Solar,43.18,Eólica,24.2,Moderada,Solar,43.18,24.2,11.35,21.25,0.02,Prueba de concepto,Costa Rica,América Latina y el Caribe,Ingreso alto
+CUB,False,Solar,43.25,Eólica,28.88,Moderada,Solar,43.25,28.88,6.65,21.2,0.02,Prueba de concepto,Cuba,América Latina y el Caribe,Ingreso mediano alto
+CYP,False,Solar,59.88,Geotérmica,30.02,Clara,Solar,59.88,8.05,0.0,30.02,2.05,Prueba de concepto,Chipre,Europa y Asia central,Ingreso alto
+CZE,False,Solar,44.82,Geotérmica,30.72,Moderada,Solar,44.82,17.88,4.12,30.72,2.45,Prueba de concepto,República Checa,Europa y Asia central,Ingreso alto
+DEU,False,Solar,38.62,Geotérmica,26.58,Moderada,Solar,38.62,18.38,15.92,26.58,0.5,Prueba de concepto,Alemania,Europa y Asia central,Ingreso alto
+DJI,False,Solar,57.18,Geotérmica,25.15,Clara,Solar,57.18,17.68,0.0,25.15,0.0,Prueba de concepto,Djibouti,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+DNK,False,Solar,39.07,Geotérmica,26.92,Moderada,Solar,39.07,24.4,9.2,26.92,0.4,Prueba de concepto,Dinamarca,Europa y Asia central,Ingreso alto
+DOM,False,Solar,51.15,Geotérmica,24.4,Clara,Solar,51.15,18.48,4.62,24.4,1.35,Prueba de concepto,República Dominicana,América Latina y el Caribe,Ingreso mediano alto
+DZA,False,Solar,67.47,Geotérmica,24.12,Clara,Solar,67.47,6.5,1.9,24.12,0.0,Prueba de concepto,Argelia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ECU,True,Solar,36.3,Eólica,26.72,Reñida,Solar,36.3,26.72,14.32,22.6,0.05,Prueba de concepto,Ecuador,América Latina y el Caribe,Ingreso mediano alto
+EGY,False,Solar,43.45,Geotérmica,21.38,Moderada,Solar,43.45,19.75,15.38,21.38,0.05,Prueba de concepto,"Egipto, República Árabe de","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+ERI,True,Solar,54.28,Geotérmica,24.55,Clara,Solar,54.28,21.18,0.0,24.55,0.0,Prueba de concepto,Eritrea,África al sur del Sahara,Países de ingreso bajo
+ESH,False,Solar,55.0,Geotérmica,24.48,Clara,Solar,55.0,20.52,0.0,24.48,0.0,Prueba de concepto,Sáhara Occidental,"Oriente Medio, Norte de África, Afganistán y Pakistán",
+ESP,False,Solar,55.47,Geotérmica,26.82,Clara,Solar,55.47,12.02,4.28,26.82,1.4,Prueba de concepto,España,Europa y Asia central,Ingreso alto
+EST,False,Solar,37.82,Geotérmica,27.32,Moderada,Solar,37.82,23.15,11.2,27.32,0.5,Prueba de concepto,Estonia,Europa y Asia central,Ingreso alto
+ETH,True,Solar,57.98,Geotérmica,23.35,Clara,Solar,57.98,8.0,9.55,23.35,1.12,Prueba de concepto,Etiopía,África al sur del Sahara,Países de ingreso bajo
+FIN,False,Solar,33.42,Eólica,26.15,Reñida,Solar,33.42,26.15,15.95,24.3,0.18,Prueba de concepto,Finlandia,Europa y Asia central,Ingreso alto
+FJI,True,Solar,41.98,Geotérmica,23.7,Moderada,Solar,41.98,21.4,12.9,23.7,0.02,Prueba de concepto,Fiji,Asia oriental y el Pacífico,Ingreso mediano alto
+FRA,False,Solar,45.8,Geotérmica,27.08,Moderada,Solar,45.8,17.27,9.12,27.08,0.73,Prueba de concepto,Francia,Europa y Asia central,Ingreso alto
+GAB,False,Solar,41.02,Eólica,28.25,Moderada,Solar,41.02,28.25,6.7,22.78,1.25,Prueba de concepto,Gabón,África al sur del Sahara,Ingreso mediano alto
+GBR,False,Solar,32.72,Eólica,31.6,Reñida,Eólica,32.72,31.6,9.38,25.5,0.8,Prueba de concepto,Reino Unido,Europa y Asia central,Ingreso alto
+GEO,True,Eólica,39.22,Solar,32.92,Reñida,Eólica,32.92,39.22,7.72,20.12,0.0,Prueba de concepto,Georgia,Europa y Asia central,Ingreso mediano alto
+GHA,False,Solar,41.42,Geotérmica,22.5,Moderada,Solar,41.42,20.38,15.65,22.5,0.05,Prueba de concepto,Ghana,África al sur del Sahara,Países de ingreso mediano bajo
+GIN,True,Solar,44.88,Eólica,23.55,Moderada,Solar,44.88,23.55,10.4,21.18,0.0,Prueba de concepto,Guinea,África al sur del Sahara,Países de ingreso mediano bajo
+GMB,False,Solar,53.18,Geotérmica,24.65,Clara,Solar,53.18,22.18,0.0,24.65,0.0,Prueba de concepto,Gambia,África al sur del Sahara,Países de ingreso bajo
+GNB,False,Solar,52.58,Geotérmica,24.78,Clara,Solar,52.58,22.65,0.0,24.78,0.0,Prueba de concepto,Guinea-Bissau,África al sur del Sahara,Países de ingreso bajo
+GNQ,False,Solar,40.45,Eólica,28.05,Moderada,Solar,40.45,28.05,9.43,22.08,0.0,Prueba de concepto,Guinea Ecuatorial,África al sur del Sahara,Ingreso mediano alto
+GRC,False,Solar,52.2,Geotérmica,27.0,Clara,Solar,52.2,15.8,3.58,27.0,1.42,Prueba de concepto,Grecia,Europa y Asia central,Ingreso alto
+GTM,False,Solar,46.15,Geotérmica,23.82,Moderada,Solar,46.15,18.35,11.6,23.82,0.08,Prueba de concepto,Guatemala,América Latina y el Caribe,Ingreso mediano alto
+GUF,False,Solar,46.68,Geotérmica,22.8,Moderada,Solar,46.68,19.25,10.88,22.8,0.4,Prueba de concepto,Guayana Francesa,América Latina y el Caribe,
+GUY,True,Solar,45.38,Eólica,21.42,Moderada,Solar,45.38,21.42,11.77,21.42,0.0,Prueba de concepto,Guyana,América Latina y el Caribe,Ingreso alto
+HND,False,Solar,48.12,Geotérmica,23.5,Moderada,Solar,48.12,16.62,11.62,23.5,0.12,Prueba de concepto,Honduras,América Latina y el Caribe,Países de ingreso mediano bajo
+HRV,False,Solar,42.35,Geotérmica,25.45,Moderada,Solar,42.35,22.38,7.98,25.45,1.85,Prueba de concepto,Croacia,Europa y Asia central,Ingreso alto
+HUN,False,Solar,49.48,Geotérmica,25.62,Moderada,Solar,49.48,12.58,12.02,25.62,0.3,Prueba de concepto,Hungría,Europa y Asia central,Ingreso alto
+IDN,False,Solar,43.82,Eólica,24.28,Moderada,Solar,43.82,24.28,9.7,20.82,1.38,Prueba de concepto,Indonesia,Asia oriental y el Pacífico,Ingreso mediano alto
+IND,False,Solar,52.25,Geotérmica,26.42,Clara,Solar,52.25,9.6,11.65,26.42,0.08,Prueba de concepto,India,Asia meridional,Países de ingreso mediano bajo
+IRL,False,Eólica,36.48,Solar,26.32,Moderada,Eólica,26.32,36.48,9.83,26.25,1.12,Prueba de concepto,Irlanda,Europa y Asia central,Ingreso alto
+IRN,False,Solar,50.4,Geotérmica,26.78,Clara,Solar,50.4,15.95,6.7,26.78,0.18,Prueba de concepto,"Irán, República Islámica del","Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+IRQ,False,Solar,48.92,Geotérmica,25.42,Moderada,Solar,48.92,21.72,3.92,25.42,0.0,Prueba de concepto,Iraq,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ISL,True,Eólica,35.45,Solar,22.98,Moderada,Eólica,22.98,35.45,22.9,18.68,0.0,Prueba de concepto,Islandia,Europa y Asia central,Ingreso alto
+ISR,False,Solar,48.0,Geotérmica,24.3,Moderada,Solar,48.0,16.02,11.42,24.3,0.25,Prueba de concepto,Israel,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ITA,False,Solar,49.4,Geotérmica,29.15,Moderada,Solar,49.4,13.0,7.48,29.15,0.98,Prueba de concepto,Italia,Europa y Asia central,Ingreso alto
+JAM,False,Solar,43.6,Geotérmica,22.9,Moderada,Solar,43.6,19.65,13.85,22.9,0.0,Prueba de concepto,Jamaica,América Latina y el Caribe,Ingreso mediano alto
+JOR,False,Solar,54.12,Geotérmica,19.78,Clara,Solar,54.12,14.77,11.32,19.78,0.0,Prueba de concepto,Jordania,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+JPN,False,Solar,43.72,Geotérmica,24.48,Moderada,Solar,43.72,21.5,7.68,24.48,2.62,Prueba de concepto,Japón,Asia oriental y el Pacífico,Ingreso alto
+KAZ,False,Solar,46.08,Geotérmica,24.65,Moderada,Solar,46.08,19.48,9.65,24.65,0.15,Prueba de concepto,Kazajstán,Europa y Asia central,Ingreso mediano alto
+KEN,False,Solar,48.12,Geotérmica,23.22,Moderada,Solar,48.12,16.83,11.8,23.22,0.02,Prueba de concepto,Kenia,África al sur del Sahara,Países de ingreso mediano bajo
+KGZ,False,Solar,42.45,Eólica,25.52,Moderada,Solar,42.45,25.52,10.5,21.52,0.0,Prueba de concepto,Kirguistán,Europa y Asia central,Países de ingreso mediano bajo
+KHM,False,Solar,46.88,Geotérmica,22.85,Moderada,Solar,46.88,18.58,11.68,22.85,0.02,Prueba de concepto,Camboya,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+KOR,False,Solar,53.72,Geotérmica,28.4,Clara,Solar,53.72,10.52,6.75,28.4,0.6,Prueba de concepto,"Corea, República de",Asia oriental y el Pacífico,Ingreso alto
+KOS,True,Eólica,42.5,Solar,29.25,Moderada,Eólica,29.25,42.5,0.0,28.25,0.0,Prueba de concepto,Kosovo,Europa y Asia central,
+KWT,True,Eólica,42.72,Solar,34.5,Reñida,Eólica,34.5,42.72,0.0,22.78,0.0,Prueba de concepto,Kuwait,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+LAO,False,Solar,44.62,Geotérmica,23.4,Moderada,Solar,44.62,19.4,12.35,23.4,0.22,Prueba de concepto,República Democrática Popular Lao,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+LBN,False,Solar,47.55,Geotérmica,24.6,Moderada,Solar,47.55,20.58,6.65,24.6,0.62,Prueba de concepto,Líbano,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+LBR,False,Solar,43.6,Eólica,26.55,Moderada,Solar,43.6,26.55,6.9,22.95,0.0,Prueba de concepto,Liberia,África al sur del Sahara,Países de ingreso bajo
+LBY,True,Solar,37.9,Eólica,35.25,Reñida,Eólica,37.9,35.25,0.0,26.85,0.0,Prueba de concepto,Libia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+LCA,False,Solar,53.12,Geotérmica,24.65,Clara,Solar,53.12,22.22,0.0,24.65,0.0,Prueba de concepto,Santa Lucía,América Latina y el Caribe,Ingreso mediano alto
+LKA,False,Solar,39.42,Geotérmica,25.12,Moderada,Solar,39.42,23.7,11.65,25.12,0.1,Prueba de concepto,Sri Lanka,Asia meridional,Ingreso mediano alto
+LSO,False,Solar,45.75,Hidroeléctrica,20.15,Moderada,Solar,45.75,17.5,20.15,16.6,0.0,Prueba de concepto,Lesotho,África al sur del Sahara,Países de ingreso mediano bajo
+LTU,False,Eólica,33.05,Geotérmica,29.05,Reñida,Eólica,25.85,33.05,11.08,29.05,0.98,Prueba de concepto,Lituania,Europa y Asia central,Ingreso alto
+LUX,False,Eólica,30.9,Solar,30.88,Reñida,Eólica,30.88,30.9,7.18,29.7,1.35,Prueba de concepto,Luxemburgo,Europa y Asia central,Ingreso alto
+LVA,False,Solar,43.58,Geotérmica,29.38,Moderada,Solar,43.58,21.1,4.38,29.38,1.58,Prueba de concepto,Letonia,Europa y Asia central,Ingreso alto
+MAR,False,Solar,43.0,Eólica,30.98,Moderada,Solar,43.0,30.98,2.05,22.18,1.8,Prueba de concepto,Marruecos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+MDA,False,Solar,49.9,Geotérmica,27.35,Moderada,Solar,49.9,10.08,12.6,27.35,0.08,Prueba de concepto,República de Moldova,Europa y Asia central,Ingreso mediano alto
+MDG,True,Solar,48.25,Geotérmica,19.3,Moderada,Solar,48.25,18.48,13.98,19.3,0.0,Prueba de concepto,Madagascar,África al sur del Sahara,Países de ingreso bajo
+MEX,False,Solar,54.05,Geotérmica,23.25,Clara,Solar,54.05,15.08,7.6,23.25,0.02,Prueba de concepto,México,América Latina y el Caribe,Ingreso mediano alto
+MKD,False,Solar,41.55,Geotérmica,27.45,Moderada,Solar,41.55,24.72,5.4,27.45,0.88,Prueba de concepto,Macedonia del Norte,Europa y Asia central,Ingreso mediano alto
+MLI,False,Solar,46.32,Geotérmica,23.1,Moderada,Solar,46.32,22.08,8.48,23.1,0.02,Prueba de concepto,Malí,África al sur del Sahara,Países de ingreso bajo
+MMR,False,Solar,51.55,Geotérmica,24.78,Clara,Solar,51.55,17.6,5.32,24.78,0.75,Prueba de concepto,Myanmar,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+MNE,True,Solar,50.52,Geotérmica,24.12,Clara,Solar,50.52,19.53,5.82,24.12,0.0,Prueba de concepto,Montenegro,Europa y Asia central,Ingreso mediano alto
+MNG,False,Solar,44.28,Eólica,27.45,Moderada,Solar,44.28,27.45,5.52,22.75,0.0,Prueba de concepto,Mongolia,Asia oriental y el Pacífico,Ingreso mediano alto
+MOZ,False,Solar,39.75,Hidroeléctrica,22.02,Moderada,Solar,39.75,19.7,22.02,18.52,0.0,Prueba de concepto,Mozambique,África al sur del Sahara,Países de ingreso bajo
+MRT,False,Solar,42.28,Eólica,31.05,Moderada,Solar,42.28,31.05,0.0,26.67,0.0,Prueba de concepto,Mauritania,África al sur del Sahara,Países de ingreso mediano bajo
+MUS,False,Solar,53.58,Geotérmica,30.12,Clara,Solar,53.58,9.25,6.35,30.12,0.7,Prueba de concepto,Mauricio,África al sur del Sahara,Ingreso mediano alto
+MWI,False,Solar,46.15,Geotérmica,23.15,Moderada,Solar,46.15,17.77,12.88,23.15,0.05,Prueba de concepto,Malawi,África al sur del Sahara,Países de ingreso bajo
+MYS,False,Solar,47.92,Geotérmica,21.82,Moderada,Solar,47.92,15.95,14.15,21.82,0.15,Prueba de concepto,Malasia,Asia oriental y el Pacífico,Ingreso mediano alto
+NAM,False,Solar,43.9,Eólica,28.1,Moderada,Solar,43.9,28.1,9.0,18.22,0.78,Prueba de concepto,Namibia,África al sur del Sahara,Países de ingreso mediano bajo
+NER,True,Solar,48.78,Eólica,26.05,Moderada,Solar,48.78,26.05,0.0,25.17,0.0,Prueba de concepto,Níger,África al sur del Sahara,Países de ingreso bajo
+NGA,False,Solar,44.22,Geotérmica,23.58,Moderada,Solar,44.22,19.62,12.48,23.58,0.1,Prueba de concepto,Nigeria,África al sur del Sahara,Países de ingreso mediano bajo
+NIC,True,Solar,44.92,Geotérmica,23.02,Moderada,Solar,44.92,20.7,11.05,23.02,0.3,Prueba de concepto,Nicaragua,América Latina y el Caribe,Países de ingreso mediano bajo
+NLD,False,Solar,35.8,Eólica,29.7,Reñida,Solar,35.8,29.7,3.52,25.37,5.6,Prueba de concepto,Países Bajos,Europa y Asia central,Ingreso alto
+NOR,False,Solar,32.5,Eólica,27.85,Reñida,Solar,32.5,27.85,14.27,25.28,0.1,Prueba de concepto,Noruega,Europa y Asia central,Ingreso alto
+NPL,False,Solar,37.28,Eólica,24.25,Moderada,Solar,37.28,24.25,14.9,23.55,0.02,Prueba de concepto,Nepal,Asia meridional,Países de ingreso mediano bajo
+NZL,False,Solar,37.52,Eólica,26.98,Moderada,Solar,37.52,26.98,13.08,21.9,0.52,Prueba de concepto,Nueva Zelandia,Asia oriental y el Pacífico,Ingreso alto
+OMN,False,Solar,62.35,Geotérmica,26.45,Clara,Solar,62.35,11.2,0.0,26.45,0.0,Prueba de concepto,Omán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+PAK,False,Solar,51.3,Geotérmica,23.02,Clara,Solar,51.3,14.37,10.25,23.02,1.05,Prueba de concepto,Pakistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+PAN,False,Solar,49.28,Geotérmica,24.78,Moderada,Solar,49.28,12.8,13.08,24.78,0.08,Prueba de concepto,Panamá,América Latina y el Caribe,Ingreso alto
+PER,False,Solar,41.15,Eólica,22.9,Moderada,Solar,41.15,22.9,15.48,20.42,0.05,Prueba de concepto,Perú,América Latina y el Caribe,Ingreso mediano alto
+PHL,False,Solar,45.45,Geotérmica,25.05,Moderada,Solar,45.45,19.23,10.17,25.05,0.1,Prueba de concepto,Filipinas,Asia oriental y el Pacífico,Ingreso mediano alto
+PNG,False,Solar,44.62,Geotérmica,23.98,Moderada,Solar,44.62,20.45,10.92,23.98,0.02,Prueba de concepto,Papua Nueva Guinea,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+POL,False,Eólica,37.5,Solar,27.1,Moderada,Eólica,27.1,37.5,8.0,25.37,2.02,Prueba de concepto,Polonia,Europa y Asia central,Ingreso alto
+PRK,False,Solar,41.0,Eólica,28.18,Moderada,Solar,41.0,28.18,8.4,22.42,0.0,Prueba de concepto,"Corea, República Popular Democrática de",Asia oriental y el Pacífico,Países de ingreso bajo
+PRT,False,Solar,50.52,Geotérmica,26.12,Clara,Solar,50.52,17.25,4.62,26.12,1.48,Prueba de concepto,Portugal,Europa y Asia central,Ingreso alto
+PRY,False,Solar,44.15,Eólica,23.8,Moderada,Solar,44.15,23.8,13.18,16.98,1.9,Prueba de concepto,Paraguay,América Latina y el Caribe,Ingreso mediano alto
+PSE,False,Solar,51.08,Geotérmica,24.92,Clara,Solar,51.08,24.0,0.0,24.92,0.0,Prueba de concepto,Ribera Occidental y Gaza,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+QAT,False,Solar,56.7,Geotérmica,22.95,Clara,Solar,56.7,16.88,0.0,22.95,3.48,Prueba de concepto,Qatar,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ROU,False,Solar,42.12,Geotérmica,27.85,Moderada,Solar,42.12,20.55,9.0,27.85,0.48,Prueba de concepto,Rumania,Europa y Asia central,Ingreso alto
+RUS,False,Solar,41.9,Geotérmica,26.5,Moderada,Solar,41.9,17.22,14.12,26.5,0.25,Prueba de concepto,Federación de Rusia,Europa y Asia central,Ingreso alto
+RWA,True,Solar,40.88,Eólica,26.5,Moderada,Solar,40.88,26.5,11.65,20.98,0.0,Prueba de concepto,Rwanda,África al sur del Sahara,Países de ingreso bajo
+SAU,False,Solar,40.17,Eólica,39.22,Reñida,Eólica,40.17,39.22,0.0,20.6,0.0,Prueba de concepto,Arabia Saudita,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+SDN,False,Solar,49.05,Hidroeléctrica,19.1,Moderada,Solar,49.05,15.18,19.1,16.68,0.0,Prueba de concepto,Sudán,África al sur del Sahara,Países de ingreso bajo
+SEN,False,Solar,51.92,Geotérmica,23.25,Clara,Solar,51.92,13.05,11.75,23.25,0.02,Prueba de concepto,Senegal,África al sur del Sahara,Países de ingreso mediano bajo
+SGP,False,Solar,39.52,Eólica,29.83,Reñida,Solar,39.52,29.83,0.0,28.92,1.72,Prueba de concepto,Singapur,Asia oriental y el Pacífico,Ingreso alto
+SLE,True,Solar,46.72,Geotérmica,21.02,Moderada,Solar,46.72,20.38,11.88,21.02,0.0,Prueba de concepto,Sierra Leona,África al sur del Sahara,Países de ingreso bajo
+SLV,False,Solar,51.58,Geotérmica,24.18,Clara,Solar,51.58,14.0,10.12,24.18,0.12,Prueba de concepto,El Salvador,América Latina y el Caribe,Ingreso mediano alto
+SRB,False,Solar,42.55,Geotérmica,23.2,Moderada,Solar,42.55,20.82,12.48,23.2,0.95,Prueba de concepto,Serbia,Europa y Asia central,Ingreso mediano alto
+SUR,True,Solar,39.85,Eólica,23.05,Moderada,Solar,39.85,23.05,18.82,17.8,0.48,Prueba de concepto,Suriname,América Latina y el Caribe,Ingreso mediano alto
+SVK,False,Solar,35.7,Eólica,32.38,Reñida,Eólica,35.7,32.38,6.18,24.15,1.6,Prueba de concepto,República Eslovaca,Europa y Asia central,Ingreso alto
+SVN,False,Solar,37.3,Eólica,26.05,Moderada,Solar,37.3,26.05,12.22,24.1,0.32,Prueba de concepto,Eslovenia,Europa y Asia central,Ingreso alto
+SWE,False,Solar,38.75,Geotérmica,25.4,Moderada,Solar,38.75,21.32,14.42,25.4,0.1,Prueba de concepto,Suecia,Europa y Asia central,Ingreso alto
+SWZ,True,Solar,49.42,Geotérmica,21.65,Moderada,Solar,49.42,15.0,13.9,21.65,0.02,Prueba de concepto,Eswatini,África al sur del Sahara,Países de ingreso mediano bajo
+SYR,False,Solar,50.42,Geotérmica,23.12,Clara,Solar,50.42,22.7,2.1,23.12,1.65,Prueba de concepto,República Árabe Siria,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+TGO,True,Solar,52.15,Geotérmica,23.45,Clara,Solar,52.15,21.58,2.82,23.45,0.0,Prueba de concepto,Togo,África al sur del Sahara,Países de ingreso mediano bajo
+THA,False,Solar,55.9,Geotérmica,24.15,Clara,Solar,55.9,10.78,8.28,24.15,0.9,Prueba de concepto,Tailandia,Asia oriental y el Pacífico,Ingreso mediano alto
+TJK,False,Solar,44.18,Eólica,24.88,Moderada,Solar,44.18,24.88,9.15,21.8,0.0,Prueba de concepto,Tayikistán,Europa y Asia central,Países de ingreso mediano bajo
+TKM,False,Solar,45.5,Eólica,23.45,Moderada,Solar,45.5,23.45,9.7,21.35,0.0,Prueba de concepto,Turkmenistán,Europa y Asia central,Ingreso mediano alto
+TTO,False,Solar,50.8,Geotérmica,24.98,Clara,Solar,50.8,24.22,0.0,24.98,0.0,Prueba de concepto,Trinidad y Tobago,América Latina y el Caribe,Ingreso alto
+TUN,False,Solar,59.3,Geotérmica,28.35,Clara,Solar,59.3,9.85,2.5,28.35,0.0,Prueba de concepto,Túnez,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+TUR,False,Solar,48.9,Geotérmica,24.8,Moderada,Solar,48.9,20.2,5.32,24.8,0.78,Prueba de concepto,Turquía,Europa y Asia central,Ingreso mediano alto
+TWN,False,Solar,40.22,Geotérmica,27.0,Moderada,Solar,40.22,26.78,4.72,27.0,1.27,Prueba de concepto,Taiwán,Asia oriental y el Pacífico,
+TZA,True,Solar,47.22,Geotérmica,23.38,Moderada,Solar,47.22,17.1,12.28,23.38,0.02,Prueba de concepto,Tanzanía,África al sur del Sahara,Países de ingreso mediano bajo
+UGA,False,Solar,47.25,Geotérmica,23.82,Moderada,Solar,47.25,18.55,10.0,23.82,0.38,Prueba de concepto,Uganda,África al sur del Sahara,Países de ingreso bajo
+UKR,False,Solar,50.4,Geotérmica,32.95,Moderada,Solar,50.4,10.58,5.03,32.95,1.05,Prueba de concepto,Ucrania,Europa y Asia central,Ingreso mediano alto
+URY,False,Solar,44.0,Eólica,24.55,Moderada,Solar,44.0,24.55,8.62,21.8,1.03,Prueba de concepto,Uruguay,América Latina y el Caribe,Ingreso alto
+USA,False,Solar,47.2,Geotérmica,22.65,Moderada,Solar,47.2,19.6,10.08,22.65,0.48,Prueba de concepto,Estados Unidos,América del Norte,Ingreso alto
+UZB,False,Solar,50.62,Eólica,21.38,Clara,Solar,50.62,21.38,6.62,21.38,0.0,Prueba de concepto,Uzbekistán,Europa y Asia central,Países de ingreso mediano bajo
+VEN,False,Solar,46.45,Geotérmica,22.35,Moderada,Solar,46.45,18.82,12.35,22.35,0.02,Prueba de concepto,Venezuela,América Latina y el Caribe,Países de ingreso mediano bajo
+VNM,False,Solar,50.4,Geotérmica,25.8,Clara,Solar,50.4,11.2,12.58,25.8,0.02,Prueba de concepto,Viet Nam,Asia oriental y el Pacífico,Ingreso mediano alto
+YEM,False,Solar,52.8,Geotérmica,24.72,Clara,Solar,52.8,22.48,0.0,24.72,0.0,Prueba de concepto,"Yemen, Rep. del","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+ZAF,False,Solar,50.2,Geotérmica,23.1,Clara,Solar,50.2,18.22,8.45,23.1,0.02,Prueba de concepto,Sudáfrica,África al sur del Sahara,Ingreso mediano alto
+ZMB,False,Solar,41.6,Geotérmica,22.4,Moderada,Solar,41.6,20.23,15.75,22.4,0.02,Prueba de concepto,Zambia,África al sur del Sahara,Países de ingreso mediano bajo
+ZWE,True,Solar,47.48,Hidroeléctrica,21.8,Moderada,Solar,47.48,13.88,21.8,16.85,0.0,Prueba de concepto,Zimbabwe,África al sur del Sahara,Países de ingreso mediano bajo
+AFG,False,Geotérmica,47.02,Solar,34.72,Moderada,Geotérmica,34.72,14.3,3.95,47.02,0.0,Madura (meta de la industria),Afganistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+AGO,False,Geotérmica,42.92,Solar,34.5,Reñida,Geotérmica,34.5,13.58,8.82,42.92,0.18,Madura (meta de la industria),Angola,África al sur del Sahara,Países de ingreso mediano bajo
+ALB,False,Geotérmica,49.05,Solar,27.4,Moderada,Geotérmica,27.4,17.42,5.3,49.05,0.82,Madura (meta de la industria),Albania,Europa y Asia central,Ingreso mediano alto
+ARE,False,Solar,46.75,Geotérmica,46.02,Reñida,Geotérmica,46.75,5.5,0.0,46.02,1.72,Madura (meta de la industria),Emiratos Árabes Unidos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ARG,False,Geotérmica,41.68,Solar,27.15,Moderada,Geotérmica,27.15,25.15,5.45,41.68,0.57,Madura (meta de la industria),Argentina,América Latina y el Caribe,Ingreso mediano alto
+ARM,False,Geotérmica,48.05,Solar,30.98,Moderada,Geotérmica,30.98,17.6,3.38,48.05,0.0,Madura (meta de la industria),Armenia,Europa y Asia central,Ingreso mediano alto
+AUS,False,Geotérmica,47.48,Solar,33.2,Moderada,Geotérmica,33.2,12.38,6.6,47.48,0.35,Madura (meta de la industria),Australia,Asia oriental y el Pacífico,Ingreso alto
+AUT,False,Geotérmica,46.58,Solar,32.15,Moderada,Geotérmica,32.15,10.9,10.17,46.58,0.2,Madura (meta de la industria),Austria,Europa y Asia central,Ingreso alto
+AZE,False,Geotérmica,51.22,Solar,38.88,Moderada,Geotérmica,38.88,5.3,3.25,51.22,1.35,Madura (meta de la industria),Azerbaiyán,Europa y Asia central,Ingreso mediano alto
+BDI,False,Geotérmica,42.9,Solar,31.48,Moderada,Geotérmica,31.48,12.95,12.4,42.9,0.27,Madura (meta de la industria),Burundi,África al sur del Sahara,Países de ingreso bajo
+BEL,False,Geotérmica,49.85,Solar,26.45,Moderada,Geotérmica,26.45,16.05,7.1,49.85,0.55,Madura (meta de la industria),Bélgica,Europa y Asia central,Ingreso alto
+BEN,False,Geotérmica,50.65,Solar,33.35,Moderada,Geotérmica,33.35,16.0,0.0,50.65,0.0,Madura (meta de la industria),Benin,África al sur del Sahara,Países de ingreso mediano bajo
+BFA,False,Geotérmica,47.4,Solar,32.0,Moderada,Geotérmica,32.0,14.6,5.25,47.4,0.75,Madura (meta de la industria),Burkina Faso,África al sur del Sahara,Países de ingreso bajo
+BGD,False,Geotérmica,41.65,Solar,41.58,Reñida,Geotérmica,41.58,7.32,9.45,41.65,0.0,Madura (meta de la industria),Bangladesh,Asia meridional,Países de ingreso mediano bajo
+BGR,False,Geotérmica,50.2,Solar,36.08,Moderada,Geotérmica,36.08,9.28,2.53,50.2,1.92,Madura (meta de la industria),Bulgaria,Europa y Asia central,Ingreso alto
+BHR,False,Geotérmica,48.62,Solar,38.8,Reñida,Geotérmica,38.8,12.58,0.0,48.62,0.0,Madura (meta de la industria),Bahrein,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+BIH,False,Geotérmica,45.8,Solar,33.67,Moderada,Geotérmica,33.67,13.23,6.98,45.8,0.32,Madura (meta de la industria),Bosnia y Herzegovina,Europa y Asia central,Ingreso mediano alto
+BLR,False,Geotérmica,53.3,Solar,28.25,Clara,Geotérmica,28.25,9.15,8.8,53.3,0.5,Madura (meta de la industria),Belarús,Europa y Asia central,Ingreso mediano alto
+BOL,False,Geotérmica,41.55,Solar,37.1,Reñida,Geotérmica,37.1,12.2,9.12,41.55,0.02,Madura (meta de la industria),Bolivia,América Latina y el Caribe,Países de ingreso mediano bajo
+BRA,False,Geotérmica,41.58,Solar,31.92,Reñida,Geotérmica,31.92,17.4,8.92,41.58,0.18,Madura (meta de la industria),Brasil,América Latina y el Caribe,Ingreso mediano alto
+BRN,False,Geotérmica,50.38,Solar,34.1,Moderada,Geotérmica,34.1,15.52,0.0,50.38,0.0,Madura (meta de la industria),Brunei Darussalam,Asia oriental y el Pacífico,Ingreso alto
+BTN,False,Geotérmica,46.2,Solar,28.48,Moderada,Geotérmica,28.48,15.88,9.45,46.2,0.0,Madura (meta de la industria),Bhután,Asia meridional,Países de ingreso mediano bajo
+BWA,False,Geotérmica,49.62,Solar,36.0,Moderada,Geotérmica,36.0,14.37,0.0,49.62,0.0,Madura (meta de la industria),Botswana,África al sur del Sahara,Ingreso mediano alto
+CAF,False,Geotérmica,38.32,Solar,34.05,Reñida,Geotérmica,34.05,10.48,17.15,38.32,0.0,Madura (meta de la industria),República Centroafricana,África al sur del Sahara,Países de ingreso bajo
+CAN,False,Geotérmica,44.0,Solar,32.57,Moderada,Geotérmica,32.57,12.68,10.6,44.0,0.15,Madura (meta de la industria),Canadá,América del Norte,Ingreso alto
+CHE,False,Geotérmica,58.25,Solar,24.52,Clara,Geotérmica,24.52,9.0,6.52,58.25,1.7,Madura (meta de la industria),Suiza,Europa y Asia central,Ingreso alto
+CHL,False,Geotérmica,45.22,Solar,42.08,Reñida,Geotérmica,42.08,6.9,5.08,45.22,0.73,Madura (meta de la industria),Chile,América Latina y el Caribe,Ingreso alto
+CHN,False,Geotérmica,48.95,Solar,31.22,Moderada,Geotérmica,31.22,10.8,8.65,48.95,0.38,Madura (meta de la industria),China,Asia oriental y el Pacífico,Ingreso mediano alto
+CIV,False,Geotérmica,47.48,Solar,31.13,Moderada,Geotérmica,31.13,14.95,6.45,47.48,0.0,Madura (meta de la industria),Côte d'Ivoire,África al sur del Sahara,Países de ingreso mediano bajo
+CMR,False,Geotérmica,45.68,Solar,23.85,Moderada,Geotérmica,23.85,17.52,12.95,45.68,0.0,Madura (meta de la industria),Camerún,África al sur del Sahara,Países de ingreso mediano bajo
+COD,False,Geotérmica,46.65,Solar,26.98,Moderada,Geotérmica,26.98,16.65,9.3,46.65,0.43,Madura (meta de la industria),"Congo, República Democrática del",África al sur del Sahara,Países de ingreso bajo
+COG,False,Geotérmica,42.22,Solar,31.55,Moderada,Geotérmica,31.55,14.75,11.42,42.22,0.05,Madura (meta de la industria),"Congo, República del",África al sur del Sahara,Países de ingreso mediano bajo
+COL,False,Geotérmica,41.5,Solar,30.52,Moderada,Geotérmica,30.52,18.32,9.4,41.5,0.25,Madura (meta de la industria),Colombia,América Latina y el Caribe,Ingreso mediano alto
+CPV,False,Geotérmica,51.48,Solar,39.38,Moderada,Geotérmica,39.38,9.15,0.0,51.48,0.0,Madura (meta de la industria),Cabo Verde,África al sur del Sahara,Ingreso mediano alto
+CRI,False,Geotérmica,39.8,Solar,33.52,Reñida,Geotérmica,33.52,17.5,9.15,39.8,0.02,Madura (meta de la industria),Costa Rica,América Latina y el Caribe,Ingreso alto
+CUB,False,Geotérmica,39.17,Solar,33.9,Reñida,Geotérmica,33.9,21.72,5.18,39.17,0.02,Madura (meta de la industria),Cuba,América Latina y el Caribe,Ingreso mediano alto
+CYP,False,Geotérmica,50.65,Solar,42.05,Reñida,Geotérmica,42.05,5.78,0.0,50.65,1.52,Madura (meta de la industria),Chipre,Europa y Asia central,Ingreso alto
+CZE,False,Geotérmica,54.47,Solar,29.7,Clara,Geotérmica,29.7,10.4,3.68,54.47,1.75,Madura (meta de la industria),República Checa,Europa y Asia central,Ingreso alto
+DEU,False,Geotérmica,49.92,Solar,27.3,Moderada,Geotérmica,27.3,11.55,10.88,49.92,0.35,Madura (meta de la industria),Alemania,Europa y Asia central,Ingreso alto
+DJI,False,Geotérmica,50.12,Solar,38.5,Moderada,Geotérmica,38.5,11.38,0.0,50.12,0.0,Madura (meta de la industria),Djibouti,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+DNK,False,Geotérmica,47.72,Solar,28.58,Moderada,Geotérmica,28.58,16.45,6.93,47.72,0.32,Madura (meta de la industria),Dinamarca,Europa y Asia central,Ingreso alto
+DOM,False,Geotérmica,46.9,Solar,36.18,Moderada,Geotérmica,36.18,12.2,3.68,46.9,1.05,Madura (meta de la industria),República Dominicana,América Latina y el Caribe,Ingreso mediano alto
+DZA,False,Solar,49.38,Geotérmica,44.58,Reñida,Solar,49.38,4.68,1.38,44.58,0.0,Madura (meta de la industria),Argelia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ECU,False,Geotérmica,42.12,Solar,28.05,Moderada,Geotérmica,28.05,18.82,10.95,42.12,0.05,Madura (meta de la industria),Ecuador,América Latina y el Caribe,Ingreso mediano alto
+EGY,False,Geotérmica,40.62,Solar,33.32,Reñida,Geotérmica,33.32,14.32,11.68,40.62,0.05,Madura (meta de la industria),"Egipto, República Árabe de","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+ERI,False,Geotérmica,49.12,Solar,37.43,Moderada,Geotérmica,37.43,13.45,0.0,49.12,0.0,Madura (meta de la industria),Eritrea,África al sur del Sahara,Países de ingreso bajo
+ESH,False,Geotérmica,48.92,Solar,37.95,Moderada,Geotérmica,37.95,13.12,0.0,48.92,0.0,Madura (meta de la industria),Sáhara Occidental,"Oriente Medio, Norte de África, Afganistán y Pakistán",
+ESP,False,Geotérmica,48.5,Solar,38.78,Reñida,Geotérmica,38.78,8.28,3.42,48.5,1.03,Madura (meta de la industria),España,Europa y Asia central,Ingreso alto
+EST,False,Geotérmica,49.85,Solar,27.3,Moderada,Geotérmica,27.3,14.25,8.22,49.85,0.38,Madura (meta de la industria),Estonia,Europa y Asia central,Ingreso alto
+ETH,False,Geotérmica,49.08,Solar,37.65,Moderada,Geotérmica,37.65,5.92,6.68,49.08,0.68,Madura (meta de la industria),Etiopía,África al sur del Sahara,Países de ingreso bajo
+FIN,False,Geotérmica,46.18,Solar,25.17,Moderada,Geotérmica,25.17,16.92,11.58,46.18,0.15,Madura (meta de la industria),Finlandia,Europa y Asia central,Ingreso alto
+FJI,False,Geotérmica,42.88,Solar,31.9,Moderada,Geotérmica,31.9,15.22,9.98,42.88,0.02,Madura (meta de la industria),Fiji,Asia oriental y el Pacífico,Ingreso mediano alto
+FRA,False,Geotérmica,50.15,Solar,31.57,Moderada,Geotérmica,31.57,11.1,6.62,50.15,0.55,Madura (meta de la industria),Francia,Europa y Asia central,Ingreso alto
+GAB,False,Geotérmica,48.75,Solar,28.6,Moderada,Geotérmica,28.6,16.88,4.9,48.75,0.88,Madura (meta de la industria),Gabón,África al sur del Sahara,Ingreso mediano alto
+GBR,False,Geotérmica,49.9,Solar,24.02,Moderada,Geotérmica,24.02,18.75,6.75,49.9,0.57,Madura (meta de la industria),Reino Unido,Europa y Asia central,Ingreso alto
+GEO,False,Geotérmica,44.95,Eólica,25.42,Moderada,Geotérmica,24.32,25.42,5.3,44.95,0.0,Madura (meta de la industria),Georgia,Europa y Asia central,Ingreso mediano alto
+GHA,False,Geotérmica,41.88,Solar,31.6,Moderada,Geotérmica,31.6,14.62,11.85,41.88,0.05,Madura (meta de la industria),Ghana,África al sur del Sahara,Países de ingreso mediano bajo
+GIN,False,Geotérmica,46.52,Solar,31.62,Moderada,Geotérmica,31.62,14.32,7.52,46.52,0.0,Madura (meta de la industria),Guinea,África al sur del Sahara,Países de ingreso mediano bajo
+GMB,False,Geotérmica,49.32,Solar,36.62,Moderada,Geotérmica,36.62,14.05,0.0,49.32,0.0,Madura (meta de la industria),Gambia,África al sur del Sahara,Países de ingreso bajo
+GNB,False,Geotérmica,49.7,Solar,35.93,Moderada,Geotérmica,35.93,14.37,0.0,49.7,0.0,Madura (meta de la industria),Guinea-Bissau,África al sur del Sahara,Países de ingreso bajo
+GNQ,False,Geotérmica,48.2,Solar,28.4,Moderada,Geotérmica,28.4,16.8,6.6,48.2,0.0,Madura (meta de la industria),Guinea Ecuatorial,África al sur del Sahara,Ingreso mediano alto
+GRC,False,Geotérmica,48.95,Solar,36.2,Moderada,Geotérmica,36.2,10.65,2.9,48.95,1.3,Madura (meta de la industria),Grecia,Europa y Asia central,Ingreso alto
+GTM,False,Geotérmica,43.03,Solar,34.52,Reñida,Geotérmica,34.52,13.05,9.35,43.03,0.05,Madura (meta de la industria),Guatemala,América Latina y el Caribe,Ingreso mediano alto
+GUF,False,Geotérmica,43.68,Solar,34.25,Reñida,Geotérmica,34.25,13.42,8.38,43.68,0.27,Madura (meta de la industria),Guayana Francesa,América Latina y el Caribe,
+GUY,False,Geotérmica,40.12,Solar,34.8,Reñida,Geotérmica,34.8,15.6,9.48,40.12,0.0,Madura (meta de la industria),Guyana,América Latina y el Caribe,Ingreso alto
+HND,False,Geotérmica,42.12,Solar,36.28,Reñida,Geotérmica,36.28,12.1,9.43,42.12,0.08,Madura (meta de la industria),Honduras,América Latina y el Caribe,Países de ingreso mediano bajo
+HRV,False,Geotérmica,53.85,Solar,27.52,Clara,Geotérmica,27.52,11.58,5.65,53.85,1.4,Madura (meta de la industria),Croacia,Europa y Asia central,Ingreso alto
+HUN,False,Geotérmica,46.12,Solar,35.38,Moderada,Geotérmica,35.38,8.95,9.35,46.12,0.2,Madura (meta de la industria),Hungría,Europa y Asia central,Ingreso alto
+IDN,False,Geotérmica,46.92,Solar,30.75,Moderada,Geotérmica,30.75,14.5,6.9,46.92,0.92,Madura (meta de la industria),Indonesia,Asia oriental y el Pacífico,Ingreso mediano alto
+IND,False,Geotérmica,45.92,Solar,37.67,Reñida,Geotérmica,37.67,7.32,9.02,45.92,0.05,Madura (meta de la industria),India,Asia meridional,Países de ingreso mediano bajo
+IRL,False,Geotérmica,55.3,Solar,19.58,Clara,Geotérmica,19.58,17.62,6.72,55.3,0.78,Madura (meta de la industria),Irlanda,Europa y Asia central,Ingreso alto
+IRN,False,Geotérmica,46.52,Solar,36.75,Reñida,Geotérmica,36.75,11.28,5.38,46.52,0.08,Madura (meta de la industria),"Irán, República Islámica del","Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+IRQ,False,Geotérmica,46.6,Solar,35.22,Moderada,Geotérmica,35.22,14.82,3.35,46.6,0.0,Madura (meta de la industria),Iraq,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ISL,False,Geotérmica,46.95,Eólica,21.38,Moderada,Geotérmica,16.92,21.38,14.75,46.95,0.0,Madura (meta de la industria),Islandia,Europa y Asia central,Ingreso alto
+ISR,False,Geotérmica,43.95,Solar,35.5,Reñida,Geotérmica,35.5,11.35,9.05,43.95,0.15,Madura (meta de la industria),Israel,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ITA,False,Geotérmica,52.72,Solar,32.38,Clara,Geotérmica,32.38,8.5,5.62,52.72,0.78,Madura (meta de la industria),Italia,Europa y Asia central,Ingreso alto
+JAM,False,Geotérmica,42.6,Solar,32.82,Reñida,Geotérmica,32.82,13.9,10.68,42.6,0.0,Madura (meta de la industria),Jamaica,América Latina y el Caribe,Ingreso mediano alto
+JOR,False,Solar,42.85,Geotérmica,36.75,Reñida,Solar,42.85,11.18,9.22,36.75,0.0,Madura (meta de la industria),Jordania,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+JPN,False,Geotérmica,55.1,Solar,27.08,Clara,Geotérmica,27.08,10.4,5.42,55.1,2.0,Madura (meta de la industria),Japón,Asia oriental y el Pacífico,Ingreso alto
+KAZ,False,Geotérmica,43.85,Solar,34.7,Reñida,Geotérmica,34.7,13.9,7.48,43.85,0.08,Madura (meta de la industria),Kazajstán,Europa y Asia central,Ingreso mediano alto
+KEN,False,Geotérmica,41.55,Solar,36.68,Reñida,Geotérmica,36.68,12.15,9.6,41.55,0.02,Madura (meta de la industria),Kenia,África al sur del Sahara,Países de ingreso mediano bajo
+KGZ,False,Geotérmica,47.22,Solar,29.75,Moderada,Geotérmica,29.75,15.42,7.6,47.22,0.0,Madura (meta de la industria),Kirguistán,Europa y Asia central,Países de ingreso mediano bajo
+KHM,False,Geotérmica,41.1,Solar,35.75,Reñida,Geotérmica,35.75,13.65,9.48,41.1,0.02,Madura (meta de la industria),Camboya,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+KOR,False,Geotérmica,48.42,Solar,38.17,Moderada,Geotérmica,38.17,7.7,5.3,48.42,0.4,Madura (meta de la industria),"Corea, República de",Asia oriental y el Pacífico,Ingreso alto
+KOS,False,Geotérmica,55.32,Eólica,23.85,Clara,Geotérmica,20.82,23.85,0.0,55.32,0.0,Madura (meta de la industria),Kosovo,Europa y Asia central,
+KWT,False,Geotérmica,46.9,Eólica,28.08,Moderada,Geotérmica,25.02,28.08,0.0,46.9,0.0,Madura (meta de la industria),Kuwait,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+LAO,False,Geotérmica,42.58,Solar,33.52,Reñida,Geotérmica,33.52,14.0,9.75,42.58,0.15,Madura (meta de la industria),República Democrática Popular Lao,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+LBN,False,Geotérmica,45.42,Solar,34.8,Moderada,Geotérmica,34.8,14.35,5.0,45.42,0.43,Madura (meta de la industria),Líbano,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+LBR,False,Geotérmica,48.7,Solar,30.25,Moderada,Geotérmica,30.25,15.98,5.08,48.7,0.0,Madura (meta de la industria),Liberia,África al sur del Sahara,Países de ingreso bajo
+LBY,False,Geotérmica,53.3,Solar,26.67,Clara,Geotérmica,26.67,20.03,0.0,53.3,0.0,Madura (meta de la industria),Libia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+LCA,False,Geotérmica,49.32,Solar,36.6,Moderada,Geotérmica,36.6,14.08,0.0,49.32,0.0,Madura (meta de la industria),Santa Lucía,América Latina y el Caribe,Ingreso mediano alto
+LKA,False,Geotérmica,44.47,Solar,29.6,Moderada,Geotérmica,29.6,16.53,9.32,44.47,0.08,Madura (meta de la industria),Sri Lanka,Asia meridional,Ingreso mediano alto
+LSO,False,Geotérmica,41.68,Solar,33.05,Reñida,Geotérmica,33.05,11.72,13.55,41.68,0.0,Madura (meta de la industria),Lesotho,África al sur del Sahara,Países de ingreso mediano bajo
+LTU,False,Geotérmica,55.35,Solar,19.95,Clara,Geotérmica,19.95,16.48,7.5,55.35,0.73,Madura (meta de la industria),Lituania,Europa y Asia central,Ingreso alto
+LUX,False,Geotérmica,55.62,Solar,22.6,Clara,Geotérmica,22.6,15.48,5.3,55.62,1.0,Madura (meta de la industria),Luxemburgo,Europa y Asia central,Ingreso alto
+LVA,False,Geotérmica,52.32,Solar,29.85,Clara,Geotérmica,29.85,12.88,3.72,52.32,1.23,Madura (meta de la industria),Letonia,Europa y Asia central,Ingreso alto
+MAR,False,Geotérmica,43.35,Solar,32.3,Moderada,Geotérmica,32.3,21.48,1.5,43.35,1.38,Madura (meta de la industria),Marruecos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+MDA,False,Geotérmica,46.85,Solar,35.8,Moderada,Geotérmica,35.8,7.5,9.8,46.85,0.05,Madura (meta de la industria),República de Moldova,Europa y Asia central,Ingreso mediano alto
+MDG,False,Geotérmica,43.75,Solar,34.12,Reñida,Geotérmica,34.12,12.15,9.98,43.75,0.0,Madura (meta de la industria),Madagascar,África al sur del Sahara,Países de ingreso bajo
+MEX,False,Solar,41.58,Geotérmica,41.52,Reñida,Geotérmica,41.58,11.05,5.82,41.52,0.02,Madura (meta de la industria),México,América Latina y el Caribe,Ingreso mediano alto
+MKD,False,Geotérmica,49.32,Solar,29.8,Moderada,Geotérmica,29.8,16.0,4.15,49.32,0.73,Madura (meta de la industria),Macedonia del Norte,Europa y Asia central,Ingreso mediano alto
+MLI,False,Geotérmica,42.05,Solar,35.4,Reñida,Geotérmica,35.4,15.95,6.58,42.05,0.02,Madura (meta de la industria),Malí,África al sur del Sahara,Países de ingreso bajo
+MMR,False,Geotérmica,44.88,Solar,38.1,Reñida,Geotérmica,38.1,12.4,4.15,44.88,0.48,Madura (meta de la industria),Myanmar,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+MNE,False,Geotérmica,49.98,Solar,33.67,Moderada,Geotérmica,33.67,11.82,4.52,49.98,0.0,Madura (meta de la industria),Montenegro,Europa y Asia central,Ingreso mediano alto
+MNG,False,Geotérmica,47.38,Solar,31.05,Moderada,Geotérmica,31.05,17.45,4.12,47.38,0.0,Madura (meta de la industria),Mongolia,Asia oriental y el Pacífico,Ingreso mediano alto
+MOZ,False,Geotérmica,37.75,Solar,31.0,Reñida,Geotérmica,31.0,14.48,16.78,37.75,0.0,Madura (meta de la industria),Mozambique,África al sur del Sahara,Países de ingreso bajo
+MRT,False,Geotérmica,53.3,Solar,28.78,Clara,Geotérmica,28.78,17.92,0.0,53.3,0.0,Madura (meta de la industria),Mauritania,África al sur del Sahara,Países de ingreso mediano bajo
+MUS,False,Geotérmica,50.55,Solar,37.05,Moderada,Geotérmica,37.05,6.93,4.95,50.55,0.52,Madura (meta de la industria),Mauricio,África al sur del Sahara,Ingreso mediano alto
+MWI,False,Geotérmica,42.35,Solar,34.72,Reñida,Geotérmica,34.72,12.9,9.98,42.35,0.05,Madura (meta de la industria),Malawi,África al sur del Sahara,Países de ingreso bajo
+MYS,False,Geotérmica,41.85,Solar,35.93,Reñida,Geotérmica,35.93,11.42,10.7,41.85,0.1,Madura (meta de la industria),Malasia,Asia oriental y el Pacífico,Ingreso mediano alto
+NAM,False,Geotérmica,41.15,Solar,32.8,Reñida,Geotérmica,32.8,18.98,6.58,41.15,0.5,Madura (meta de la industria),Namibia,África al sur del Sahara,Países de ingreso mediano bajo
+NER,False,Geotérmica,50.65,Solar,33.35,Moderada,Geotérmica,33.35,16.0,0.0,50.65,0.0,Madura (meta de la industria),Níger,África al sur del Sahara,Países de ingreso bajo
+NGA,False,Geotérmica,42.55,Solar,33.35,Reñida,Geotérmica,33.35,14.22,9.83,42.55,0.05,Madura (meta de la industria),Nigeria,África al sur del Sahara,Países de ingreso mediano bajo
+NIC,False,Geotérmica,42.6,Solar,33.75,Reñida,Geotérmica,33.75,14.7,8.75,42.6,0.2,Madura (meta de la industria),Nicaragua,América Latina y el Caribe,Países de ingreso mediano bajo
+NLD,False,Geotérmica,49.28,Solar,26.3,Moderada,Geotérmica,26.3,18.0,2.88,49.28,3.55,Madura (meta de la industria),Países Bajos,Europa y Asia central,Ingreso alto
+NOR,False,Geotérmica,46.1,Solar,24.72,Moderada,Geotérmica,24.72,18.3,10.8,46.1,0.08,Madura (meta de la industria),Noruega,Europa y Asia central,Ingreso alto
+NPL,False,Geotérmica,43.28,Solar,28.3,Moderada,Geotérmica,28.3,17.0,11.4,43.28,0.02,Madura (meta de la industria),Nepal,Asia meridional,Países de ingreso mediano bajo
+NZL,False,Geotérmica,44.75,Solar,27.75,Moderada,Geotérmica,27.75,17.52,9.68,44.75,0.3,Madura (meta de la industria),Nueva Zelandia,Asia oriental y el Pacífico,Ingreso alto
+OMN,False,Geotérmica,51.25,Solar,41.15,Moderada,Geotérmica,41.15,7.6,0.0,51.25,0.0,Madura (meta de la industria),Omán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+PAK,False,Geotérmica,48.38,Solar,34.3,Moderada,Geotérmica,34.3,9.35,7.25,48.38,0.73,Madura (meta de la industria),Pakistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+PAN,False,Geotérmica,44.47,Solar,36.22,Reñida,Geotérmica,36.22,9.12,10.12,44.47,0.05,Madura (meta de la industria),Panamá,América Latina y el Caribe,Ingreso alto
+PER,False,Geotérmica,39.52,Solar,31.9,Reñida,Geotérmica,31.9,16.55,11.98,39.52,0.05,Madura (meta de la industria),Perú,América Latina y el Caribe,Ingreso mediano alto
+PHL,False,Geotérmica,44.82,Solar,33.9,Moderada,Geotérmica,33.9,13.5,7.7,44.82,0.08,Madura (meta de la industria),Filipinas,Asia oriental y el Pacífico,Ingreso mediano alto
+PNG,False,Geotérmica,42.9,Solar,33.55,Reñida,Geotérmica,33.55,14.77,8.75,42.9,0.02,Madura (meta de la industria),Papua Nueva Guinea,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+POL,False,Geotérmica,55.38,Solar,20.0,Clara,Geotérmica,20.0,17.65,5.42,55.38,1.55,Madura (meta de la industria),Polonia,Europa y Asia central,Ingreso alto
+PRK,False,Geotérmica,48.7,Solar,28.68,Moderada,Geotérmica,28.68,16.95,5.68,48.7,0.0,Madura (meta de la industria),"Corea, República Popular Democrática de",Asia oriental y el Pacífico,Países de ingreso bajo
+PRT,False,Geotérmica,49.45,Solar,34.42,Moderada,Geotérmica,34.42,11.12,3.85,49.45,1.15,Madura (meta de la industria),Portugal,Europa y Asia central,Ingreso alto
+PRY,False,Geotérmica,44.7,Solar,30.88,Moderada,Geotérmica,30.88,14.2,8.92,44.7,1.3,Madura (meta de la industria),Paraguay,América Latina y el Caribe,Ingreso mediano alto
+PSE,False,Geotérmica,50.08,Solar,34.78,Moderada,Geotérmica,34.78,15.15,0.0,50.08,0.0,Madura (meta de la industria),Ribera Occidental y Gaza,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+QAT,False,Geotérmica,47.42,Solar,39.52,Reñida,Geotérmica,39.52,10.85,0.0,47.42,2.2,Madura (meta de la industria),Qatar,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ROU,False,Geotérmica,48.7,Solar,30.72,Moderada,Geotérmica,30.72,13.55,6.65,48.7,0.38,Madura (meta de la industria),Rumania,Europa y Asia central,Ingreso alto
+RUS,False,Geotérmica,47.68,Solar,30.15,Moderada,Geotérmica,30.15,11.52,10.42,47.68,0.22,Madura (meta de la industria),Federación de Rusia,Europa y Asia central,Ingreso alto
+RWA,False,Geotérmica,46.95,Solar,28.9,Moderada,Geotérmica,28.9,15.92,8.22,46.95,0.0,Madura (meta de la industria),Rwanda,África al sur del Sahara,Países de ingreso bajo
+SAU,False,Geotérmica,42.98,Solar,30.18,Moderada,Geotérmica,30.18,26.85,0.0,42.98,0.0,Madura (meta de la industria),Arabia Saudita,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+SDN,False,Solar,39.07,Geotérmica,34.33,Reñida,Solar,39.07,11.7,14.9,34.33,0.0,Madura (meta de la industria),Sudán,África al sur del Sahara,Países de ingreso bajo
+SEN,False,Geotérmica,42.02,Solar,39.0,Reñida,Geotérmica,39.0,9.5,9.45,42.02,0.02,Madura (meta de la industria),Senegal,África al sur del Sahara,Países de ingreso mediano bajo
+SGP,False,Geotérmica,50.08,Solar,28.72,Clara,Geotérmica,28.72,19.92,0.0,50.08,1.27,Madura (meta de la industria),Singapur,Asia oriental y el Pacífico,Ingreso alto
+SLE,False,Geotérmica,39.45,Solar,35.98,Reñida,Geotérmica,35.98,14.98,9.6,39.45,0.0,Madura (meta de la industria),Sierra Leona,África al sur del Sahara,Países de ingreso bajo
+SLV,False,Geotérmica,43.05,Solar,39.1,Reñida,Geotérmica,39.1,10.02,7.75,43.05,0.08,Madura (meta de la industria),El Salvador,América Latina y el Caribe,Ingreso mediano alto
+SRB,False,Geotérmica,49.32,Solar,29.33,Moderada,Geotérmica,29.33,12.3,8.43,49.32,0.62,Madura (meta de la industria),Serbia,Europa y Asia central,Ingreso mediano alto
+SUR,False,Geotérmica,43.72,Solar,28.68,Moderada,Geotérmica,28.68,14.4,12.9,43.72,0.3,Madura (meta de la industria),Suriname,América Latina y el Caribe,Ingreso mediano alto
+SVK,False,Geotérmica,50.02,Solar,25.72,Clara,Geotérmica,25.72,18.82,4.4,50.02,1.03,Madura (meta de la industria),República Eslovaca,Europa y Asia central,Ingreso alto
+SVN,False,Geotérmica,44.75,Solar,27.9,Moderada,Geotérmica,27.9,17.82,9.35,44.75,0.18,Madura (meta de la industria),Eslovenia,Europa y Asia central,Ingreso alto
+SWE,False,Geotérmica,45.85,Solar,28.78,Moderada,Geotérmica,28.78,14.32,10.98,45.85,0.08,Madura (meta de la industria),Suecia,Europa y Asia central,Ingreso alto
+SWZ,False,Geotérmica,39.98,Solar,38.15,Reñida,Geotérmica,38.15,11.08,10.78,39.98,0.02,Madura (meta de la industria),Eswatini,África al sur del Sahara,Países de ingreso mediano bajo
+SYR,False,Geotérmica,43.65,Solar,37.3,Reñida,Geotérmica,37.3,16.1,1.65,43.65,1.3,Madura (meta de la industria),República Árabe Siria,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+TGO,False,Geotérmica,44.05,Solar,38.38,Reñida,Geotérmica,38.38,15.28,2.3,44.05,0.0,Madura (meta de la industria),Togo,África al sur del Sahara,Países de ingreso mediano bajo
+THA,False,Geotérmica,47.05,Solar,39.07,Reñida,Geotérmica,39.07,7.42,5.88,47.05,0.57,Madura (meta de la industria),Tailandia,Asia oriental y el Pacífico,Ingreso mediano alto
+TJK,False,Geotérmica,47.48,Solar,31.0,Moderada,Geotérmica,31.0,15.05,6.48,47.48,0.0,Madura (meta de la industria),Tayikistán,Europa y Asia central,Países de ingreso mediano bajo
+TKM,False,Geotérmica,46.8,Solar,31.75,Moderada,Geotérmica,31.75,14.45,7.0,46.8,0.0,Madura (meta de la industria),Turkmenistán,Europa y Asia central,Ingreso mediano alto
+TTO,False,Geotérmica,50.15,Solar,34.58,Moderada,Geotérmica,34.58,15.28,0.0,50.15,0.0,Madura (meta de la industria),Trinidad y Tobago,América Latina y el Caribe,Ingreso alto
+TUN,False,Geotérmica,50.78,Solar,40.1,Moderada,Geotérmica,40.1,7.25,1.88,50.78,0.0,Madura (meta de la industria),Túnez,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+TUR,False,Geotérmica,45.7,Solar,35.65,Moderada,Geotérmica,35.65,13.98,4.12,45.7,0.55,Madura (meta de la industria),Turquía,Europa y Asia central,Ingreso mediano alto
+TWN,False,Geotérmica,49.3,Solar,28.75,Moderada,Geotérmica,28.75,17.18,3.82,49.3,0.95,Madura (meta de la industria),Taiwán,Asia oriental y el Pacífico,
+TZA,False,Geotérmica,42.18,Solar,35.65,Reñida,Geotérmica,35.65,12.32,9.83,42.18,0.02,Madura (meta de la industria),Tanzanía,África al sur del Sahara,Países de ingreso mediano bajo
+UGA,False,Geotérmica,43.53,Solar,35.4,Reñida,Geotérmica,35.4,13.28,7.58,43.53,0.22,Madura (meta de la industria),Uganda,África al sur del Sahara,Países de ingreso bajo
+UKR,False,Geotérmica,53.92,Solar,33.45,Clara,Geotérmica,33.45,7.5,4.15,53.92,0.98,Madura (meta de la industria),Ucrania,Europa y Asia central,Ingreso mediano alto
+URY,False,Geotérmica,45.82,Solar,31.3,Moderada,Geotérmica,31.3,15.95,6.2,45.82,0.73,Madura (meta de la industria),Uruguay,América Latina y el Caribe,Ingreso alto
+USA,False,Geotérmica,44.4,Solar,34.52,Reñida,Geotérmica,34.52,13.25,7.48,44.4,0.35,Madura (meta de la industria),Estados Unidos,América del Norte,Ingreso alto
+UZB,False,Geotérmica,46.08,Solar,35.4,Moderada,Geotérmica,35.4,13.75,4.78,46.08,0.0,Madura (meta de la industria),Uzbekistán,Europa y Asia central,Países de ingreso mediano bajo
+VEN,False,Geotérmica,40.92,Solar,35.38,Reñida,Geotérmica,35.38,13.92,9.75,40.92,0.02,Madura (meta de la industria),Venezuela,América Latina y el Caribe,Países de ingreso mediano bajo
+VNM,False,Geotérmica,45.38,Solar,36.55,Reñida,Geotérmica,36.55,8.12,9.93,45.38,0.02,Madura (meta de la industria),Viet Nam,Asia oriental y el Pacífico,Ingreso mediano alto
+YEM,False,Geotérmica,49.6,Solar,36.15,Moderada,Geotérmica,36.15,14.25,0.0,49.6,0.0,Madura (meta de la industria),"Yemen, Rep. del","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+ZAF,False,Geotérmica,41.72,Solar,38.38,Reñida,Geotérmica,38.38,13.32,6.55,41.72,0.02,Madura (meta de la industria),Sudáfrica,África al sur del Sahara,Ingreso mediano alto
+ZMB,False,Geotérmica,41.82,Solar,31.7,Moderada,Geotérmica,31.7,14.52,11.92,41.82,0.02,Madura (meta de la industria),Zambia,África al sur del Sahara,Países de ingreso mediano bajo
+ZWE,True,Solar,37.43,Geotérmica,35.08,Reñida,Geotérmica,37.43,10.4,17.1,35.08,0.0,Madura (meta de la industria),Zimbabwe,África al sur del Sahara,Países de ingreso mediano bajo

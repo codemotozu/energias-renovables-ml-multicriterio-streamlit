@@ -1,0 +1,8 @@
+# Versiones exactas para ejecutar y desplegar el tablero (Python 3.13)
+streamlit==1.66.1
+plotly==5.24.1
+numpy==2.2.5
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.7.0
+joblib==1.5.1

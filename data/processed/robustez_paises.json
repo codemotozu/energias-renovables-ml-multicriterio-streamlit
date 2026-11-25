@@ -1,0 +1,15 @@
+{
+  "coincidencia_saw_topsis": 87.34939759036145,
+  "estable_5_semillas": 95.18072289156626,
+  "cambian_por_datos_locales": 25,
+  "provisionales": 33,
+  "certeza": {
+    "Clara": 73,
+    "Moderada": 52,
+    "Reñida": 41
+  },
+  "conteo": {
+    "Solar": 141,
+    "Eólica": 25
+  }
+}
