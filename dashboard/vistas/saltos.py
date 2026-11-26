@@ -9,7 +9,7 @@ from comun import TECS, colores_tec, criterios, encabezado, estilo_figura, halla
 
 CUATRO = list(sa.PALANCAS)
 encabezado("¿Y si cada una da su gran salto?",
-           "El celular pasó de ladrillo a smartphone. ¿Puede pasar algo así con la solar, la eólica, la hidroeléctrica y la biomasa?")
+           "¿Qué pasaría si la solar, la eólica, la hidroeléctrica y la biomasa dieran un salto histórico?")
 color, t = colores_tec(), tinta()
 
 # Tu ejemplo: un pedacito de panel de 2 × 2 cm
