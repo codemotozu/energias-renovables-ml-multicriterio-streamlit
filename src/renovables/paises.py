@@ -127,6 +127,26 @@ def clasificar_certeza(primero, segundo):
     return "Clara" if primero >= 50 and ventaja >= 20 else ("Moderada" if ventaja >= 10 else "Reñida")
 
 
+MESES_POWER = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
+UMBRAL_INVIERNO = 25.0           # % del sol medio del año: si el mes más oscuro recibe menos, se advierte que el promedio anual engaña
+
+
+def estacionalidad_pais(puntos, mensual):
+    """Radiación de cada mes ponderada por capacidad, en los mismos puntos de la recomendación, y peso del mes más oscuro."""
+    p = puntos.merge(mensual.dropna(), on=["lat", "lon"], how="inner")
+    p["peso"] = p["peso"] / p.groupby("country")["peso"].transform("sum")
+    filas = []
+    for pais, g in p.groupby("country"):
+        meses = [np.average(g[m], weights=g["peso"]) for m in MESES_POWER]
+        anual = np.average(g["ANN"], weights=g["peso"])
+        k = int(np.argmin(meses))
+        filas.append({"iso3": pais, **{f"ghi_{i + 1:02d}": v for i, v in enumerate(meses)}, "ghi_anual": anual,
+                      "mes_min": k + 1, "pct_mes_min": meses[k] / anual * 100})
+    d = pd.DataFrame(filas)
+    d["invierno_oscuro"] = d["pct_mes_min"] < UMBRAL_INVIERNO
+    return d
+
+
 def recomendar_todos(d, fp_tabla, n=4000, escenario=None):
     filas = []
     for iso3 in sorted(fp_tabla["iso3"].unique()):

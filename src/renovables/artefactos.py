@@ -206,6 +206,9 @@ def construir(raiz, n_pais=4000, verbose=True, reusar_operacion=False):
     fp_tabla = pa.tabla_fp_local(obs, recurso, modelos).merge(nombres[["iso3", "pais", "region", "ingreso"]], on="iso3", how="left")
     fp_tabla["pais"], fp_tabla["region"] = fp_tabla["pais"].fillna(fp_tabla["iso3"]), fp_tabla["region"].fillna("Otros territorios")
     fp_tabla.to_csv(salida / "fp_local.csv", index=False, encoding="utf-8")
+    mensual = raiz / "data" / "raw" / "nasa_power" / "ghi_mensual_celdas.csv"
+    if mensual.exists():            # radiación mes a mes: muestra el invierno que el promedio anual esconde
+        pa.estacionalidad_pais(puntos, pd.read_csv(mensual)).to_csv(salida / "estacionalidad_pais.csv", index=False, encoding="utf-8")
     filas = []
     for nombre, esc in mc.ESCENARIOS_GEO.items():
         r = pa.recomendar_todos(d, fp_tabla, n=n_pais, escenario=esc)

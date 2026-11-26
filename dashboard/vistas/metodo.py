@@ -21,7 +21,7 @@ with a:
     st.markdown("""
 - **Global Power Plant Database v1.3.0** (WRI), CC BY 4.0: plantas, capacidad, ubicación y generación hasta 2019.
 - **IRENASTAT 2026-H2:** capacidad y generación por país y tecnología.
-- **NASA POWER:** climatología 2001–2025 de radiación, viento y lluvia, y datos horarios 2022–2024 de seis países.
+- **NASA POWER:** climatología 2001–2025 de radiación (anual y mes a mes), viento y lluvia, y datos horarios 2022–2024 de seis países.
 - **IRENA, IPCC, IEA, DOE y Lovering et al. (2022):** costos, emisiones, minerales, materiales y uso de suelo.
 """)
     st.subheader("Cuidado metodológico")
@@ -38,7 +38,7 @@ with b:
 1. **Sesgo geográfico:** el 88 % de las plantas con generación está en EE. UU.; fuera de allí el R² baja a 0.41.
 2. **Faltan variables** decisivas para la hidroeléctrica y la biomasa: hidrología, tipo de central, combustible y despacho.
 3. **Datos hasta 2019:** el rendimiento actual de la solar y la eólica probablemente es mayor.
-4. **La recomendación por país es orientativa:** no incluye red, demanda, financiamiento ni política.
+4. **La recomendación por país es orientativa:** usa promedios anuales, así que no ve el invierno de los países del norte, ni las diferencias dentro de cada país; tampoco incluye red, demanda, financiamiento ni política.
 5. **El recurso eólico de NASA no predijo** el rendimiento entre países; donde no hay parques, la eólica usa el valor mundial.
 6. **El costo local es una aproximación:** supone que invertir cuesta lo mismo en todos los países.
 7. **El escenario geotérmico es hipotético:** su costo es una meta de la industria. La simulación horaria supone un consumo constante y no incluye la red, la hidroeléctrica ni el gas.

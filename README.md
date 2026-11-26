@@ -81,6 +81,7 @@ pytest tests -v
 pip install -r requirements.txt
 python herramientas/descargar_datos_externos.py   # solo si faltan los datos de IRENA y NASA
 python herramientas/descargar_datos_horarios.py   # solo si faltan los datos horarios de NASA
+python herramientas/descargar_estacionalidad.py   # solo si falta la radiación mes a mes de NASA
 python herramientas/construir_artefactos.py       # regenera data/processed/ (unos 15 minutos)
 python herramientas/construir_cuaderno_fase4.py --ejecutar
 python herramientas/compilar_informe.py           # requiere pdflatex
@@ -100,4 +101,4 @@ Todo usa `SEMILLA = 42`. El código verifica con aserciones la huella SHA-256 de
 
 ## Limitaciones
 
-El 88 % de las plantas con generación está en EE. UU.; faltan hidrología, tipo de central y despacho; la GPPD llega hasta 2019. La recomendación por país es orientativa: no incluye red, demanda, financiamiento ni política. El escenario geotérmico es hipotético: la simulación horaria cubre seis países con un consumo constante, y el potencial es una analogía con la expansión de la eólica y la solar. Los saltos tecnológicos de la vista 9 son exploratorios: sus niveles son supuestos ilustrativos. El detalle está en el informe final y en la vista 10 del tablero.
+El 88 % de las plantas con generación está en EE. UU.; faltan hidrología, tipo de central y despacho; la GPPD llega hasta 2019. La recomendación por país es orientativa: usa promedios anuales, así que no ve el invierno de los países del norte (la vista 7 lo advierte con la radiación mes a mes), y no incluye red, demanda, financiamiento ni política. El escenario geotérmico es hipotético: la simulación horaria cubre seis países con un consumo constante, y el potencial es una analogía con la expansión de la eólica y la solar. Los saltos tecnológicos de la vista 9 son exploratorios: sus niveles son supuestos ilustrativos. El detalle está en el informe final y en la vista 10 del tablero.

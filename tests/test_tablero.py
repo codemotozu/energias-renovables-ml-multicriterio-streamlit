@@ -83,7 +83,7 @@ def test_integral_controles():
 def test_pais_controles():
     at = abrir("pais")
     paises = control(at.selectbox, "País").options
-    for p in ["Argentina", "Islandia", "Singapur", "Kenia", paises[0], paises[-1]]:
+    for p in ["Argentina", "Islandia", "Noruega", "Singapur", "Kenia", paises[0], paises[-1]]:
         control(at.selectbox, "País").set_value(p).run(); paso(at, p)
     control(at.selectbox, "Método").set_value("TOPSIS").run(); paso(at, "TOPSIS")
     for e in control(at.selectbox, "Escenario").options:
