@@ -37,7 +37,7 @@ streamlit run dashboard/app.py
 
 ## Pruebas automáticas
 
-`tests/test_tablero.py` abre las nueve vistas con el probador oficial de Streamlit (`AppTest`) y mueve sus controles, incluidos casos límite como filtros vacíos o todos los pesos en cero. Una prueba falla si alguna vista lanza una excepción. GitHub Actions las ejecuta en cada `push` y en cada *pull request*; la insignia de arriba muestra el último resultado. Para ejecutarlas en local:
+`tests/test_tablero.py` abre las diez vistas con el probador oficial de Streamlit (`AppTest`) y mueve sus controles, incluidos casos límite como filtros vacíos o todos los pesos en cero. Una prueba falla si alguna vista lanza una excepción. GitHub Actions las ejecuta en cada `push` y en cada *pull request*; la insignia de arriba muestra el último resultado. Para ejecutarlas en local:
 
 ```bash
 pip install -r tests/requirements.txt
@@ -56,7 +56,8 @@ pytest tests -v
 | 6. Evaluación integral | Qué gana con distintas prioridades | Multicriterio |
 | 7. País | Qué renovable conviene a cada país | Recomendación |
 | 8. Geotérmica | Qué pasaría con las ondas milimétricas, cómo se comportaría y cuál sería su potencial | Escenario |
-| 9. Método y limitaciones | De dónde salen los resultados | Respaldo |
+| 9. Saltos tecnológicos | Cuánto pueden mejorar todavía la solar, la eólica, la hidroeléctrica y la biomasa, y qué pasaría si dan un gran salto | Escenario exploratorio |
+| 10. Método y limitaciones | De dónde salen los resultados | Respaldo |
 
 ## Estructura del repositorio
 
@@ -99,4 +100,4 @@ Todo usa `SEMILLA = 42`. El código verifica con aserciones la huella SHA-256 de
 
 ## Limitaciones
 
-El 88 % de las plantas con generación está en EE. UU.; faltan hidrología, tipo de central y despacho; la GPPD llega hasta 2019. La recomendación por país es orientativa: no incluye red, demanda, financiamiento ni política. El escenario geotérmico es hipotético: la simulación horaria cubre seis países con un consumo constante, y el potencial es una analogía con la expansión de la eólica y la solar. El detalle está en el informe final y en la vista 9 del tablero.
+El 88 % de las plantas con generación está en EE. UU.; faltan hidrología, tipo de central y despacho; la GPPD llega hasta 2019. La recomendación por país es orientativa: no incluye red, demanda, financiamiento ni política. El escenario geotérmico es hipotético: la simulación horaria cubre seis países con un consumo constante, y el potencial es una analogía con la expansión de la eólica y la solar. Los saltos tecnológicos de la vista 9 son exploratorios: sus niveles son supuestos ilustrativos. El detalle está en el informe final y en la vista 10 del tablero.

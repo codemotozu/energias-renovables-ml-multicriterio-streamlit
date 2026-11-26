@@ -17,6 +17,7 @@ if str(RAIZ / "src") not in sys.path:
 
 from renovables import multicriterio as mc  # noqa: E402
 from renovables import paises as pa  # noqa: E402
+from renovables import saltos as sa  # noqa: E402
 from renovables.datos import ANIO_REFERENCIA, NIVELES, PREDICTORES, R_TIERRA_KM, TECS  # noqa: E402
 
 PROC = RAIZ / "data" / "processed"
@@ -191,6 +192,21 @@ def recomendar(iso3, prioridad, metodo, baterias, escenario=None, n=4000):
     pesos = mc.pesos_desde_pilares(dict(prioridad)) if prioridad else None
     return pa.recomendar_pais(criterios(), fp_local(), iso3, n=n, metodo=metodo, pesos=pesos,
                               escenario=dict(escenario) if escenario else None, almacenamiento=baterias)
+
+
+@st.cache_data(show_spinner=False)
+def simular_saltos(saltos, metodo="SAW", geo_madura=False, n=20000):
+    """Monte Carlo global con saltos tecnológicos. saltos = ((tecnología, ((palanca, valor), ...)), ...)."""
+    d = criterios()
+    if geo_madura:
+        d = mc.aplicar_escenario_geo(d, **mc.ESCENARIOS_GEO["Madura (meta de la industria)"])
+    d = sa.aplicar_saltos(d, {t: dict(v) for t, v in saltos})
+    P = mc.simular(d, n, np.random.default_rng(42), metodo=metodo, almacenamiento=True)
+    return mc.resumen_puestos(P), d
+
+
+def saltos_a_tupla(saltos):
+    return tuple(sorted((t, tuple(sorted(v.items()))) for t, v in saltos.items()))
 
 
 def escenario_a_tupla(e):

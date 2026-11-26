@@ -21,9 +21,12 @@ pagina = st.navigation({
     "La decisión": [
         st.Page("vistas/integral.py", title="6. Evaluación integral", icon=":material/balance:"),
         st.Page("vistas/pais.py", title="7. Qué le conviene a cada país", icon=":material/flag:"),
-        st.Page("vistas/geotermica.py", title="8. ¿Y si la geotérmica despega?", icon=":material/volcano:"),
     ],
-    "Respaldo": [st.Page("vistas/metodo.py", title="9. Método y limitaciones", icon=":material/menu_book:")],
+    "Cara al futuro": [
+        st.Page("vistas/geotermica.py", title="8. ¿Y si la geotérmica despega?", icon=":material/volcano:"),
+        st.Page("vistas/saltos.py", title="9. ¿Y si cada una da su gran salto?", icon=":material/rocket_launch:"),
+    ],
+    "Respaldo": [st.Page("vistas/metodo.py", title="10. Método y limitaciones", icon=":material/menu_book:")],
 })
 
 with st.sidebar:

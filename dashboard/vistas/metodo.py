@@ -44,6 +44,7 @@ with b:
 7. **El escenario geotérmico es hipotético:** su costo es una meta de la industria. La simulación horaria supone un consumo constante y no incluye la red, la hidroeléctrica ni el gas.
 8. **Datos de IRENA depurados:** se descartaron 25 FP solares y 8 eólicos físicamente imposibles. El filtro eólico se definió después de ver los datos y no cambió el número de países por tecnología.
 9. **El clustering** no alcanza la meta de silueta: las plantas forman un continuo.
+10. **Los saltos tecnológicos de la vista 9 son exploratorios:** sus niveles son supuestos ilustrativos y solo cambian los criterios del multicriterio; no simulan la red, la demanda ni cómo una tecnología afecta a otra, por ejemplo el bombeo hidroeléctrico que guarda energía solar.
 """)
     st.subheader("Trabajo futuro")
     st.markdown("""

@@ -13,7 +13,7 @@ from streamlit.testing.v1 import AppTest
 RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / "dashboard"))          # las vistas importan comun.py como lo hace `streamlit run`
 APP = str(RAIZ / "dashboard" / "app.py")
-VISTAS = ["inicio", "panorama", "modelos", "prediccion", "segmentacion", "integral", "pais", "geotermica", "metodo"]
+VISTAS = ["inicio", "panorama", "modelos", "prediccion", "segmentacion", "integral", "pais", "geotermica", "saltos", "metodo"]
 ESPERA = 240                                          # segundos por ejecución; la primera carga entrena cachés
 
 
@@ -95,6 +95,22 @@ def test_geotermica_escenario():
     at = abrir("geotermica")
     control(at.toggle, "Viable").set_value(False).run(); paso(at, "no viable en todos los países")
     control(at.slider, "Costo").set_value((15, 100)).run(); paso(at, "rango de costo extremo")
+
+
+def test_saltos_controles():
+    at = abrir("saltos")
+    assert len(at.tabs) == 3, "la vista debe tener sus tres pestañas"
+    for tec in ["Eólica", "Hidroeléctrica", "Biomasa", "Solar"]:
+        control(at.button_group, "Tecnología").set_value(tec).run(); paso(at, f"salto de {tec}")
+        for nivel in ["Hoy", "Avance esperado"]:
+            control(at.button_group, "Punto de partida").set_value(nivel).run(); paso(at, f"{tec}: {nivel}")
+    control(at.slider, "Cambio del costo").set_value(-80).run(); paso(at, "costo mínimo")
+    control(at.slider, "Eficiencia").set_value(45).run(); paso(at, "eficiencia máxima")
+    control(at.button_group, "Tecnología").set_value("Biomasa").run()
+    control(at.toggle, "Captura").set_value(True).run(); paso(at, "biomasa con captura de carbono")
+    control(at.toggle, "Crece").set_value(True).run(); paso(at, "biomasa crece como la solar")
+    control(at.button_group, "Nivel para todas").set_value("Avance esperado").run(); paso(at, "todas: avance esperado")
+    control(at.toggle, "Sumar la geotérmica").set_value(True).run(); paso(at, "todas con la geotérmica madura")
 
 
 def test_geotermica_operacion():
