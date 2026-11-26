@@ -1,9 +1,32 @@
 # -*- coding: utf-8 -*-
 """Tablero del proyecto integrador. Ejecutar desde la raíz del repositorio con:  streamlit run dashboard/app.py"""
+import importlib
+import sys
+from pathlib import Path
+
 import streamlit as st
 
 st.set_page_config(page_title="Renovables: desempeño integral", page_icon=":material/bolt:", layout="wide")
 
+ORDEN_RECARGA = ["datos", "preprocesamiento", "multicriterio", "trayectoria", "geotermica", "saltos", "paises"]
+
+
+def recargar_paquete():
+    """Streamlit solo recarga los módulos de dashboard/. Tras cada push, recarga también los de src/renovables que cambiaron,
+    para que el servidor no siga usando una versión vieja en memoria."""
+    nombres = [n for n in sys.modules if n.startswith("renovables.")]
+    for nombre in sorted(nombres, key=lambda n: ORDEN_RECARGA.index(n.split(".")[1]) if n.split(".")[1] in ORDEN_RECARGA else len(ORDEN_RECARGA)):
+        modulo = sys.modules[nombre]
+        archivo = getattr(modulo, "__file__", None)
+        if not archivo or not Path(archivo).exists():
+            continue
+        fecha = Path(archivo).stat().st_mtime
+        if getattr(modulo, "_fecha_cargada", None) != fecha:
+            importlib.reload(modulo)
+            modulo._fecha_cargada = fecha
+
+
+recargar_paquete()
 from comun import inyectar_estilos  # noqa: E402
 
 inyectar_estilos()
