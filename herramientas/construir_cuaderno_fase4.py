@@ -272,10 +272,13 @@ cond = pd.read_csv(PROC / "geo_condiciones.csv")
 riv = pd.read_csv(PROC / "geo_rivales.csv")
 g50 = cond[(cond["costo_medio"] == 50) & (cond["fp"] == 0.90) & cond["crece_como_eolica"]].iloc[0]
 r40 = riv[riv["caida_rivales"] == 40].set_index("metodo")
+caida = tabla_esc.loc[orden_esc[0]] - tabla_esc.loc[orden_esc[-1]]          # puntos que pierde cada tecnología de «Hoy» a «Madura»
 print(f"\nCosto de empate con la solar: {geo_res['quiebre_con_crecimiento']:.1f} USD/MWh si crece como la eólica; {geo_res['quiebre_sin_crecimiento']:.1f} si no")
 print(f"Con la meta de la AIE (50 USD/MWh): geotérmica {g50['geotermica']:.1f} % | mejor rival {g50['mejor_rival']:.1f} %")
 print(f"Madura, si la solar y la eólica caen otro 40 %: SAW {r40.loc['SAW', 'Geotérmica']:.1f} contra {r40.loc['SAW', 'Solar']:.1f} | TOPSIS {r40.loc['TOPSIS', 'Geotérmica']:.1f} contra {r40.loc['TOPSIS', 'Solar']:.1f}")
-display(Markdown(f"""**Interpretación.** Una sola mejora no basta. La geotérmica solo queda primera si llega a todos los países, crece como la eólica y cuesta menos de unos **{geo_res['quiebre_con_crecimiento']:.0f} USD/MWh**. Con la meta de la AIE (50 USD/MWh) **no alcanzaría** el primer lugar. Y si la solar y la eólica se abaratan otro 40 %, como proyecta IRENA para la solar con baterías a 2035, la ventaja se reduce a un **empate técnico** con SAW ({r40.loc['SAW', 'Geotérmica']:.1f} % contra {r40.loc['SAW', 'Solar']:.1f} %)."""))
+display(Markdown(f"""**Interpretación.** Una sola mejora no basta. La geotérmica solo queda primera si llega a todos los países, crece como la eólica y cuesta menos de unos **{geo_res['quiebre_con_crecimiento']:.0f} USD/MWh**. Con la meta de la AIE (50 USD/MWh) **no alcanzaría** el primer lugar. Y si la solar y la eólica se abaratan otro 40 %, como proyecta IRENA para la solar con baterías a 2035, la ventaja se reduce a un **empate técnico** con SAW ({r40.loc['SAW', 'Geotérmica']:.1f} % contra {r40.loc['SAW', 'Solar']:.1f} %).
+
+En el escenario maduro, los **{-caida['Geotérmica']:.0f} puntos** que gana la geotérmica salen sobre todo de la **eólica** ({caida['Eólica']:.0f} puntos), seguida de la solar ({caida['Solar']:.0f}), la hidroeléctrica ({caida['Hidroeléctrica']:.0f}) y la biomasa ({caida['Biomasa']:.0f})."""))
 ''')
 
 md(r"""
@@ -322,17 +325,22 @@ display(Markdown(f"""**Interpretación.** Si despega en 2030 y crece como la eó
 
 fig, axs = plt.subplots(2, 2, figsize=(3.45, 3.75))
 ax = axs.ravel()
-etiquetas = ["Hoy", "Todos los países", "Baja el costo", "Prueba", "Madura"]
-x, w = np.arange(5), 0.26
-for k, t in enumerate(["Solar", "Eólica", "Geotérmica"]):
+# (a) Las cinco tecnologías suman 100 % en cada escenario; la geotérmica va primero para que su avance se lea desde el eje
+etiquetas = ["Hoy", "Todos los\npaíses", "Baja el\ncosto", "Prueba", "Madura"]
+apilado = {"Geotérmica": "Geot.", "Solar": "Solar", "Eólica": "Eólica", "Hidroeléctrica": "Hidro.", "Biomasa": "Biom."}
+y = np.arange(len(etiquetas))[::-1]
+izq = np.zeros(len(etiquetas))
+for t, corto in apilado.items():
     v = tabla_esc[t].values
-    ax[0].bar(x + (k - 1) * w, v, w * 0.92, color=TEC_COLOR[t], label=t)
-    if t == "Geotérmica":
-        for xi, vi in zip(x, v):
-            ax[0].text(xi + (k - 1) * w, vi + 0.9, f"{vi:.0f}", ha="center", fontsize=5.4, color=TINTA)
-ax[0].set_xticks(x, etiquetas, fontsize=5.2, rotation=30, ha="right", rotation_mode="anchor"); ax[0].grid(axis="x", visible=False); ax[0].set_ylabel("% en primer lugar"); ax[0].set_ylim(0, 66)
-ax[0].legend(ncol=3, loc="upper left", handlelength=0.8, columnspacing=0.5, handletextpad=0.3, fontsize=5.4)
-ax[0].set_title("(a) Escenarios", loc="left")
+    ax[0].barh(y, v, 0.72, left=izq, color=TEC_COLOR[t], edgecolor="white", linewidth=0.4, label=corto)
+    for yi, l, vi in zip(y, izq, v):
+        if vi >= 7:                                   # los segmentos más angostos no tienen espacio para el número
+            ax[0].text(l + vi / 2, yi, f"{vi:.0f}", ha="center", va="center", fontsize=5.2, color=TINTA if t in ("Solar", "Eólica") else "white")
+    izq += v
+ax[0].set_yticks(y, etiquetas, fontsize=5.6, linespacing=0.95); ax[0].grid(axis="y", visible=False); ax[0].set_xlim(0, 100); ax[0].set_ylim(-0.5, len(etiquetas) - 0.5)
+ax[0].set_xticks([0, 50, 100], ["0", "50", "100"]); ax[0].set_xlabel("% de escenarios en primer lugar", fontsize=6)
+ax[0].legend(ncol=5, loc="lower left", bbox_to_anchor=(-0.47, 0.99), handlelength=0.7, columnspacing=0.45, handletextpad=0.25, fontsize=5.0, borderaxespad=0.1)
+ax[0].set_title("(a) Escenarios", loc="left", x=-0.47, pad=9)
 
 g = cond[(cond["fp"] == 0.90) & cond["crece_como_eolica"]].sort_values("costo_medio")
 ax[1].plot(g["costo_medio"], g["geotermica"], color=TEC_COLOR["Geotérmica"], marker="o", ms=2.2, label="Geotérmica")

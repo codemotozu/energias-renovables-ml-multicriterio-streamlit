@@ -102,5 +102,5 @@ with tab4:
     if "material" in m_:
         st.caption("En la biomasa, la fuente solo cuenta la planta generadora y no la cadena del combustible: su valor no es comparable con los demás.")
     if "cancha" in m_:
-        st.caption("Cancha de 105 × 68 m. En el peor caso, la eólica cuenta todo el espacio entre turbinas (que sigue sirviendo para cultivar) y la biomasa, cultivos dedicados.")
+        st.caption("Cancha de 105 × 68 m, como la de El Campín. En el peor caso, la eólica cuenta todo el espacio entre turbinas (que sigue sirviendo para cultivar) y la biomasa, cultivos dedicados.")
     st.markdown("**No hay una sola ganadora:** la eólica entrega más energía **por dólar**; la geotérmica, más **por MW, por terreno y por material**, pero es más cara y hoy solo es viable donde hay calor cerca de la superficie.")
