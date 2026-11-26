@@ -453,7 +453,7 @@ plt.show()
 ganadoras = "; ".join(f"{p_.lower()}: {por_prioridad.loc[p_].idxmax().lower()} ({por_prioridad.loc[p_].max():.0f} %)" for p_ in mc.PILARES)
 display(Markdown(f"""**Interpretación.** Si solo una da el salto, puede ganar: la solar llegaría al {sola['Solar']:.0f} % de los escenarios y la eólica al {sola['Eólica']:.0f} %.
 Si todas lo dan a la vez, junto con la geotérmica madura, gana la {todas.idxmax().lower()} ({todas.max():.0f} %), pero ninguna llega tan lejos como si mejorara sola:
-el modelo compara a las cinco entre sí. Con un pilar cinco veces más importante, la ganadora cambia ({ganadoras}). No hay un ganador único.
+el modelo compara a las cinco entre sí. Con un pilar cinco veces más importante, la ganadora cambia ({ganadoras}). No hay una ganadora única.
 Los niveles son supuestos ilustrativos: es un ejercicio exploratorio, no un pronóstico."""))
 ''')
 

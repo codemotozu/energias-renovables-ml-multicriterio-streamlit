@@ -28,7 +28,7 @@ hallazgo(f"<b>La física pone techo:</b> un panel de 2 × 2 cm recibe como máxi
          f"<b>Si una sola da el salto, puede ganar:</b> con un gran salto, la solar quedaría primera en el {solo['Solar'].loc['Solar', '% n.º 1']:.0f} % de los escenarios, "
          f"y la eólica subiría al {solo['Eólica'].loc['Eólica', '% n.º 1']:.0f} % y superaría a la solar.<br>"
          f"<b>Si todas lo dan a la vez,</b> gana la {gana_todas.lower()} ({todas.loc[gana_todas, '% n.º 1']:.0f} %) sin favorecer ninguna prioridad. "
-         "Si se prioriza otra cosa, como tener energía a toda hora, el ganador cambia.")
+         "Si se prioriza otra cosa, como tener energía a toda hora, la ganadora cambia.")
 
 tab1, tab2, tab3 = st.tabs(["1. ¿Cuánto pueden mejorar todavía?", "2. ¿Y si una da el salto?", "3. ¿Y si todas lo dan a la vez?"])
 
@@ -211,9 +211,9 @@ la ventaja de cada una se diluye y gana la que mejora más en lo que más pesa. 
     if len(victorias) == 1:
         texto += "Y sigue ganando con cualquiera de las cinco prioridades."
     else:
-        texto += "Pero el ganador cambia según lo que se valore: " + "; ".join(
+        texto += "Pero la ganadora cambia según lo que se valore: " + "; ".join(
             f"la **{g.lower()}** gana si se prioriza {unir(prs)}" for g, prs in sorted(victorias.items(), key=lambda x: -len(x[1]))) + "."
-        texto += " No es una carrera con un solo ganador: cada tecnología destaca en algo distinto, y lo más probable es que se complementen."
+        texto += " No es una carrera con una sola ganadora: cada tecnología destaca en algo distinto, y lo más probable es que se complementen."
     st.markdown(texto)
     st.caption("«Ganar» significa quedar primera en más escenarios del índice de 14 criterios, no producir más energía. Con pesos fijos solo se sortea la incertidumbre "
                "de los datos, por eso los porcentajes son más extremos.")
