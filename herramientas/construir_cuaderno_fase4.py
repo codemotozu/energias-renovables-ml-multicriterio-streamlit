@@ -69,7 +69,7 @@ import plotly.graph_objects as go
 from IPython.display import Markdown, display
 from scipy import stats
 
-from renovables import geotermica as geo, multicriterio as mc, paises as pa
+from renovables import geotermica as geo, multicriterio as mc, paises as pa, saltos as sa
 from renovables.artefactos import VARS_CLUSTER, construir
 from renovables.datos import PREDICTORES, SEMILLA, TECS, cargar_gppd, preparar_modelado
 from renovables.trayectoria import calcular_trayectoria, leer_serie_mundial
@@ -372,6 +372,89 @@ ax[3].set_title("(d) Potencial", loc="left")
 fig.tight_layout(pad=0.3, w_pad=0.6, h_pad=0.7)
 fig.savefig(FIG / "f4_geotermica.png", dpi=300)
 plt.show()
+''')
+
+md(r"""
+## 4.4 ¿Y si cada renovable da su gran salto? (exploratorio)
+
+La geotérmica no es la única que puede mejorar. Este ejercicio traduce un **gran salto** de la solar, la eólica, la hidroeléctrica y la biomasa en cambios de sus criterios
+y repite el mismo Monte Carlo de 20 000 escenarios (`src/renovables/saltos.py`; vista 9 del tablero). Se comparan tres situaciones: hoy, si solo una tecnología da el salto
+y si todas lo dan a la vez junto con la geotérmica madura. Después se fija un pilar cinco veces más importante que cada uno de los demás.
+
+Ninguna tecnología puede superar su techo físico: un panel de 2 × 2 cm recibe como máximo 0.4 W de sol a mediodía, aunque fuera perfecto. Por eso el salto está en el costo, la escala, la duración y el reciclaje.
+""")
+
+code(r'''
+palancas = [{"Tecnología": t, "Palanca": p_["etiqueta"], "Gran salto": ("sí" if v else "no") if p_.get("tipo") == "toggle" else f"{v:g}"}
+            for t in sa.PALANCAS for p_, v in ((p_, p_["niveles"][2]) for p_ in sa.PALANCAS[t])]
+display(Markdown("**Supuestos del gran salto de cada tecnología** (ilustrativos)"))
+display(pd.DataFrame(palancas).set_index(["Tecnología", "Palanca"]))
+crit = pd.read_csv(PROC / "criterios.csv", index_col=0).reindex(TECS)
+geo_madura = mc.aplicar_escenario_geo(crit, **mc.ESCENARIOS_GEO["Madura (meta de la industria)"])
+gran = {t: sa.valores_nivel(t, "Gran salto") for t in sa.PALANCAS}
+
+
+def primer_lugar(d, prioridad=None):
+    pesos = mc.pesos_desde_pilares(prioridad) if prioridad else None
+    return mc.resumen_puestos(mc.simular(d, 20000, np.random.default_rng(42), pesos=pesos))["% n.º 1"]
+
+
+hoy = primer_lugar(crit)
+sola = pd.Series({t: primer_lugar(sa.aplicar_salto(crit, t, gran[t]))[t] for t in sa.PALANCAS} | {"Geotérmica": primer_lugar(geo_madura)["Geotérmica"]})
+todas_d = sa.aplicar_saltos(geo_madura, gran)
+todas = primer_lugar(todas_d)
+carrera = pd.DataFrame({"Hoy": hoy, "Si solo ella da el salto": sola, "Si todas lo dan a la vez": todas}).loc[TECS]
+prioridades = {"Ninguna (pesos al azar)": None} | {p: {q: 5 if q == p else 1 for q in mc.PILARES} for p in mc.PILARES}
+por_prioridad = pd.DataFrame({nombre: primer_lugar(todas_d, pr) for nombre, pr in prioridades.items()}).T[TECS]
+print("% de escenarios en primer lugar (gran salto; «todas» incluye la geotérmica madura)")
+print(carrera.round(1).to_string())
+print("\nGanadora con cada prioridad (todas dan el salto):")
+print(pd.DataFrame({"ganadora": por_prioridad.idxmax(axis=1), "%": por_prioridad.max(axis=1).round(1)}).to_string())
+
+fig = plt.figure(figsize=(3.45, 3.55))
+gs = fig.add_gridspec(2, 1, height_ratios=[1, 1.12], hspace=0.62)
+ax0, ax1 = fig.add_subplot(gs[0]), fig.add_subplot(gs[1])
+orden = carrera["Si todas lo dan a la vez"].sort_values().index
+y = np.arange(len(orden))
+for yi, t in zip(y, orden):
+    v = carrera.loc[t]
+    ax0.plot([v.min(), v.max()], [yi, yi], color=GRIS, lw=1.0, zorder=1)
+    ax0.scatter(v["Hoy"], yi, s=16, color=GRIS, zorder=2)
+    ax0.scatter(v["Si solo ella da el salto"], yi, s=18, facecolor="white", edgecolor=TEC_COLOR[t], linewidth=1.1, zorder=3)
+    ax0.scatter(v["Si todas lo dan a la vez"], yi, s=20, color=TEC_COLOR[t], zorder=4)
+    ax0.text(v["Si solo ella da el salto"] + 2.4, yi, f"{v['Si solo ella da el salto']:.0f}", fontsize=5.2, color=TINTA2, ha="left", va="center")
+    ax0.text(v["Si todas lo dan a la vez"], yi - 0.52, f"{v['Si todas lo dan a la vez']:.0f}", fontsize=5.2, color=TINTA, ha="center")
+ax0.set_yticks(y, [t.replace("Hidroeléctrica", "Hidro.") for t in orden], fontsize=5.8); ax0.set_ylim(-0.75, len(orden) - 0.4)
+ax0.set_xlim(0, 100); ax0.grid(axis="y", visible=False); ax0.set_xlabel("% de escenarios en primer lugar", fontsize=6)
+for etiqueta, kw in (("Hoy", dict(color=GRIS)), ("Solo ella da el salto", dict(facecolor="white", edgecolor=TINTA2, linewidth=1.1)),
+                     ("Todas a la vez", dict(color=TINTA2))):
+    ax0.scatter([], [], s=16, label=etiqueta, **kw)
+ax0.legend(ncol=3, loc="lower left", bbox_to_anchor=(-0.02, 1.0), handletextpad=0.2, columnspacing=0.8, fontsize=5.2, borderaxespad=0.1)
+ax0.set_title("(a) La carrera", loc="left", pad=11)
+
+filas = list(por_prioridad.index)[::-1]
+corto = {"Ninguna (pesos al azar)": "Ninguna (al azar)", "Materiales y circularidad": "Materiales", "Trayectoria y futuro": "Trayectoria"}
+izq = np.zeros(len(filas))
+abrev = {"Geotérmica": "Geot.", "Solar": "Solar", "Eólica": "Eólica", "Hidroeléctrica": "Hidro.", "Biomasa": "Biom."}
+for t in TECS:
+    v = por_prioridad.loc[filas, t].values
+    ax1.barh(np.arange(len(filas)), v, 0.72, left=izq, color=TEC_COLOR[t], edgecolor="white", linewidth=0.4, label=abrev[t])
+    for yi, l, vi in zip(np.arange(len(filas)), izq, v):
+        if vi >= 12:
+            ax1.text(l + vi / 2, yi, f"{vi:.0f}", ha="center", va="center", fontsize=5.2, color=TINTA if t in ("Solar", "Eólica") else "white")
+    izq += v
+ax1.set_yticks(np.arange(len(filas)), [corto.get(f, f) for f in filas], fontsize=5.8); ax1.set_xlim(0, 100); ax1.set_ylim(-0.5, len(filas) - 0.5)
+ax1.grid(axis="y", visible=False); ax1.set_xlabel("% de escenarios en primer lugar (todas dan el salto)", fontsize=6)
+ax1.legend(ncol=5, loc="lower left", bbox_to_anchor=(-0.02, 1.0), handlelength=0.7, columnspacing=0.5, handletextpad=0.25, fontsize=5.2, borderaxespad=0.1)
+ax1.set_title("(b) Pilar que pesa cinco veces más", loc="left", pad=11)
+fig.subplots_adjust(left=0.27, right=0.97, top=0.9, bottom=0.1)
+fig.savefig(FIG / "f4_saltos.png", dpi=300)
+plt.show()
+ganadoras = "; ".join(f"{p_.lower()}: {por_prioridad.loc[p_].idxmax().lower()} ({por_prioridad.loc[p_].max():.0f} %)" for p_ in mc.PILARES)
+display(Markdown(f"""**Interpretación.** Si solo una da el salto, puede ganar: la solar llegaría al {sola['Solar']:.0f} % de los escenarios y la eólica al {sola['Eólica']:.0f} %.
+Si todas lo dan a la vez, junto con la geotérmica madura, gana la {todas.idxmax().lower()} ({todas.max():.0f} %), pero ninguna llega tan lejos como si mejorara sola:
+el modelo compara a las cinco entre sí. Con un pilar cinco veces más importante, la ganadora cambia ({ganadoras}). No hay un ganador único.
+Los niveles son supuestos ilustrativos: es un ejercicio exploratorio, no un pronóstico."""))
 ''')
 
 md("# 5. Artefactos y cumplimiento")
