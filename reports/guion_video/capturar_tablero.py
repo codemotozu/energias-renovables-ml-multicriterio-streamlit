@@ -89,6 +89,15 @@ if __name__ == "__main__":
             esperar(pg, 4000)
             pg.screenshot(path=str(SALIDA / "vista7.png"))
 
+            # Vista 7: escenario de futuro (todas mejoran con el avance esperado y la geotérmica madura)
+            pg.locator('[data-testid="stSelectbox"]').filter(has_text="Escenario").first.click()
+            esperar(pg, 800)
+            pg.get_by_role("option", name="Todas mejoran: avance esperado (y geotérmica madura)").click()
+            esperar(pg, 9000)
+            pg.evaluate("window.scrollTo(0, 0)")
+            esperar(pg, 1000)
+            pg.screenshot(path=str(SALIDA / "vista7_futuro.png"))
+
             # Vista 9: la carrera con la geotérmica madura
             pg.goto(URL + "/saltos", wait_until="networkidle", timeout=120000)
             pg.wait_for_selector('[role="tab"]', timeout=120000)

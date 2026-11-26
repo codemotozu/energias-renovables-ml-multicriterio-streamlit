@@ -27,7 +27,8 @@ INFORME = "Ciencia_de_Datos_Fase4_Actividades_7_8_y_9_Rodriguez_Chacon_Carolina.
 
 # Recortes de las capturas del tablero (x0, y0, x1, y1, en píxeles de la captura)
 RECORTES = {"vista1": (540, 90, 2060, 1500), "vista4": (540, 120, 2060, 990), "vista6": (540, 120, 2060, 1400),
-            "vista7": (540, 2120, 2060, 3320), "vista9": (540, 2120, 2060, 3020), "github": (160, 280, 1530, 1420)}
+            "vista7": (540, 2120, 2060, 3320), "vista7_futuro": (540, 110, 2060, 1460), "vista9": (540, 2120, 2060, 3020),
+            "github": (160, 280, 1530, 1420)}
 
 # (sección, paso)  ·  cada paso: etiqueta, imagen, pie, acciones (HAZ) y texto (LO QUE DICES)
 PASOS = [
@@ -120,6 +121,11 @@ PASOS = [
         haz=["abre «7. Qué le conviene a cada país», baja hasta «Análisis de un país» y elige Alemania."],
         dices="En la vista por país, a Alemania se le recomienda la solar, pero el tablero advierte que en diciembre llega solo el 19 % del sol "
               "promedio: allí la solar necesita el respaldo de otras fuentes en invierno.")),
+    ("Demostración del tablero", dict(
+        etiqueta="Tablero", img="vista7_futuro", pie="<b>Vista 7</b> · Escenario de futuro: todas mejoran",
+        haz=["sube hasta el selector «Escenario», arriba de la vista, y elige «Todas mejoran: avance esperado (y geotérmica madura)»."],
+        dices="Y de cara al futuro: si todas las renovables mejoran a un ritmo esperado y la geotérmica madura, la solar seguiría primera en 149 "
+              "países y la geotérmica en 17, pero en 125 la decisión queda reñida. Con un gran salto de todas, la solar ganaría en los 166.")),
     ("Demostración del tablero", dict(
         etiqueta="Tablero", img="vista9", pie="<b>Vista 9</b> · ¿Quién gana según lo que más importe?",
         haz=["abre «9. ¿Y si cada una da su gran salto?», entra a la pestaña 3, activa «Sumar la geotérmica madura de la vista 8» y baja hasta "
