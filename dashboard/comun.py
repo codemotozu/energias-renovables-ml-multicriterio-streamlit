@@ -195,13 +195,15 @@ def recomendar(iso3, prioridad, metodo, baterias, escenario=None, n=4000):
 
 
 @st.cache_data(show_spinner=False)
-def simular_saltos(saltos, metodo="SAW", geo_madura=False, n=20000):
-    """Monte Carlo global con saltos tecnológicos. saltos = ((tecnología, ((palanca, valor), ...)), ...)."""
+def simular_saltos(saltos, metodo="SAW", geo_madura=False, prioridad=None, n=20000):
+    """Monte Carlo global con saltos tecnológicos. saltos = ((tecnología, ((palanca, valor), ...)), ...);
+    prioridad = ((pilar, peso), ...) fija los pesos; None los sortea al azar."""
     d = criterios()
     if geo_madura:
         d = mc.aplicar_escenario_geo(d, **mc.ESCENARIOS_GEO["Madura (meta de la industria)"])
     d = sa.aplicar_saltos(d, {t: dict(v) for t, v in saltos})
-    P = mc.simular(d, n, np.random.default_rng(42), metodo=metodo, almacenamiento=True)
+    pesos = mc.pesos_desde_pilares(dict(prioridad)) if prioridad else None
+    P = mc.simular(d, n, np.random.default_rng(42), metodo=metodo, almacenamiento=True, pesos=pesos)
     return mc.resumen_puestos(P), d
 
 

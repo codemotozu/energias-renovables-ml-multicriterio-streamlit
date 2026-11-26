@@ -27,7 +27,8 @@ qué pasaría si una de ellas da un salto histórico y qué pasaría si todas lo
 hallazgo(f"<b>La física pone techo:</b> un panel de 2 × 2 cm recibe como máximo {p_max:.1f} W de sol, aunque fuera perfecto. El gran salto de las renovables está en el costo, la escala, la duración y el reciclaje.<br>"
          f"<b>Si una sola da el salto, puede ganar:</b> con un gran salto, la solar quedaría primera en el {solo['Solar'].loc['Solar', '% n.º 1']:.0f} % de los escenarios, "
          f"y la eólica subiría al {solo['Eólica'].loc['Eólica', '% n.º 1']:.0f} % y superaría a la solar.<br>"
-         f"<b>Si todas lo dan a la vez,</b> gana la {gana_todas.lower()} ({todas.loc[gana_todas, '% n.º 1']:.0f} %): cuando todas mejoran, decide quién mejora más.")
+         f"<b>Si todas lo dan a la vez,</b> gana la {gana_todas.lower()} ({todas.loc[gana_todas, '% n.º 1']:.0f} %) sin favorecer ninguna prioridad. "
+         "Si se prioriza otra cosa, como tener energía a toda hora, el ganador cambia.")
 
 tab1, tab2, tab3 = st.tabs(["1. ¿Cuánto pueden mejorar todavía?", "2. ¿Y si una da el salto?", "3. ¿Y si todas lo dan a la vez?"])
 
@@ -176,6 +177,46 @@ la ventaja de cada una se diluye y gana la que mejora más en lo que más pesa. 
     st.dataframe({"Tecnología": list(TECS), "Hoy (%)": [f"{ref.loc[x, '% n.º 1']:.1f}" for x in TECS],
                   "Si solo ella da el salto (%)": [f"{sola[x]:.1f}" if x in sola else "—" for x in TECS],
                   "Si todas lo dan a la vez (%)": [f"{res_t.loc[x, '% n.º 1']:.1f}" for x in TECS]}, width="stretch", hide_index=True)
+
+    st.subheader("¿Quién gana según lo que más importe?")
+    st.markdown("Arriba, los pesos de los criterios se sortean al azar: no se favorece ninguna visión. Aquí, en cambio, **un pilar pesa cinco veces más** "
+                "que cada uno de los demás, con el mismo nivel de salto y la misma opción de geotérmica elegidos arriba.")
+    SIN_PRIORIDAD = "Ninguna (pesos al azar)"
+    por_prioridad = {}
+    for pr in [SIN_PRIORIDAD] + list(mc.PILARES):
+        prioridad = None if pr == SIN_PRIORIDAD else tuple((p, 5 if p == pr else 1) for p in mc.PILARES)
+        por_prioridad[pr] = simular_saltos(saltos_a_tupla(saltos), geo_madura=geo, prioridad=prioridad)[0]["% n.º 1"]
+    filas = list(por_prioridad)[::-1]
+    fig = go.Figure()
+    for tec_ in TECS:
+        v = [por_prioridad[pr][tec_] for pr in filas]
+        fig.add_bar(y=filas, x=v, name=tec_, orientation="h", marker=dict(color=color[tec_], line=dict(color=t["superficie"], width=1.5)),
+                    text=[f"{x:.0f}" if x >= 8 else "" for x in v], textposition="inside", insidetextanchor="middle",
+                    textfont=dict(color="#0b0b0b" if tec_ in ("Solar", "Eólica") else "#ffffff", size=12),
+                    hovertemplate=tec_ + " · prioridad %{y}: %{x:.1f} %<extra></extra>")
+    fig.update_layout(barmode="stack", bargap=0.3, barcornerradius=0)
+    estilo_figura(fig, alto=360, titulo_x="% de escenarios en primer lugar", margen=dict(l=8, r=12, t=34, b=8))
+    fig.update_layout(barcornerradius=0)
+    fig.update_xaxes(range=[0, 100], ticksuffix=" %"); fig.update_yaxes(showgrid=False)
+    mostrar(fig)
+
+    ganadoras = {pr: por_prioridad[pr].idxmax() for pr in por_prioridad}
+    victorias = {}
+    for pr, g in ganadoras.items():
+        if pr != SIN_PRIORIDAD:
+            victorias.setdefault(g, []).append(f"{pr.lower()} ({por_prioridad[pr][g]:.0f} %)")
+    unir = lambda xs: xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " o " + xs[-1]
+    g0 = ganadoras[SIN_PRIORIDAD]
+    texto = f"Sin favorecer ninguna prioridad gana la **{g0.lower()}** ({por_prioridad[SIN_PRIORIDAD][g0]:.0f} %). "
+    if len(victorias) == 1:
+        texto += "Y sigue ganando con cualquiera de las cinco prioridades."
+    else:
+        texto += "Pero el ganador cambia según lo que se valore: " + "; ".join(
+            f"la **{g.lower()}** gana si se prioriza {unir(prs)}" for g, prs in sorted(victorias.items(), key=lambda x: -len(x[1]))) + "."
+        texto += " No es una carrera con un solo ganador: cada tecnología destaca en algo distinto, y lo más probable es que se complementen."
+    st.markdown(texto)
+    st.caption("«Ganar» significa quedar primera en más escenarios del índice de 14 criterios, no producir más energía. Con pesos fijos solo se sortea la incertidumbre "
+               "de los datos, por eso los porcentajes son más extremos.")
 
 with st.expander("Fuentes y supuestos"):
     st.markdown("**Datos reales que anclan los escenarios**")
