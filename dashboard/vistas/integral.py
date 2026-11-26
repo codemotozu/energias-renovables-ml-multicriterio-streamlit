@@ -88,19 +88,41 @@ with tab3:
 with tab4:
     pr = leer("productividad.csv", index_col=0).reindex(TECS)
     medidas = {"Por dólar (MWh por 1 000 USD)": "MWh por 1 000 USD", "Por MW instalado (MWh al año)": "MWh por MW al año",
-               "Por cancha de fútbol (GWh al año, mejor caso)": "GWh/año por cancha (mejor caso)", "Por material (GWh por 1 000 t)": "GWh por 1 000 t de materiales",
+               "Por cancha de fútbol (GWh al año)": "GWh/año por cancha (mejor caso)", "Por material (GWh por 1 000 t)": "GWh por 1 000 t de materiales",
                "Por minerales críticos (GWh por t)": "GWh por t de minerales críticos"}
+
+    def cifra(v):
+        """Mismo redondeo que la Tabla IV del informe."""
+        if v >= 1000:
+            return f"{round(v, -1):,.0f}".replace(",", " ")
+        return f"{v:.1f}" if v >= 1 else f"{v:.2f}"
+
     m_ = st.selectbox("¿Energía por cada unidad de qué recurso?", list(medidas))
     col = medidas[m_]
     o = pr[col].sort_values()
+    peor = pr["GWh/año por cancha (peor caso)"]
+    if "cancha" in m_:      # la eólica y la biomasa tienen rango: la barra es el mejor caso y la etiqueta muestra peor–mejor
+        textos = [cifra(v) if np.isclose(peor[t], v) else f"{cifra(peor[t])}–{cifra(v)}" for t, v in o.items()]
+        titulo_x = "GWh al año por cancha (la barra es el mejor caso)"
+    else:
+        textos, titulo_x = [cifra(v) for v in o.values], col
     color = colores_tec()
-    fig = go.Figure(go.Bar(x=o.values, y=o.index, orientation="h", marker=dict(color=[color[t] for t in o.index]), text=[f"{v:,.1f}".replace(",", " ") for v in o.values],
-                           textposition="outside", cliponaxis=False, hovertemplate="%{y}: %{x:,.1f}<extra></extra>"))
-    estilo_figura(fig, alto=300, leyenda=False, titulo_x=col, margen=dict(l=8, r=70, t=8, b=8))
+    fig = go.Figure(go.Bar(x=o.values, y=o.index, orientation="h", marker=dict(color=[color[t] for t in o.index]), text=textos, customdata=textos,
+                           textposition="outside", cliponaxis=False, hovertemplate="%{y}: %{customdata}<extra></extra>"))
+    estilo_figura(fig, alto=300, leyenda=False, titulo_x=titulo_x, margen=dict(l=8, r=90, t=8, b=8))
     fig.update_yaxes(showgrid=False); fig.update_layout(bargap=0.3)
     mostrar(fig)
     if "material" in m_:
         st.caption("En la biomasa, la fuente solo cuenta la planta generadora y no la cadena del combustible: su valor no es comparable con los demás.")
     if "cancha" in m_:
-        st.caption("Cancha de 105 × 68 m, como la de El Campín. En el peor caso, la eólica cuenta todo el espacio entre turbinas (que sigue sirviendo para cultivar) y la biomasa, cultivos dedicados.")
+        geo_, sol_ = pr.loc["Geotérmica", col], pr.loc["Solar", col]
+        st.caption(
+            f"Una cancha de fútbol como la de El Campín mide 105 × 68 m (0.71 ha). En ese espacio, una planta geotérmica generaría {cifra(geo_)} GWh al año, "
+            f"unas {geo_ / sol_:.0f} veces lo que produciría una planta solar ({cifra(sol_)} GWh). "
+            "La eólica y la biomasa tienen un rango porque su resultado depende de qué terreno se cuente. "
+            f"**Eólica:** {cifra(peor['Eólica'])} si se cuenta todo el parque, incluido el espacio entre turbinas, que se puede seguir usando para cultivar o tener ganado; "
+            f"{cifra(pr.loc['Eólica', col])} si solo se cuenta lo que ocupan las turbinas, las vías y la subestación. "
+            f"**Biomasa:** {cifra(peor['Biomasa'])} si el combustible sale de cultivos sembrados solo para producir energía; "
+            f"{cifra(pr.loc['Biomasa', col])} si sale de residuos agrícolas o forestales, como el bagazo de caña, que no ocupan terreno adicional. "
+            "Uso de suelo según Lovering et al. (2022).")
     st.markdown("**No hay una sola ganadora:** la eólica entrega más energía **por dólar**; la geotérmica, más **por MW, por terreno y por material**, pero es más cara y hoy solo es viable donde hay calor cerca de la superficie.")
