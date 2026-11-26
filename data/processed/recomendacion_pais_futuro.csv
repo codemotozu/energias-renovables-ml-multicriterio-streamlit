@@ -1,0 +1,333 @@
+iso3,provisional,recomendada,pct_primera,segunda,pct_segunda,certeza,recomendada_topsis,pct_Solar,pct_Eólica,pct_Hidroeléctrica,pct_Geotérmica,pct_Biomasa,escenario,pais,region,ingreso
+AFG,False,Solar,43.58,Geotérmica,34.95,Reñida,Solar,43.58,17.08,4.4,34.95,0.0,Todas mejoran: avance esperado (y geotérmica madura),Afganistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+AGO,False,Solar,41.18,Geotérmica,33.4,Reñida,Solar,41.18,16.3,9.05,33.4,0.08,Todas mejoran: avance esperado (y geotérmica madura),Angola,África al sur del Sahara,Países de ingreso mediano bajo
+ALB,False,Solar,37.82,Geotérmica,35.5,Reñida,Geotérmica,37.82,20.28,5.88,35.5,0.52,Todas mejoran: avance esperado (y geotérmica madura),Albania,Europa y Asia central,Ingreso mediano alto
+ARE,False,Solar,54.4,Geotérmica,36.28,Moderada,Solar,54.4,8.0,0.0,36.28,1.32,Todas mejoran: avance esperado (y geotérmica madura),Emiratos Árabes Unidos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ARG,False,Solar,35.15,Eólica,29.9,Reñida,Solar,35.15,29.9,6.02,28.62,0.3,Todas mejoran: avance esperado (y geotérmica madura),Argentina,América Latina y el Caribe,Ingreso mediano alto
+ARM,False,Solar,39.57,Geotérmica,36.52,Reñida,Solar,39.57,20.28,3.62,36.52,0.0,Todas mejoran: avance esperado (y geotérmica madura),Armenia,Europa y Asia central,Ingreso mediano alto
+AUS,False,Solar,41.28,Geotérmica,36.33,Reñida,Solar,41.28,14.95,7.32,36.33,0.12,Todas mejoran: avance esperado (y geotérmica madura),Australia,Asia oriental y el Pacífico,Ingreso alto
+AUT,False,Solar,40.4,Geotérmica,36.38,Reñida,Solar,40.4,12.75,10.48,36.38,0.0,Todas mejoran: avance esperado (y geotérmica madura),Austria,Europa y Asia central,Ingreso alto
+AZE,False,Solar,48.65,Geotérmica,39.98,Reñida,Solar,48.65,6.62,3.85,39.98,0.9,Todas mejoran: avance esperado (y geotérmica madura),Azerbaiyán,Europa y Asia central,Ingreso mediano alto
+BDI,False,Solar,40.83,Geotérmica,30.75,Moderada,Solar,40.83,15.18,13.15,30.75,0.1,Todas mejoran: avance esperado (y geotérmica madura),Burundi,África al sur del Sahara,Países de ingreso bajo
+BEL,False,Geotérmica,36.7,Solar,35.88,Reñida,Geotérmica,35.88,19.12,8.0,36.7,0.3,Todas mejoran: avance esperado (y geotérmica madura),Bélgica,Europa y Asia central,Ingreso alto
+BEN,True,Solar,44.1,Geotérmica,36.72,Reñida,Solar,44.1,19.18,0.0,36.72,0.0,Todas mejoran: avance esperado (y geotérmica madura),Benin,África al sur del Sahara,Países de ingreso mediano bajo
+BFA,False,Solar,42.48,Geotérmica,33.83,Reñida,Solar,42.48,17.18,6.05,33.83,0.48,Todas mejoran: avance esperado (y geotérmica madura),Burkina Faso,África al sur del Sahara,Países de ingreso bajo
+BGD,False,Solar,48.85,Geotérmica,32.57,Moderada,Solar,48.85,9.22,9.35,32.57,0.0,Todas mejoran: avance esperado (y geotérmica madura),Bangladesh,Asia meridional,Países de ingreso mediano bajo
+BGR,False,Solar,45.8,Geotérmica,38.22,Reñida,Solar,45.8,11.4,3.25,38.22,1.32,Todas mejoran: avance esperado (y geotérmica madura),Bulgaria,Europa y Asia central,Ingreso alto
+BHR,True,Solar,47.92,Geotérmica,35.95,Moderada,Solar,47.92,16.12,0.0,35.95,0.0,Todas mejoran: avance esperado (y geotérmica madura),Bahrein,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+BIH,False,Solar,41.25,Geotérmica,34.95,Reñida,Solar,41.25,16.12,7.52,34.95,0.15,Todas mejoran: avance esperado (y geotérmica madura),Bosnia y Herzegovina,Europa y Asia central,Ingreso mediano alto
+BLR,False,Geotérmica,40.17,Solar,39.42,Reñida,Geotérmica,39.42,10.25,9.9,40.17,0.25,Todas mejoran: avance esperado (y geotérmica madura),Belarús,Europa y Asia central,Ingreso mediano alto
+BOL,False,Solar,42.75,Geotérmica,32.62,Moderada,Solar,42.75,15.48,9.15,32.62,0.0,Todas mejoran: avance esperado (y geotérmica madura),Bolivia,América Latina y el Caribe,Países de ingreso mediano bajo
+BRA,False,Solar,37.92,Geotérmica,32.17,Reñida,Solar,37.92,20.82,9.07,32.17,0.0,Todas mejoran: avance esperado (y geotérmica madura),Brasil,América Latina y el Caribe,Ingreso mediano alto
+BRN,False,Solar,44.4,Geotérmica,36.75,Reñida,Solar,44.4,18.85,0.0,36.75,0.0,Todas mejoran: avance esperado (y geotérmica madura),Brunei Darussalam,Asia oriental y el Pacífico,Ingreso alto
+BTN,False,Solar,38.52,Geotérmica,33.45,Reñida,Solar,38.52,18.18,9.85,33.45,0.0,Todas mejoran: avance esperado (y geotérmica madura),Bhután,Asia meridional,Países de ingreso mediano bajo
+BWA,False,Solar,46.0,Geotérmica,36.18,Reñida,Solar,46.0,17.82,0.0,36.18,0.0,Todas mejoran: avance esperado (y geotérmica madura),Botswana,África al sur del Sahara,Ingreso mediano alto
+CAF,True,Solar,42.65,Geotérmica,26.9,Moderada,Solar,42.65,12.82,17.62,26.9,0.0,Todas mejoran: avance esperado (y geotérmica madura),República Centroafricana,África al sur del Sahara,Países de ingreso bajo
+CAN,False,Solar,40.02,Geotérmica,34.17,Reñida,Solar,40.02,14.95,10.85,34.17,0.0,Todas mejoran: avance esperado (y geotérmica madura),Canadá,América del Norte,Ingreso alto
+CHE,False,Geotérmica,42.08,Solar,39.45,Reñida,Geotérmica,39.45,9.83,7.48,42.08,1.18,Todas mejoran: avance esperado (y geotérmica madura),Suiza,Europa y Asia central,Ingreso alto
+CHL,False,Solar,50.28,Geotérmica,33.72,Moderada,Solar,50.28,9.45,6.08,33.72,0.48,Todas mejoran: avance esperado (y geotérmica madura),Chile,América Latina y el Caribe,Ingreso alto
+CHN,False,Solar,40.8,Geotérmica,37.18,Reñida,Solar,40.8,12.55,9.3,37.18,0.18,Todas mejoran: avance esperado (y geotérmica madura),China,Asia oriental y el Pacífico,Ingreso mediano alto
+CIV,True,Solar,41.48,Geotérmica,34.0,Reñida,Solar,41.48,17.58,6.95,34.0,0.0,Todas mejoran: avance esperado (y geotérmica madura),Côte d'Ivoire,África al sur del Sahara,Países de ingreso mediano bajo
+CMR,False,Solar,33.67,Geotérmica,32.7,Reñida,Geotérmica,33.67,20.38,13.25,32.7,0.0,Todas mejoran: avance esperado (y geotérmica madura),Camerún,África al sur del Sahara,Países de ingreso mediano bajo
+COD,True,Solar,36.93,Geotérmica,33.88,Reñida,Solar,36.93,19.28,9.7,33.88,0.22,Todas mejoran: avance esperado (y geotérmica madura),"Congo, República Democrática del",África al sur del Sahara,Países de ingreso bajo
+COG,False,Solar,38.07,Geotérmica,32.9,Reñida,Solar,38.07,17.12,11.9,32.9,0.0,Todas mejoran: avance esperado (y geotérmica madura),"Congo, República del",África al sur del Sahara,Países de ingreso mediano bajo
+COL,False,Solar,37.48,Geotérmica,30.72,Reñida,Solar,37.48,21.98,9.7,30.72,0.12,Todas mejoran: avance esperado (y geotérmica madura),Colombia,América Latina y el Caribe,Ingreso mediano alto
+CPV,False,Solar,49.9,Geotérmica,37.88,Moderada,Solar,49.9,12.22,0.0,37.88,0.0,Todas mejoran: avance esperado (y geotérmica madura),Cabo Verde,África al sur del Sahara,Ingreso mediano alto
+CRI,False,Solar,39.48,Geotérmica,30.35,Reñida,Solar,39.48,20.98,9.2,30.35,0.0,Todas mejoran: avance esperado (y geotérmica madura),Costa Rica,América Latina y el Caribe,Ingreso alto
+CUB,False,Solar,39.62,Geotérmica,29.45,Moderada,Solar,39.62,25.45,5.48,29.45,0.0,Todas mejoran: avance esperado (y geotérmica madura),Cuba,América Latina y el Caribe,Ingreso mediano alto
+CYP,False,Solar,50.95,Geotérmica,40.45,Moderada,Solar,50.95,7.65,0.0,40.45,0.95,Todas mejoran: avance esperado (y geotérmica madura),Chipre,Europa y Asia central,Ingreso alto
+CZE,False,Solar,41.68,Geotérmica,40.72,Reñida,Geotérmica,41.68,12.25,4.15,40.72,1.2,Todas mejoran: avance esperado (y geotérmica madura),República Checa,Europa y Asia central,Ingreso alto
+DEU,False,Solar,38.0,Geotérmica,37.85,Reñida,Geotérmica,38.0,12.72,11.28,37.85,0.15,Todas mejoran: avance esperado (y geotérmica madura),Alemania,Europa y Asia central,Ingreso alto
+DJI,False,Solar,48.35,Geotérmica,36.85,Moderada,Solar,48.35,14.8,0.0,36.85,0.0,Todas mejoran: avance esperado (y geotérmica madura),Djibouti,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+DNK,False,Solar,36.88,Geotérmica,36.25,Reñida,Geotérmica,36.88,19.3,7.42,36.25,0.15,Todas mejoran: avance esperado (y geotérmica madura),Dinamarca,Europa y Asia central,Ingreso alto
+DOM,False,Solar,44.55,Geotérmica,35.22,Reñida,Solar,44.55,15.35,4.23,35.22,0.65,Todas mejoran: avance esperado (y geotérmica madura),República Dominicana,América Latina y el Caribe,Ingreso mediano alto
+DZA,False,Solar,58.18,Geotérmica,33.78,Clara,Solar,58.18,6.42,1.62,33.78,0.0,Todas mejoran: avance esperado (y geotérmica madura),Argelia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ECU,True,Solar,34.5,Geotérmica,32.07,Reñida,Solar,34.5,22.18,11.25,32.07,0.0,Todas mejoran: avance esperado (y geotérmica madura),Ecuador,América Latina y el Caribe,Ingreso mediano alto
+EGY,False,Solar,38.82,Geotérmica,31.05,Reñida,Solar,38.82,17.75,12.38,31.05,0.0,Todas mejoran: avance esperado (y geotérmica madura),"Egipto, República Árabe de","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+ERI,True,Solar,46.88,Geotérmica,36.18,Moderada,Solar,46.88,16.95,0.0,36.18,0.0,Todas mejoran: avance esperado (y geotérmica madura),Eritrea,África al sur del Sahara,Países de ingreso bajo
+ESH,False,Solar,47.35,Geotérmica,36.0,Moderada,Solar,47.35,16.65,0.0,36.0,0.0,Todas mejoran: avance esperado (y geotérmica madura),Sáhara Occidental,"Oriente Medio, Norte de África, Afganistán y Pakistán",
+ESP,False,Solar,47.55,Geotérmica,37.35,Moderada,Solar,47.55,10.4,4.0,37.35,0.7,Todas mejoran: avance esperado (y geotérmica madura),España,Europa y Asia central,Ingreso alto
+EST,False,Geotérmica,37.38,Solar,36.65,Reñida,Geotérmica,36.65,16.73,9.07,37.38,0.18,Todas mejoran: avance esperado (y geotérmica madura),Estonia,Europa y Asia central,Ingreso alto
+ETH,True,Solar,48.75,Geotérmica,35.93,Moderada,Solar,48.75,7.5,7.4,35.93,0.43,Todas mejoran: avance esperado (y geotérmica madura),Etiopía,África al sur del Sahara,Países de ingreso bajo
+FIN,False,Geotérmica,34.75,Solar,33.67,Reñida,Geotérmica,33.67,19.68,11.9,34.75,0.0,Todas mejoran: avance esperado (y geotérmica madura),Finlandia,Europa y Asia central,Ingreso alto
+FJI,True,Solar,38.45,Geotérmica,33.58,Reñida,Solar,38.45,17.9,10.08,33.58,0.0,Todas mejoran: avance esperado (y geotérmica madura),Fiji,Asia oriental y el Pacífico,Ingreso mediano alto
+FRA,False,Solar,41.55,Geotérmica,37.82,Reñida,Solar,41.55,12.98,7.38,37.82,0.27,Todas mejoran: avance esperado (y geotérmica madura),Francia,Europa y Asia central,Ingreso alto
+GAB,False,Solar,39.3,Geotérmica,35.22,Reñida,Solar,39.3,19.45,5.45,35.22,0.57,Todas mejoran: avance esperado (y geotérmica madura),Gabón,África al sur del Sahara,Ingreso mediano alto
+GBR,False,Geotérmica,36.6,Solar,33.3,Reñida,Geotérmica,33.3,22.3,7.5,36.6,0.3,Todas mejoran: avance esperado (y geotérmica madura),Reino Unido,Europa y Asia central,Ingreso alto
+GEO,False,Solar,33.0,Geotérmica,31.57,Reñida,Eólica,33.0,29.48,5.95,31.57,0.0,Todas mejoran: avance esperado (y geotérmica madura),Georgia,Europa y Asia central,Ingreso mediano alto
+GHA,False,Solar,38.22,Geotérmica,32.42,Reñida,Solar,38.22,16.83,12.52,32.42,0.0,Todas mejoran: avance esperado (y geotérmica madura),Ghana,África al sur del Sahara,Países de ingreso mediano bajo
+GIN,True,Solar,41.48,Geotérmica,33.4,Reñida,Solar,41.48,17.08,8.05,33.4,0.0,Todas mejoran: avance esperado (y geotérmica madura),Guinea,África al sur del Sahara,Países de ingreso mediano bajo
+GMB,False,Solar,46.32,Geotérmica,36.12,Moderada,Solar,46.32,17.55,0.0,36.12,0.0,Todas mejoran: avance esperado (y geotérmica madura),Gambia,África al sur del Sahara,Países de ingreso bajo
+GNB,False,Solar,45.98,Geotérmica,36.2,Reñida,Solar,45.98,17.82,0.0,36.2,0.0,Todas mejoran: avance esperado (y geotérmica madura),Guinea-Bissau,África al sur del Sahara,Países de ingreso bajo
+GNQ,False,Solar,38.98,Geotérmica,34.75,Reñida,Solar,38.98,19.18,7.1,34.75,0.0,Todas mejoran: avance esperado (y geotérmica madura),Guinea Ecuatorial,África al sur del Sahara,Ingreso mediano alto
+GRC,False,Solar,45.2,Geotérmica,37.28,Reñida,Solar,45.2,13.3,3.52,37.28,0.7,Todas mejoran: avance esperado (y geotérmica madura),Grecia,Europa y Asia central,Ingreso alto
+GTM,False,Solar,41.0,Geotérmica,33.7,Reñida,Solar,41.0,15.9,9.4,33.7,0.0,Todas mejoran: avance esperado (y geotérmica madura),Guatemala,América Latina y el Caribe,Ingreso mediano alto
+GUF,False,Solar,41.5,Geotérmica,33.17,Reñida,Solar,41.5,16.18,8.98,33.17,0.18,Todas mejoran: avance esperado (y geotérmica madura),Guayana Francesa,América Latina y el Caribe,
+GUY,True,Solar,41.8,Geotérmica,30.9,Moderada,Solar,41.8,17.95,9.35,30.9,0.0,Todas mejoran: avance esperado (y geotérmica madura),Guyana,América Latina y el Caribe,Ingreso alto
+HND,False,Solar,42.0,Geotérmica,33.35,Reñida,Solar,42.0,15.18,9.48,33.35,0.0,Todas mejoran: avance esperado (y geotérmica madura),Honduras,América Latina y el Caribe,Países de ingreso mediano bajo
+HRV,False,Solar,40.55,Geotérmica,39.07,Reñida,Geotérmica,40.55,13.38,6.12,39.07,0.88,Todas mejoran: avance esperado (y geotérmica madura),Croacia,Europa y Asia central,Ingreso alto
+HUN,False,Solar,43.25,Geotérmica,36.28,Reñida,Solar,43.25,10.68,9.75,36.28,0.05,Todas mejoran: avance esperado (y geotérmica madura),Hungría,Europa y Asia central,Ingreso alto
+IDN,False,Solar,41.38,Geotérmica,33.28,Reñida,Solar,41.38,17.32,7.35,33.28,0.68,Todas mejoran: avance esperado (y geotérmica madura),Indonesia,Asia oriental y el Pacífico,Ingreso mediano alto
+IND,False,Solar,45.0,Geotérmica,36.55,Reñida,Solar,45.0,8.98,9.48,36.55,0.0,Todas mejoran: avance esperado (y geotérmica madura),India,Asia meridional,Países de ingreso mediano bajo
+IRL,False,Geotérmica,39.83,Solar,30.7,Reñida,Geotérmica,30.7,21.38,7.62,39.83,0.48,Todas mejoran: avance esperado (y geotérmica madura),Irlanda,Europa y Asia central,Ingreso alto
+IRN,False,Solar,44.6,Geotérmica,35.9,Reñida,Solar,44.6,13.65,5.85,35.9,0.0,Todas mejoran: avance esperado (y geotérmica madura),"Irán, República Islámica del","Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+IRQ,False,Solar,43.05,Geotérmica,35.6,Reñida,Solar,43.05,17.65,3.7,35.6,0.0,Todas mejoran: avance esperado (y geotérmica madura),Iraq,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ISL,False,Geotérmica,32.88,Solar,26.55,Reñida,Geotérmica,26.55,24.5,16.08,32.88,0.0,Todas mejoran: avance esperado (y geotérmica madura),Islandia,Europa y Asia central,Ingreso alto
+ISR,False,Solar,42.18,Geotérmica,34.3,Reñida,Solar,42.18,14.08,9.45,34.3,0.0,Todas mejoran: avance esperado (y geotérmica madura),Israel,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ITA,False,Solar,43.28,Geotérmica,39.57,Reñida,Solar,43.28,10.27,6.35,39.57,0.52,Todas mejoran: avance esperado (y geotérmica madura),Italia,Europa y Asia central,Ingreso alto
+JAM,False,Solar,40.42,Geotérmica,32.8,Reñida,Solar,40.42,16.05,10.72,32.8,0.0,Todas mejoran: avance esperado (y geotérmica madura),Jamaica,América Latina y el Caribe,Ingreso mediano alto
+JOR,False,Solar,48.78,Geotérmica,28.55,Moderada,Solar,48.78,13.5,9.18,28.55,0.0,Todas mejoran: avance esperado (y geotérmica madura),Jordania,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+JPN,False,Solar,41.9,Geotérmica,39.28,Reñida,Solar,41.9,11.68,5.82,39.28,1.32,Todas mejoran: avance esperado (y geotérmica madura),Japón,Asia oriental y el Pacífico,Ingreso alto
+KAZ,False,Solar,41.22,Geotérmica,33.98,Reñida,Solar,41.22,16.95,7.85,33.98,0.0,Todas mejoran: avance esperado (y geotérmica madura),Kazajstán,Europa y Asia central,Ingreso mediano alto
+KEN,False,Solar,42.3,Geotérmica,32.9,Reñida,Solar,42.3,15.2,9.6,32.9,0.0,Todas mejoran: avance esperado (y geotérmica madura),Kenia,África al sur del Sahara,Países de ingreso mediano bajo
+KGZ,False,Solar,40.08,Geotérmica,33.8,Reñida,Solar,40.08,18.0,8.12,33.8,0.0,Todas mejoran: avance esperado (y geotérmica madura),Kirguistán,Europa y Asia central,Países de ingreso mediano bajo
+KHM,False,Solar,41.82,Geotérmica,32.38,Reñida,Solar,41.82,16.28,9.52,32.38,0.0,Todas mejoran: avance esperado (y geotérmica madura),Camboya,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+KOR,False,Solar,46.5,Geotérmica,37.62,Reñida,Solar,46.5,9.6,6.15,37.62,0.12,Todas mejoran: avance esperado (y geotérmica madura),"Corea, República de",Asia oriental y el Pacífico,Ingreso alto
+KOS,False,Geotérmica,39.9,Solar,32.02,Reñida,Geotérmica,32.02,28.08,0.0,39.9,0.0,Todas mejoran: avance esperado (y geotérmica madura),Kosovo,Europa y Asia central,
+KWT,False,Solar,34.08,Geotérmica,33.07,Reñida,Eólica,34.08,32.85,0.0,33.07,0.0,Todas mejoran: avance esperado (y geotérmica madura),Kuwait,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+LAO,False,Solar,40.02,Geotérmica,33.55,Reñida,Solar,40.02,16.6,9.83,33.55,0.0,Todas mejoran: avance esperado (y geotérmica madura),República Democrática Popular Lao,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+LBN,False,Solar,42.22,Geotérmica,34.38,Reñida,Solar,42.22,17.45,5.68,34.38,0.27,Todas mejoran: avance esperado (y geotérmica madura),Líbano,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+LBR,False,Solar,40.9,Geotérmica,35.05,Reñida,Solar,40.9,18.6,5.45,35.05,0.0,Todas mejoran: avance esperado (y geotérmica madura),Liberia,África al sur del Sahara,Países de ingreso bajo
+LBY,False,Geotérmica,38.7,Solar,37.52,Reñida,Geotérmica,37.52,23.78,0.0,38.7,0.0,Todas mejoran: avance esperado (y geotérmica madura),Libia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+LCA,False,Solar,46.25,Geotérmica,36.15,Moderada,Solar,46.25,17.6,0.0,36.15,0.0,Todas mejoran: avance esperado (y geotérmica madura),Santa Lucía,América Latina y el Caribe,Ingreso mediano alto
+LKA,False,Solar,36.98,Geotérmica,34.38,Reñida,Solar,36.98,19.32,9.32,34.38,0.0,Todas mejoran: avance esperado (y geotérmica madura),Sri Lanka,Asia meridional,Ingreso mediano alto
+LSO,False,Solar,42.02,Geotérmica,29.4,Moderada,Solar,42.02,14.1,14.48,29.4,0.0,Todas mejoran: avance esperado (y geotérmica madura),Lesotho,África al sur del Sahara,Países de ingreso mediano bajo
+LTU,False,Geotérmica,40.98,Solar,30.35,Moderada,Geotérmica,30.35,19.6,8.65,40.98,0.43,Todas mejoran: avance esperado (y geotérmica madura),Lituania,Europa y Asia central,Ingreso alto
+LUX,False,Geotérmica,40.6,Solar,33.88,Reñida,Geotérmica,33.88,18.85,6.0,40.6,0.68,Todas mejoran: avance esperado (y geotérmica madura),Luxemburgo,Europa y Asia central,Ingreso alto
+LVA,False,Solar,40.58,Geotérmica,39.35,Reñida,Geotérmica,40.58,15.18,4.12,39.35,0.78,Todas mejoran: avance esperado (y geotérmica madura),Letonia,Europa y Asia central,Ingreso alto
+MAR,False,Solar,40.2,Geotérmica,31.25,Reñida,Solar,40.2,25.85,1.85,31.25,0.85,Todas mejoran: avance esperado (y geotérmica madura),Marruecos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+MDA,False,Solar,43.8,Geotérmica,37.18,Reñida,Solar,43.8,8.9,10.12,37.18,0.0,Todas mejoran: avance esperado (y geotérmica madura),República de Moldova,Europa y Asia central,Ingreso mediano alto
+MDG,True,Solar,43.05,Geotérmica,31.57,Moderada,Solar,43.05,14.75,10.62,31.57,0.0,Todas mejoran: avance esperado (y geotérmica madura),Madagascar,África al sur del Sahara,Países de ingreso bajo
+MEX,False,Solar,47.38,Geotérmica,32.38,Moderada,Solar,47.38,13.85,6.4,32.38,0.0,Todas mejoran: avance esperado (y geotérmica madura),México,América Latina y el Caribe,Ingreso mediano alto
+MKD,False,Solar,38.92,Geotérmica,36.98,Reñida,Geotérmica,38.92,18.82,4.85,36.98,0.43,Todas mejoran: avance esperado (y geotérmica madura),Macedonia del Norte,Europa y Asia central,Ingreso mediano alto
+MLI,False,Solar,42.25,Geotérmica,32.38,Reñida,Solar,42.25,18.62,6.75,32.38,0.0,Todas mejoran: avance esperado (y geotérmica madura),Malí,África al sur del Sahara,Países de ingreso bajo
+MMR,False,Solar,44.68,Geotérmica,34.5,Moderada,Solar,44.68,15.62,4.95,34.5,0.25,Todas mejoran: avance esperado (y geotérmica madura),Myanmar,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+MNE,True,Solar,44.58,Geotérmica,36.15,Reñida,Solar,44.58,14.3,4.98,36.15,0.0,Todas mejoran: avance esperado (y geotérmica madura),Montenegro,Europa y Asia central,Ingreso mediano alto
+MNG,False,Solar,40.65,Geotérmica,34.08,Reñida,Solar,40.65,20.6,4.68,34.08,0.0,Todas mejoran: avance esperado (y geotérmica madura),Mongolia,Asia oriental y el Pacífico,Ingreso mediano alto
+MOZ,False,Solar,37.52,Geotérmica,28.48,Reñida,Solar,37.52,16.28,17.72,28.48,0.0,Todas mejoran: avance esperado (y geotérmica madura),Mozambique,África al sur del Sahara,Países de ingreso bajo
+MRT,False,Solar,40.08,Geotérmica,38.67,Reñida,Geotérmica,40.08,21.25,0.0,38.67,0.0,Todas mejoran: avance esperado (y geotérmica madura),Mauritania,África al sur del Sahara,Países de ingreso mediano bajo
+MUS,False,Solar,46.2,Geotérmica,39.52,Reñida,Solar,46.2,8.28,5.7,39.52,0.3,Todas mejoran: avance esperado (y geotérmica madura),Mauricio,África al sur del Sahara,Ingreso mediano alto
+MWI,False,Solar,40.9,Geotérmica,33.22,Reñida,Solar,40.9,15.58,10.3,33.22,0.0,Todas mejoran: avance esperado (y geotérmica madura),Malawi,África al sur del Sahara,Países de ingreso bajo
+MYS,False,Solar,42.1,Geotérmica,32.17,Reñida,Solar,42.1,14.32,11.4,32.17,0.0,Todas mejoran: avance esperado (y geotérmica madura),Malasia,Asia oriental y el Pacífico,Ingreso mediano alto
+NAM,False,Solar,40.2,Geotérmica,28.9,Moderada,Solar,40.2,23.38,7.25,28.9,0.27,Todas mejoran: avance esperado (y geotérmica madura),Namibia,África al sur del Sahara,Países de ingreso mediano bajo
+NER,True,Solar,44.1,Geotérmica,36.72,Reñida,Solar,44.1,19.18,0.0,36.72,0.0,Todas mejoran: avance esperado (y geotérmica madura),Níger,África al sur del Sahara,Países de ingreso bajo
+NGA,False,Solar,39.67,Geotérmica,33.48,Reñida,Solar,39.67,16.88,9.98,33.48,0.0,Todas mejoran: avance esperado (y geotérmica madura),Nigeria,África al sur del Sahara,Países de ingreso mediano bajo
+NIC,True,Solar,40.05,Geotérmica,32.75,Reñida,Solar,40.05,18.02,9.1,32.75,0.08,Todas mejoran: avance esperado (y geotérmica madura),Nicaragua,América Latina y el Caribe,Países de ingreso mediano bajo
+NLD,False,Geotérmica,36.55,Solar,35.98,Reñida,Geotérmica,35.98,21.48,3.42,36.55,2.58,Todas mejoran: avance esperado (y geotérmica madura),Países Bajos,Europa y Asia central,Ingreso alto
+NOR,False,Geotérmica,34.98,Solar,32.6,Reñida,Geotérmica,32.6,21.65,10.78,34.98,0.0,Todas mejoran: avance esperado (y geotérmica madura),Noruega,Europa y Asia central,Ingreso alto
+NPL,False,Solar,35.52,Geotérmica,33.45,Reñida,Geotérmica,35.52,19.48,11.55,33.45,0.0,Todas mejoran: avance esperado (y geotérmica madura),Nepal,Asia meridional,Países de ingreso mediano bajo
+NZL,False,Solar,35.95,Geotérmica,33.45,Reñida,Solar,35.95,20.5,9.95,33.45,0.15,Todas mejoran: avance esperado (y geotérmica madura),Nueva Zelandia,Asia oriental y el Pacífico,Ingreso alto
+OMN,False,Solar,51.6,Geotérmica,38.45,Moderada,Solar,51.6,9.95,0.0,38.45,0.0,Todas mejoran: avance esperado (y geotérmica madura),Omán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+PAK,False,Solar,44.2,Geotérmica,35.6,Reñida,Solar,44.2,11.6,8.2,35.6,0.4,Todas mejoran: avance esperado (y geotérmica madura),Pakistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+PAN,False,Solar,43.08,Geotérmica,35.45,Reñida,Solar,43.08,11.0,10.48,35.45,0.0,Todas mejoran: avance esperado (y geotérmica madura),Panamá,América Latina y el Caribe,Ingreso alto
+PER,False,Solar,37.25,Geotérmica,30.05,Reñida,Solar,37.25,20.3,12.4,30.05,0.0,Todas mejoran: avance esperado (y geotérmica madura),Perú,América Latina y el Caribe,Ingreso mediano alto
+PHL,False,Solar,40.83,Geotérmica,35.0,Reñida,Solar,40.83,15.98,8.2,35.0,0.0,Todas mejoran: avance esperado (y geotérmica madura),Filipinas,Asia oriental y el Pacífico,Ingreso mediano alto
+PNG,False,Solar,40.05,Geotérmica,33.67,Reñida,Solar,40.05,17.32,8.95,33.67,0.0,Todas mejoran: avance esperado (y geotérmica madura),Papua Nueva Guinea,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+POL,False,Geotérmica,39.45,Solar,31.62,Reñida,Geotérmica,31.62,21.75,6.22,39.45,0.95,Todas mejoran: avance esperado (y geotérmica madura),Polonia,Europa y Asia central,Ingreso alto
+PRK,False,Solar,39.28,Geotérmica,35.08,Reñida,Solar,39.28,19.32,6.32,35.08,0.0,Todas mejoran: avance esperado (y geotérmica madura),"Corea, República Popular Democrática de",Asia oriental y el Pacífico,Países de ingreso bajo
+PRT,False,Solar,44.0,Geotérmica,37.3,Reñida,Solar,44.0,13.68,4.32,37.3,0.7,Todas mejoran: avance esperado (y geotérmica madura),Portugal,Europa y Asia central,Ingreso alto
+PRY,False,Solar,42.05,Geotérmica,30.93,Moderada,Solar,42.05,16.4,9.8,30.93,0.82,Todas mejoran: avance esperado (y geotérmica madura),Paraguay,América Latina y el Caribe,Ingreso mediano alto
+PSE,False,Solar,45.02,Geotérmica,36.52,Reñida,Solar,45.02,18.45,0.0,36.52,0.0,Todas mejoran: avance esperado (y geotérmica madura),Ribera Occidental y Gaza,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+QAT,False,Solar,48.32,Geotérmica,35.12,Moderada,Solar,48.32,14.82,0.0,35.12,1.72,Todas mejoran: avance esperado (y geotérmica madura),Qatar,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ROU,False,Solar,39.35,Geotérmica,37.28,Reñida,Geotérmica,39.35,15.88,7.4,37.28,0.1,Todas mejoran: avance esperado (y geotérmica madura),Rumania,Europa y Asia central,Ingreso alto
+RUS,False,Solar,39.3,Geotérmica,36.78,Reñida,Solar,39.3,13.15,10.78,36.78,0.0,Todas mejoran: avance esperado (y geotérmica madura),Federación de Rusia,Europa y Asia central,Ingreso alto
+RWA,True,Solar,39.1,Geotérmica,33.7,Reñida,Solar,39.1,18.27,8.92,33.7,0.0,Todas mejoran: avance esperado (y geotérmica madura),Rwanda,África al sur del Sahara,Países de ingreso bajo
+SAU,False,Solar,37.38,Eólica,32.82,Reñida,Eólica,37.38,32.82,0.0,29.8,0.0,Todas mejoran: avance esperado (y geotérmica madura),Arabia Saudita,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+SDN,False,Solar,44.38,Geotérmica,25.75,Moderada,Solar,44.38,13.88,16.0,25.75,0.0,Todas mejoran: avance esperado (y geotérmica madura),Sudán,África al sur del Sahara,Países de ingreso bajo
+SEN,False,Solar,45.9,Geotérmica,33.02,Moderada,Solar,45.9,11.62,9.45,33.02,0.0,Todas mejoran: avance esperado (y geotérmica madura),Senegal,África al sur del Sahara,Países de ingreso mediano bajo
+SGP,False,Geotérmica,38.28,Solar,37.8,Reñida,Geotérmica,37.8,23.22,0.0,38.28,0.7,Todas mejoran: avance esperado (y geotérmica madura),Singapur,Asia oriental y el Pacífico,Ingreso alto
+SLE,True,Solar,42.35,Geotérmica,30.65,Moderada,Solar,42.35,17.5,9.5,30.65,0.0,Todas mejoran: avance esperado (y geotérmica madura),Sierra Leona,África al sur del Sahara,Países de ingreso bajo
+SLV,False,Solar,44.85,Geotérmica,33.98,Moderada,Solar,44.85,12.92,8.25,33.98,0.0,Todas mejoran: avance esperado (y geotérmica madura),El Salvador,América Latina y el Caribe,Ingreso mediano alto
+SRB,False,Solar,39.78,Geotérmica,36.28,Reñida,Solar,39.78,14.35,9.25,36.28,0.35,Todas mejoran: avance esperado (y geotérmica madura),Serbia,Europa y Asia central,Ingreso mediano alto
+SUR,True,Solar,38.67,Geotérmica,31.3,Reñida,Solar,38.67,16.42,13.52,31.3,0.08,Todas mejoran: avance esperado (y geotérmica madura),Suriname,América Latina y el Caribe,Ingreso mediano alto
+SVK,False,Geotérmica,36.2,Solar,35.7,Reñida,Geotérmica,35.7,22.08,5.28,36.2,0.75,Todas mejoran: avance esperado (y geotérmica madura),República Eslovaca,Europa y Asia central,Ingreso alto
+SVN,False,Solar,36.1,Geotérmica,34.22,Reñida,Geotérmica,36.1,19.98,9.62,34.22,0.08,Todas mejoran: avance esperado (y geotérmica madura),Eslovenia,Europa y Asia central,Ingreso alto
+SWE,False,Solar,36.93,Geotérmica,35.48,Reñida,Geotérmica,36.93,16.5,11.1,35.48,0.0,Todas mejoran: avance esperado (y geotérmica madura),Suecia,Europa y Asia central,Ingreso alto
+SWZ,True,Solar,43.35,Geotérmica,31.25,Moderada,Solar,43.35,14.03,11.38,31.25,0.0,Todas mejoran: avance esperado (y geotérmica madura),Eswatini,África al sur del Sahara,Países de ingreso mediano bajo
+SYR,False,Solar,45.42,Geotérmica,32.95,Moderada,Solar,45.42,18.75,2.0,32.95,0.88,Todas mejoran: avance esperado (y geotérmica madura),República Árabe Siria,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+TGO,True,Solar,46.25,Geotérmica,33.35,Moderada,Solar,46.25,17.92,2.48,33.35,0.0,Todas mejoran: avance esperado (y geotérmica madura),Togo,África al sur del Sahara,Países de ingreso mediano bajo
+THA,False,Solar,47.8,Geotérmica,35.52,Moderada,Solar,47.8,9.55,6.7,35.52,0.43,Todas mejoran: avance esperado (y geotérmica madura),Tailandia,Asia oriental y el Pacífico,Ingreso mediano alto
+TJK,False,Solar,41.4,Geotérmica,33.98,Reñida,Solar,41.4,17.62,7.0,33.98,0.0,Todas mejoran: avance esperado (y geotérmica madura),Tayikistán,Europa y Asia central,Países de ingreso mediano bajo
+TKM,False,Solar,41.92,Geotérmica,33.58,Reñida,Solar,41.92,17.03,7.48,33.58,0.0,Todas mejoran: avance esperado (y geotérmica madura),Turkmenistán,Europa y Asia central,Ingreso mediano alto
+TTO,False,Solar,44.92,Geotérmica,36.58,Reñida,Solar,44.92,18.5,0.0,36.58,0.0,Todas mejoran: avance esperado (y geotérmica madura),Trinidad y Tobago,América Latina y el Caribe,Ingreso alto
+TUN,False,Solar,50.78,Geotérmica,38.38,Moderada,Solar,50.78,8.72,2.12,38.38,0.0,Todas mejoran: avance esperado (y geotérmica madura),Túnez,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+TUR,False,Solar,43.0,Geotérmica,34.38,Reñida,Solar,43.0,17.3,4.92,34.38,0.4,Todas mejoran: avance esperado (y geotérmica madura),Turquía,Europa y Asia central,Ingreso mediano alto
+TWN,False,Solar,38.12,Geotérmica,36.83,Reñida,Geotérmica,38.12,20.18,4.3,36.83,0.57,Todas mejoran: avance esperado (y geotérmica madura),Taiwán,Asia oriental y el Pacífico,
+TZA,True,Solar,41.5,Geotérmica,33.3,Reñida,Solar,41.5,15.38,9.83,33.3,0.0,Todas mejoran: avance esperado (y geotérmica madura),Tanzanía,África al sur del Sahara,Países de ingreso mediano bajo
+UGA,False,Solar,41.95,Geotérmica,33.62,Reñida,Solar,41.95,16.08,8.25,33.62,0.1,Todas mejoran: avance esperado (y geotérmica madura),Uganda,África al sur del Sahara,Países de ingreso bajo
+UKR,False,Solar,44.4,Geotérmica,41.48,Reñida,Solar,44.4,8.82,4.78,41.48,0.52,Todas mejoran: avance esperado (y geotérmica madura),Ucrania,Europa y Asia central,Ingreso mediano alto
+URY,False,Solar,40.35,Geotérmica,33.25,Reñida,Solar,40.35,19.1,6.85,33.25,0.45,Todas mejoran: avance esperado (y geotérmica madura),Uruguay,América Latina y el Caribe,Ingreso alto
+USA,False,Solar,42.05,Geotérmica,33.15,Reñida,Solar,42.05,16.48,8.12,33.15,0.2,Todas mejoran: avance esperado (y geotérmica madura),Estados Unidos,América del Norte,Ingreso alto
+UZB,False,Solar,44.62,Geotérmica,33.05,Moderada,Solar,44.62,16.75,5.58,33.05,0.0,Todas mejoran: avance esperado (y geotérmica madura),Uzbekistán,Europa y Asia central,Países de ingreso mediano bajo
+VEN,False,Solar,41.55,Geotérmica,32.02,Reñida,Solar,41.55,16.53,9.9,32.02,0.0,Todas mejoran: avance esperado (y geotérmica madura),Venezuela,América Latina y el Caribe,Países de ingreso mediano bajo
+VNM,False,Solar,44.05,Geotérmica,36.25,Reñida,Solar,44.05,9.57,10.12,36.25,0.0,Todas mejoran: avance esperado (y geotérmica madura),Viet Nam,Asia oriental y el Pacífico,Ingreso mediano alto
+YEM,False,Solar,46.08,Geotérmica,36.18,Reñida,Solar,46.08,17.75,0.0,36.18,0.0,Todas mejoran: avance esperado (y geotérmica madura),"Yemen, Rep. del","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+ZAF,False,Solar,44.5,Geotérmica,32.32,Moderada,Solar,44.5,16.28,6.9,32.32,0.0,Todas mejoran: avance esperado (y geotérmica madura),Sudáfrica,África al sur del Sahara,Ingreso mediano alto
+ZMB,False,Solar,38.22,Geotérmica,32.42,Reñida,Solar,38.22,16.75,12.6,32.42,0.0,Todas mejoran: avance esperado (y geotérmica madura),Zambia,África al sur del Sahara,Países de ingreso mediano bajo
+ZWE,True,Solar,43.12,Geotérmica,26.2,Moderada,Solar,43.12,12.85,17.82,26.2,0.0,Todas mejoran: avance esperado (y geotérmica madura),Zimbabwe,África al sur del Sahara,Países de ingreso mediano bajo
+AFG,False,Solar,52.98,Geotérmica,24.28,Clara,Solar,52.98,17.72,5.03,24.28,0.0,Todas mejoran: gran salto (y geotérmica madura),Afganistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+AGO,False,Solar,49.22,Geotérmica,24.62,Moderada,Solar,49.22,15.6,8.65,24.62,1.9,Todas mejoran: gran salto (y geotérmica madura),Angola,África al sur del Sahara,Países de ingreso mediano bajo
+ALB,False,Solar,47.68,Geotérmica,23.6,Moderada,Solar,47.68,18.73,6.05,23.6,3.95,Todas mejoran: gran salto (y geotérmica madura),Albania,Europa y Asia central,Ingreso mediano alto
+ARE,False,Solar,61.45,Geotérmica,26.32,Clara,Solar,61.45,7.25,0.0,26.32,4.98,Todas mejoran: gran salto (y geotérmica madura),Emiratos Árabes Unidos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ARG,False,Solar,41.95,Eólica,30.45,Moderada,Solar,41.95,30.45,5.72,18.62,3.25,Todas mejoran: gran salto (y geotérmica madura),Argentina,América Latina y el Caribe,Ingreso mediano alto
+ARM,False,Solar,50.25,Geotérmica,25.3,Clara,Solar,50.25,20.72,3.72,25.3,0.0,Todas mejoran: gran salto (y geotérmica madura),Armenia,Europa y Asia central,Ingreso mediano alto
+AUS,False,Solar,50.65,Geotérmica,26.32,Clara,Solar,50.65,13.58,6.98,26.32,2.48,Todas mejoran: gran salto (y geotérmica madura),Australia,Asia oriental y el Pacífico,Ingreso alto
+AUT,False,Solar,50.18,Geotérmica,26.28,Clara,Solar,50.18,11.3,10.3,26.28,1.95,Todas mejoran: gran salto (y geotérmica madura),Austria,Europa y Asia central,Ingreso alto
+AZE,False,Solar,57.88,Geotérmica,28.05,Clara,Solar,57.88,5.38,4.05,28.05,4.65,Todas mejoran: gran salto (y geotérmica madura),Azerbaiyán,Europa y Asia central,Ingreso mediano alto
+BDI,False,Solar,48.78,Geotérmica,21.12,Moderada,Solar,48.78,14.8,12.68,21.12,2.62,Todas mejoran: gran salto (y geotérmica madura),Burundi,África al sur del Sahara,Países de ingreso bajo
+BEL,False,Solar,46.35,Geotérmica,25.28,Moderada,Solar,46.35,17.4,7.6,25.28,3.38,Todas mejoran: gran salto (y geotérmica madura),Bélgica,Europa y Asia central,Ingreso alto
+BEN,True,Solar,54.02,Geotérmica,26.05,Clara,Solar,54.02,19.92,0.0,26.05,0.0,Todas mejoran: gran salto (y geotérmica madura),Benin,África al sur del Sahara,Países de ingreso mediano bajo
+BFA,False,Solar,50.2,Geotérmica,23.12,Clara,Solar,50.2,16.8,5.98,23.12,3.9,Todas mejoran: gran salto (y geotérmica madura),Burkina Faso,África al sur del Sahara,Países de ingreso bajo
+BGD,False,Solar,57.55,Geotérmica,23.85,Clara,Solar,57.55,8.38,9.68,23.85,0.55,Todas mejoran: gran salto (y geotérmica madura),Bangladesh,Asia meridional,Países de ingreso mediano bajo
+BGR,False,Solar,56.1,Geotérmica,25.95,Clara,Solar,56.1,9.83,2.58,25.95,5.55,Todas mejoran: gran salto (y geotérmica madura),Bulgaria,Europa y Asia central,Ingreso alto
+BHR,True,Solar,56.9,Geotérmica,25.85,Clara,Solar,56.9,17.25,0.0,25.85,0.0,Todas mejoran: gran salto (y geotérmica madura),Bahrein,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+BIH,False,Solar,50.0,Geotérmica,25.37,Clara,Solar,50.0,15.0,7.22,25.37,2.4,Todas mejoran: gran salto (y geotérmica madura),Bosnia y Herzegovina,Europa y Asia central,Ingreso mediano alto
+BLR,False,Solar,50.78,Geotérmica,28.05,Clara,Solar,50.78,9.0,9.2,28.05,2.97,Todas mejoran: gran salto (y geotérmica madura),Belarús,Europa y Asia central,Ingreso mediano alto
+BOL,False,Solar,49.65,Geotérmica,24.35,Moderada,Solar,49.65,16.08,8.98,24.35,0.95,Todas mejoran: gran salto (y geotérmica madura),Bolivia,América Latina y el Caribe,Países de ingreso mediano bajo
+BRA,False,Solar,45.3,Geotérmica,23.22,Moderada,Solar,45.3,21.2,8.75,23.22,1.52,Todas mejoran: gran salto (y geotérmica madura),Brasil,América Latina y el Caribe,Ingreso mediano alto
+BRN,False,Solar,54.42,Geotérmica,26.05,Clara,Solar,54.42,19.53,0.0,26.05,0.0,Todas mejoran: gran salto (y geotérmica madura),Brunei Darussalam,Asia oriental y el Pacífico,Ingreso alto
+BTN,False,Solar,47.88,Geotérmica,23.1,Moderada,Solar,47.88,18.25,10.78,23.1,0.0,Todas mejoran: gran salto (y geotérmica madura),Bhután,Asia meridional,Países de ingreso mediano bajo
+BWA,False,Solar,55.55,Geotérmica,26.05,Clara,Solar,55.55,18.4,0.0,26.05,0.0,Todas mejoran: gran salto (y geotérmica madura),Botswana,África al sur del Sahara,Ingreso mediano alto
+CAF,True,Solar,50.28,Hidroeléctrica,18.35,Clara,Solar,50.28,13.23,18.35,18.15,0.0,Todas mejoran: gran salto (y geotérmica madura),República Centroafricana,África al sur del Sahara,Países de ingreso bajo
+CAN,False,Solar,48.82,Geotérmica,24.7,Moderada,Solar,48.82,13.88,10.8,24.7,1.8,Todas mejoran: gran salto (y geotérmica madura),Canadá,América del Norte,Ingreso alto
+CHE,False,Solar,51.42,Geotérmica,25.58,Clara,Solar,51.42,9.12,7.35,25.58,6.52,Todas mejoran: gran salto (y geotérmica madura),Suiza,Europa y Asia central,Ingreso alto
+CHL,False,Solar,56.9,Geotérmica,24.15,Clara,Solar,56.9,8.88,5.92,24.15,4.15,Todas mejoran: gran salto (y geotérmica madura),Chile,América Latina y el Caribe,Ingreso alto
+CHN,False,Solar,50.9,Geotérmica,26.25,Clara,Solar,50.9,11.2,8.88,26.25,2.78,Todas mejoran: gran salto (y geotérmica madura),China,Asia oriental y el Pacífico,Ingreso mediano alto
+CIV,True,Solar,50.0,Geotérmica,23.8,Clara,Solar,50.0,18.38,7.82,23.8,0.0,Todas mejoran: gran salto (y geotérmica madura),Côte d'Ivoire,África al sur del Sahara,Países de ingreso mediano bajo
+CMR,False,Solar,44.58,Geotérmica,22.28,Moderada,Solar,44.58,19.48,13.68,22.28,0.0,Todas mejoran: gran salto (y geotérmica madura),Camerún,África al sur del Sahara,Países de ingreso mediano bajo
+COD,True,Solar,46.45,Geotérmica,22.75,Moderada,Solar,46.45,18.05,9.78,22.75,2.97,Todas mejoran: gran salto (y geotérmica madura),"Congo, República Democrática del",África al sur del Sahara,Países de ingreso bajo
+COG,False,Solar,46.78,Geotérmica,23.75,Moderada,Solar,46.78,16.8,11.58,23.75,1.1,Todas mejoran: gran salto (y geotérmica madura),"Congo, República del",África al sur del Sahara,Países de ingreso mediano bajo
+COL,False,Solar,44.58,Eólica,22.02,Moderada,Solar,44.58,22.02,9.62,21.6,2.17,Todas mejoran: gran salto (y geotérmica madura),Colombia,América Latina y el Caribe,Ingreso mediano alto
+CPV,False,Solar,59.48,Geotérmica,27.75,Clara,Solar,59.48,12.78,0.0,27.75,0.0,Todas mejoran: gran salto (y geotérmica madura),Cabo Verde,África al sur del Sahara,Ingreso mediano alto
+CRI,False,Solar,47.2,Geotérmica,22.1,Moderada,Solar,47.2,20.88,9.2,22.1,0.62,Todas mejoran: gran salto (y geotérmica madura),Costa Rica,América Latina y el Caribe,Ingreso alto
+CUB,False,Solar,47.5,Eólica,25.58,Moderada,Solar,47.5,25.58,5.48,20.67,0.78,Todas mejoran: gran salto (y geotérmica madura),Cuba,América Latina y el Caribe,Ingreso mediano alto
+CYP,False,Solar,59.9,Geotérmica,29.58,Clara,Solar,59.9,6.52,0.0,29.58,4.0,Todas mejoran: gran salto (y geotérmica madura),Chipre,Europa y Asia central,Ingreso alto
+CZE,False,Solar,52.55,Geotérmica,26.82,Clara,Solar,52.55,10.82,4.25,26.82,5.55,Todas mejoran: gran salto (y geotérmica madura),República Checa,Europa y Asia central,Ingreso alto
+DEU,False,Solar,48.95,Geotérmica,26.28,Moderada,Solar,48.95,11.28,10.88,26.28,2.62,Todas mejoran: gran salto (y geotérmica madura),Alemania,Europa y Asia central,Ingreso alto
+DJI,False,Solar,57.53,Geotérmica,26.78,Clara,Solar,57.53,15.7,0.0,26.78,0.0,Todas mejoran: gran salto (y geotérmica madura),Djibouti,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+DNK,False,Solar,46.9,Geotérmica,25.87,Moderada,Solar,46.9,17.55,7.3,25.87,2.38,Todas mejoran: gran salto (y geotérmica madura),Dinamarca,Europa y Asia central,Ingreso alto
+DOM,False,Solar,52.2,Geotérmica,24.22,Clara,Solar,52.2,14.77,4.42,24.22,4.38,Todas mejoran: gran salto (y geotérmica madura),República Dominicana,América Latina y el Caribe,Ingreso mediano alto
+DZA,False,Solar,69.3,Geotérmica,23.18,Clara,Solar,69.3,6.02,1.5,23.18,0.0,Todas mejoran: gran salto (y geotérmica madura),Argelia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ECU,True,Solar,43.08,Geotérmica,22.95,Moderada,Solar,43.08,21.82,11.0,22.95,1.15,Todas mejoran: gran salto (y geotérmica madura),Ecuador,América Latina y el Caribe,Ingreso mediano alto
+EGY,False,Solar,46.48,Geotérmica,22.5,Moderada,Solar,46.48,17.95,11.9,22.5,1.18,Todas mejoran: gran salto (y geotérmica madura),"Egipto, República Árabe de","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+ERI,True,Solar,56.1,Geotérmica,26.02,Clara,Solar,56.1,17.88,0.0,26.02,0.0,Todas mejoran: gran salto (y geotérmica madura),Eritrea,África al sur del Sahara,Países de ingreso bajo
+ESH,False,Solar,56.4,Geotérmica,26.0,Clara,Solar,56.4,17.6,0.0,26.0,0.0,Todas mejoran: gran salto (y geotérmica madura),Sáhara Occidental,"Oriente Medio, Norte de África, Afganistán y Pakistán",
+ESP,False,Solar,55.68,Geotérmica,26.35,Clara,Solar,55.68,9.52,4.2,26.35,4.25,Todas mejoran: gran salto (y geotérmica madura),España,Europa y Asia central,Ingreso alto
+EST,False,Solar,47.55,Geotérmica,26.62,Moderada,Solar,47.55,14.55,8.62,26.62,2.65,Todas mejoran: gran salto (y geotérmica madura),Estonia,Europa y Asia central,Ingreso alto
+ETH,True,Solar,56.65,Geotérmica,25.05,Clara,Solar,56.65,7.0,7.38,25.05,3.92,Todas mejoran: gran salto (y geotérmica madura),Etiopía,África al sur del Sahara,Países de ingreso bajo
+FIN,False,Solar,43.62,Geotérmica,24.5,Moderada,Solar,43.62,18.27,11.7,24.5,1.9,Todas mejoran: gran salto (y geotérmica madura),Finlandia,Europa y Asia central,Ingreso alto
+FJI,True,Solar,47.08,Geotérmica,24.52,Moderada,Solar,47.08,17.47,10.17,24.52,0.75,Todas mejoran: gran salto (y geotérmica madura),Fiji,Asia oriental y el Pacífico,Ingreso mediano alto
+FRA,False,Solar,51.55,Geotérmica,26.42,Clara,Solar,51.55,11.75,7.05,26.42,3.22,Todas mejoran: gran salto (y geotérmica madura),Francia,Europa y Asia central,Ingreso alto
+GAB,False,Solar,48.78,Geotérmica,23.48,Moderada,Solar,48.78,18.1,5.65,23.48,4.0,Todas mejoran: gran salto (y geotérmica madura),Gabón,África al sur del Sahara,Ingreso mediano alto
+GBR,False,Solar,44.0,Geotérmica,25.02,Moderada,Solar,44.0,20.35,7.38,25.02,3.25,Todas mejoran: gran salto (y geotérmica madura),Reino Unido,Europa y Asia central,Ingreso alto
+GEO,False,Solar,42.25,Eólica,29.8,Moderada,Solar,42.25,29.8,6.82,21.12,0.0,Todas mejoran: gran salto (y geotérmica madura),Georgia,Europa y Asia central,Ingreso mediano alto
+GHA,False,Solar,46.75,Geotérmica,23.58,Moderada,Solar,46.75,16.62,12.1,23.58,0.95,Todas mejoran: gran salto (y geotérmica madura),Ghana,África al sur del Sahara,Países de ingreso mediano bajo
+GIN,True,Solar,50.02,Geotérmica,23.45,Clara,Solar,50.02,17.72,8.8,23.45,0.0,Todas mejoran: gran salto (y geotérmica madura),Guinea,África al sur del Sahara,Países de ingreso mediano bajo
+GMB,False,Solar,55.78,Geotérmica,26.0,Clara,Solar,55.78,18.22,0.0,26.0,0.0,Todas mejoran: gran salto (y geotérmica madura),Gambia,África al sur del Sahara,Países de ingreso bajo
+GNB,False,Solar,55.55,Geotérmica,26.05,Clara,Solar,55.55,18.4,0.0,26.05,0.0,Todas mejoran: gran salto (y geotérmica madura),Guinea-Bissau,África al sur del Sahara,Países de ingreso bajo
+GNQ,False,Solar,48.78,Geotérmica,24.0,Moderada,Solar,48.78,19.23,8.0,24.0,0.0,Todas mejoran: gran salto (y geotérmica madura),Guinea Ecuatorial,África al sur del Sahara,Ingreso mediano alto
+GRC,False,Solar,53.97,Geotérmica,26.2,Clara,Solar,53.97,12.18,3.52,26.2,4.12,Todas mejoran: gran salto (y geotérmica madura),Grecia,Europa y Asia central,Ingreso alto
+GTM,False,Solar,48.98,Geotérmica,24.85,Moderada,Solar,48.98,15.72,9.12,24.85,1.32,Todas mejoran: gran salto (y geotérmica madura),Guatemala,América Latina y el Caribe,Ingreso mediano alto
+GUF,False,Solar,49.48,Geotérmica,23.98,Moderada,Solar,49.48,15.52,8.6,23.98,2.43,Todas mejoran: gran salto (y geotérmica madura),Guayana Francesa,América Latina y el Caribe,
+GUY,True,Solar,50.68,Geotérmica,22.25,Clara,Solar,50.68,17.15,9.48,22.25,0.45,Todas mejoran: gran salto (y geotérmica madura),Guyana,América Latina y el Caribe,Ingreso alto
+HND,False,Solar,49.72,Geotérmica,24.72,Moderada,Solar,49.72,14.82,9.25,24.72,1.48,Todas mejoran: gran salto (y geotérmica madura),Honduras,América Latina y el Caribe,Países de ingreso mediano bajo
+HRV,False,Solar,50.95,Geotérmica,24.92,Clara,Solar,50.95,12.1,6.18,24.92,5.85,Todas mejoran: gran salto (y geotérmica madura),Croacia,Europa y Asia central,Ingreso alto
+HUN,False,Solar,52.42,Geotérmica,26.62,Clara,Solar,52.42,9.6,9.38,26.62,1.98,Todas mejoran: gran salto (y geotérmica madura),Hungría,Europa y Asia central,Ingreso alto
+IDN,False,Solar,49.05,Geotérmica,22.0,Moderada,Solar,49.05,16.5,7.35,22.0,5.1,Todas mejoran: gran salto (y geotérmica madura),Indonesia,Asia oriental y el Pacífico,Ingreso mediano alto
+IND,False,Solar,54.28,Geotérmica,27.32,Clara,Solar,54.28,7.92,9.1,27.32,1.38,Todas mejoran: gran salto (y geotérmica madura),India,Asia meridional,Países de ingreso mediano bajo
+IRL,False,Solar,42.98,Geotérmica,25.8,Moderada,Solar,42.98,19.5,7.8,25.8,3.92,Todas mejoran: gran salto (y geotérmica madura),Irlanda,Europa y Asia central,Ingreso alto
+IRN,False,Solar,53.45,Geotérmica,26.82,Clara,Solar,53.45,12.62,5.7,26.82,1.4,Todas mejoran: gran salto (y geotérmica madura),"Irán, República Islámica del","Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+IRQ,False,Solar,52.98,Geotérmica,24.75,Clara,Solar,52.98,18.4,3.88,24.75,0.0,Todas mejoran: gran salto (y geotérmica madura),Iraq,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+ISL,True,Solar,38.42,Eólica,23.02,Moderada,Solar,38.42,23.02,16.58,21.98,0.0,Todas mejoran: gran salto (y geotérmica madura),Islandia,Europa y Asia central,Ingreso alto
+ISR,False,Solar,50.6,Geotérmica,25.72,Clara,Solar,50.6,13.1,8.9,25.72,1.68,Todas mejoran: gran salto (y geotérmica madura),Israel,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ITA,False,Solar,53.58,Geotérmica,26.85,Clara,Solar,53.58,9.3,6.25,26.85,4.03,Todas mejoran: gran salto (y geotérmica madura),Italia,Europa y Asia central,Ingreso alto
+JAM,False,Solar,50.32,Geotérmica,23.6,Clara,Solar,50.32,14.7,10.92,23.6,0.45,Todas mejoran: gran salto (y geotérmica madura),Jamaica,América Latina y el Caribe,Ingreso mediano alto
+JOR,False,Solar,56.97,Geotérmica,20.38,Clara,Solar,56.97,12.92,9.28,20.38,0.45,Todas mejoran: gran salto (y geotérmica madura),Jordania,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+JPN,False,Solar,52.45,Geotérmica,23.88,Clara,Solar,52.45,10.78,5.95,23.88,6.95,Todas mejoran: gran salto (y geotérmica madura),Japón,Asia oriental y el Pacífico,Ingreso alto
+KAZ,False,Solar,49.38,Geotérmica,25.17,Moderada,Solar,49.38,16.5,7.58,25.17,1.38,Todas mejoran: gran salto (y geotérmica madura),Kazajstán,Europa y Asia central,Ingreso mediano alto
+KEN,False,Solar,50.32,Geotérmica,24.6,Clara,Solar,50.32,14.72,9.57,24.6,0.78,Todas mejoran: gran salto (y geotérmica madura),Kenia,África al sur del Sahara,Países de ingreso mediano bajo
+KGZ,False,Solar,49.08,Geotérmica,23.58,Moderada,Solar,49.08,18.4,8.95,23.58,0.0,Todas mejoran: gran salto (y geotérmica madura),Kirguistán,Europa y Asia central,Países de ingreso mediano bajo
+KHM,False,Solar,50.08,Geotérmica,23.92,Clara,Solar,50.08,15.88,9.45,23.92,0.68,Todas mejoran: gran salto (y geotérmica madura),Camboya,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+KOR,False,Solar,55.2,Geotérmica,27.55,Clara,Solar,55.2,8.52,5.8,27.55,2.92,Todas mejoran: gran salto (y geotérmica madura),"Corea, República de",Asia oriental y el Pacífico,Ingreso alto
+KOS,True,Solar,45.18,Geotérmica,27.85,Moderada,Solar,45.18,26.98,0.0,27.85,0.0,Todas mejoran: gran salto (y geotérmica madura),Kosovo,Europa y Asia central,
+KWT,False,Solar,44.05,Eólica,33.58,Moderada,Solar,44.05,33.58,0.0,22.38,0.0,Todas mejoran: gran salto (y geotérmica madura),Kuwait,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+LAO,False,Solar,48.18,Geotérmica,24.4,Moderada,Solar,48.18,16.08,9.65,24.4,1.7,Todas mejoran: gran salto (y geotérmica madura),República Democrática Popular Lao,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+LBN,False,Solar,50.12,Geotérmica,24.4,Clara,Solar,50.12,16.7,5.6,24.4,3.18,Todas mejoran: gran salto (y geotérmica madura),Líbano,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+LBR,False,Solar,50.12,Geotérmica,24.32,Clara,Solar,50.12,19.1,6.45,24.32,0.0,Todas mejoran: gran salto (y geotérmica madura),Liberia,África al sur del Sahara,Países de ingreso bajo
+LBY,True,Solar,49.78,Geotérmica,26.98,Moderada,Solar,49.78,23.25,0.0,26.98,0.0,Todas mejoran: gran salto (y geotérmica madura),Libia,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso mediano alto
+LCA,False,Solar,55.78,Geotérmica,26.0,Clara,Solar,55.78,18.22,0.0,26.0,0.0,Todas mejoran: gran salto (y geotérmica madura),Santa Lucía,América Latina y el Caribe,Ingreso mediano alto
+LKA,False,Solar,46.1,Geotérmica,24.88,Moderada,Solar,46.1,18.6,9.05,24.88,1.38,Todas mejoran: gran salto (y geotérmica madura),Sri Lanka,Asia meridional,Ingreso mediano alto
+LSO,False,Solar,49.7,Geotérmica,20.58,Moderada,Solar,49.7,14.25,15.48,20.58,0.0,Todas mejoran: gran salto (y geotérmica madura),Lesotho,África al sur del Sahara,Países de ingreso mediano bajo
+LTU,False,Solar,42.85,Geotérmica,27.2,Moderada,Solar,42.85,17.7,8.38,27.2,3.88,Todas mejoran: gran salto (y geotérmica madura),Lituania,Europa y Asia central,Ingreso alto
+LUX,False,Solar,45.82,Geotérmica,26.85,Moderada,Solar,45.82,16.75,5.95,26.85,4.62,Todas mejoran: gran salto (y geotérmica madura),Luxemburgo,Europa y Asia central,Ingreso alto
+LVA,False,Solar,51.32,Geotérmica,26.6,Clara,Solar,51.32,13.45,4.28,26.6,4.35,Todas mejoran: gran salto (y geotérmica madura),Letonia,Europa y Asia central,Ingreso alto
+MAR,False,Solar,48.88,Eólica,24.05,Moderada,Solar,48.88,24.05,1.85,20.85,4.38,Todas mejoran: gran salto (y geotérmica madura),Marruecos,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+MDA,False,Solar,53.32,Geotérmica,27.55,Clara,Solar,53.32,7.9,9.83,27.55,1.4,Todas mejoran: gran salto (y geotérmica madura),República de Moldova,Europa y Asia central,Ingreso mediano alto
+MDG,True,Solar,50.92,Geotérmica,22.68,Clara,Solar,50.92,15.15,11.25,22.68,0.0,Todas mejoran: gran salto (y geotérmica madura),Madagascar,África al sur del Sahara,Países de ingreso bajo
+MEX,False,Solar,55.45,Geotérmica,23.98,Clara,Solar,55.45,13.48,6.08,23.98,1.03,Todas mejoran: gran salto (y geotérmica madura),México,América Latina y el Caribe,Ingreso mediano alto
+MKD,False,Solar,48.6,Geotérmica,25.3,Moderada,Solar,48.6,17.7,5.03,25.3,3.38,Todas mejoran: gran salto (y geotérmica madura),Macedonia del Norte,Europa y Asia central,Ingreso mediano alto
+MLI,False,Solar,51.02,Geotérmica,23.42,Clara,Solar,51.02,18.02,6.8,23.42,0.73,Todas mejoran: gran salto (y geotérmica madura),Malí,África al sur del Sahara,Países de ingreso bajo
+MMR,False,Solar,52.05,Geotérmica,24.75,Clara,Solar,52.05,15.2,4.88,24.75,3.12,Todas mejoran: gran salto (y geotérmica madura),Myanmar,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+MNE,True,Solar,53.6,Geotérmica,25.32,Clara,Solar,53.6,15.08,6.0,25.32,0.0,Todas mejoran: gran salto (y geotérmica madura),Montenegro,Europa y Asia central,Ingreso mediano alto
+MNG,False,Solar,49.5,Geotérmica,23.55,Moderada,Solar,49.5,21.4,5.55,23.55,0.0,Todas mejoran: gran salto (y geotérmica madura),Mongolia,Asia oriental y el Pacífico,Ingreso mediano alto
+MOZ,False,Solar,46.52,Geotérmica,19.58,Moderada,Solar,46.52,15.3,18.1,19.58,0.5,Todas mejoran: gran salto (y geotérmica madura),Mozambique,África al sur del Sahara,Países de ingreso bajo
+MRT,False,Solar,51.62,Geotérmica,26.78,Clara,Solar,51.62,21.6,0.0,26.78,0.0,Todas mejoran: gran salto (y geotérmica madura),Mauritania,África al sur del Sahara,Países de ingreso mediano bajo
+MUS,False,Solar,55.72,Geotérmica,28.28,Clara,Solar,55.72,7.28,5.55,28.28,3.18,Todas mejoran: gran salto (y geotérmica madura),Mauricio,África al sur del Sahara,Ingreso mediano alto
+MWI,False,Solar,48.85,Geotérmica,24.35,Moderada,Solar,48.85,15.35,10.4,24.35,1.05,Todas mejoran: gran salto (y geotérmica madura),Malawi,África al sur del Sahara,Países de ingreso bajo
+MYS,False,Solar,49.7,Geotérmica,23.6,Moderada,Solar,49.7,13.78,11.2,23.6,1.72,Todas mejoran: gran salto (y geotérmica madura),Malasia,Asia oriental y el Pacífico,Ingreso mediano alto
+NAM,False,Solar,46.0,Eólica,24.52,Moderada,Solar,46.0,24.52,6.98,19.48,3.02,Todas mejoran: gran salto (y geotérmica madura),Namibia,África al sur del Sahara,Países de ingreso mediano bajo
+NER,True,Solar,54.0,Geotérmica,26.05,Clara,Solar,54.0,19.95,0.0,26.05,0.0,Todas mejoran: gran salto (y geotérmica madura),Níger,África al sur del Sahara,Países de ingreso bajo
+NGA,False,Solar,47.75,Geotérmica,24.5,Moderada,Solar,47.75,16.48,9.9,24.5,1.38,Todas mejoran: gran salto (y geotérmica madura),Nigeria,África al sur del Sahara,Países de ingreso mediano bajo
+NIC,True,Solar,48.08,Geotérmica,23.67,Moderada,Solar,48.08,17.62,8.75,23.67,1.88,Todas mejoran: gran salto (y geotérmica madura),Nicaragua,América Latina y el Caribe,Países de ingreso mediano bajo
+NLD,False,Solar,46.3,Geotérmica,22.98,Moderada,Solar,46.3,19.18,2.68,22.98,8.88,Todas mejoran: gran salto (y geotérmica madura),Países Bajos,Europa y Asia central,Ingreso alto
+NOR,False,Solar,42.7,Geotérmica,25.15,Moderada,Solar,42.7,19.98,10.72,25.15,1.45,Todas mejoran: gran salto (y geotérmica madura),Noruega,Europa y Asia central,Ingreso alto
+NPL,False,Solar,44.98,Geotérmica,24.08,Moderada,Solar,44.98,18.65,11.65,24.08,0.65,Todas mejoran: gran salto (y geotérmica madura),Nepal,Asia meridional,Países de ingreso mediano bajo
+NZL,False,Solar,45.02,Geotérmica,22.9,Moderada,Solar,45.02,19.68,10.0,22.9,2.4,Todas mejoran: gran salto (y geotérmica madura),Nueva Zelandia,Asia oriental y el Pacífico,Ingreso alto
+OMN,False,Solar,61.42,Geotérmica,28.1,Clara,Solar,61.42,10.48,0.0,28.1,0.0,Todas mejoran: gran salto (y geotérmica madura),Omán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+PAK,False,Solar,52.55,Geotérmica,24.5,Clara,Solar,52.55,10.88,7.7,24.5,4.38,Todas mejoran: gran salto (y geotérmica madura),Pakistán,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+PAN,False,Solar,51.85,Geotérmica,26.2,Clara,Solar,51.85,10.08,10.3,26.2,1.58,Todas mejoran: gran salto (y geotérmica madura),Panamá,América Latina y el Caribe,Ingreso alto
+PER,False,Solar,44.12,Geotérmica,21.55,Moderada,Solar,44.12,21.1,12.25,21.55,0.98,Todas mejoran: gran salto (y geotérmica madura),Perú,América Latina y el Caribe,Ingreso mediano alto
+PHL,False,Solar,49.7,Geotérmica,25.9,Moderada,Solar,49.7,15.05,7.98,25.9,1.38,Todas mejoran: gran salto (y geotérmica madura),Filipinas,Asia oriental y el Pacífico,Ingreso mediano alto
+PNG,False,Solar,48.32,Geotérmica,24.88,Moderada,Solar,48.32,17.22,8.77,24.88,0.8,Todas mejoran: gran salto (y geotérmica madura),Papua Nueva Guinea,Asia oriental y el Pacífico,Países de ingreso mediano bajo
+POL,False,Solar,43.62,Geotérmica,24.68,Moderada,Solar,43.62,19.58,6.45,24.68,5.68,Todas mejoran: gran salto (y geotérmica madura),Polonia,Europa y Asia central,Ingreso alto
+PRK,False,Solar,49.22,Geotérmica,24.28,Moderada,Solar,49.22,19.32,7.18,24.28,0.0,Todas mejoran: gran salto (y geotérmica madura),"Corea, República Popular Democrática de",Asia oriental y el Pacífico,Países de ingreso bajo
+PRT,False,Solar,52.98,Geotérmica,25.52,Clara,Solar,52.98,12.55,4.45,25.52,4.5,Todas mejoran: gran salto (y geotérmica madura),Portugal,Europa y Asia central,Ingreso alto
+PRY,False,Solar,50.18,Geotérmica,19.6,Clara,Solar,50.18,14.77,9.48,19.6,5.98,Todas mejoran: gran salto (y geotérmica madura),Paraguay,América Latina y el Caribe,Ingreso mediano alto
+PSE,False,Solar,55.0,Geotérmica,25.98,Clara,Solar,55.0,19.02,0.0,25.98,0.0,Todas mejoran: gran salto (y geotérmica madura),Ribera Occidental y Gaza,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+QAT,False,Solar,56.05,Geotérmica,23.5,Clara,Solar,56.05,13.78,0.0,23.5,6.68,Todas mejoran: gran salto (y geotérmica madura),Qatar,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+ROU,False,Solar,49.58,Geotérmica,26.88,Moderada,Solar,49.58,14.0,7.12,26.88,2.43,Todas mejoran: gran salto (y geotérmica madura),Rumania,Europa y Asia central,Ingreso alto
+RUS,False,Solar,49.35,Geotérmica,26.62,Moderada,Solar,49.35,11.58,10.45,26.62,2.0,Todas mejoran: gran salto (y geotérmica madura),Federación de Rusia,Europa y Asia central,Ingreso alto
+RWA,True,Solar,48.5,Geotérmica,23.45,Moderada,Solar,48.5,18.48,9.57,23.45,0.0,Todas mejoran: gran salto (y geotérmica madura),Rwanda,África al sur del Sahara,Países de ingreso bajo
+SAU,False,Solar,44.8,Eólica,35.35,Reñida,Eólica,44.8,35.35,0.0,19.85,0.0,Todas mejoran: gran salto (y geotérmica madura),Arabia Saudita,"Oriente Medio, Norte de África, Afganistán y Pakistán",Ingreso alto
+SDN,False,Solar,52.42,Geotérmica,18.12,Clara,Solar,52.42,12.98,16.05,18.12,0.43,Todas mejoran: gran salto (y geotérmica madura),Sudán,África al sur del Sahara,Países de ingreso bajo
+SEN,False,Solar,54.4,Geotérmica,24.7,Clara,Solar,54.4,10.88,9.32,24.7,0.7,Todas mejoran: gran salto (y geotérmica madura),Senegal,África al sur del Sahara,Países de ingreso mediano bajo
+SGP,False,Solar,48.4,Geotérmica,26.82,Moderada,Solar,48.4,21.3,0.0,26.82,3.48,Todas mejoran: gran salto (y geotérmica madura),Singapur,Asia oriental y el Pacífico,Ingreso alto
+SLE,True,Solar,51.32,Geotérmica,22.0,Clara,Solar,51.32,16.6,9.62,22.0,0.45,Todas mejoran: gran salto (y geotérmica madura),Sierra Leona,África al sur del Sahara,Países de ingreso bajo
+SLV,False,Solar,52.18,Geotérmica,25.7,Clara,Solar,52.18,12.7,8.08,25.7,1.35,Todas mejoran: gran salto (y geotérmica madura),El Salvador,América Latina y el Caribe,Ingreso mediano alto
+SRB,False,Solar,49.7,Geotérmica,24.32,Moderada,Solar,49.7,13.02,8.98,24.32,3.98,Todas mejoran: gran salto (y geotérmica madura),Serbia,Europa y Asia central,Ingreso mediano alto
+SUR,True,Solar,47.22,Geotérmica,20.95,Moderada,Solar,47.22,15.78,13.5,20.95,2.55,Todas mejoran: gran salto (y geotérmica madura),Suriname,América Latina y el Caribe,Ingreso mediano alto
+SVK,False,Solar,46.2,Geotérmica,23.62,Moderada,Solar,46.2,19.95,5.2,23.62,5.03,Todas mejoran: gran salto (y geotérmica madura),República Eslovaca,Europa y Asia central,Ingreso alto
+SVN,False,Solar,45.3,Geotérmica,24.08,Moderada,Solar,45.3,19.0,9.5,24.08,2.12,Todas mejoran: gran salto (y geotérmica madura),Eslovenia,Europa y Asia central,Ingreso alto
+SWE,False,Solar,46.88,Geotérmica,25.9,Moderada,Solar,46.88,14.9,10.8,25.9,1.52,Todas mejoran: gran salto (y geotérmica madura),Suecia,Europa y Asia central,Ingreso alto
+SWZ,True,Solar,51.3,Geotérmica,23.1,Clara,Solar,51.3,13.38,11.52,23.1,0.7,Todas mejoran: gran salto (y geotérmica madura),Eswatini,África al sur del Sahara,Países de ingreso mediano bajo
+SYR,False,Solar,54.3,Geotérmica,22.45,Clara,Solar,54.3,16.95,1.98,22.45,4.32,Todas mejoran: gran salto (y geotérmica madura),República Árabe Siria,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+TGO,True,Solar,56.75,Geotérmica,22.72,Clara,Solar,56.75,17.92,2.6,22.72,0.0,Todas mejoran: gran salto (y geotérmica madura),Togo,África al sur del Sahara,Países de ingreso mediano bajo
+THA,False,Solar,55.22,Geotérmica,25.6,Clara,Solar,55.22,8.85,6.52,25.6,3.8,Todas mejoran: gran salto (y geotérmica madura),Tailandia,Asia oriental y el Pacífico,Ingreso mediano alto
+TJK,False,Solar,49.9,Geotérmica,23.8,Moderada,Solar,49.9,18.4,7.9,23.8,0.0,Todas mejoran: gran salto (y geotérmica madura),Tayikistán,Europa y Asia central,Países de ingreso mediano bajo
+TKM,False,Solar,50.32,Geotérmica,23.7,Clara,Solar,50.32,17.88,8.1,23.7,0.0,Todas mejoran: gran salto (y geotérmica madura),Turkmenistán,Europa y Asia central,Ingreso mediano alto
+TTO,False,Solar,54.82,Geotérmica,26.05,Clara,Solar,54.82,19.12,0.0,26.05,0.0,Todas mejoran: gran salto (y geotérmica madura),Trinidad y Tobago,América Latina y el Caribe,Ingreso alto
+TUN,False,Solar,62.92,Geotérmica,26.72,Clara,Solar,62.92,8.43,1.92,26.72,0.0,Todas mejoran: gran salto (y geotérmica madura),Túnez,"Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso mediano bajo
+TUR,False,Solar,50.48,Geotérmica,24.22,Clara,Solar,50.48,17.08,4.95,24.22,3.28,Todas mejoran: gran salto (y geotérmica madura),Turquía,Europa y Asia central,Ingreso mediano alto
+TWN,False,Solar,47.95,Geotérmica,24.88,Moderada,Solar,47.95,19.02,4.45,24.88,3.7,Todas mejoran: gran salto (y geotérmica madura),Taiwán,Asia oriental y el Pacífico,
+TZA,True,Solar,49.68,Geotérmica,24.55,Moderada,Solar,49.68,14.92,9.85,24.55,1.0,Todas mejoran: gran salto (y geotérmica madura),Tanzanía,África al sur del Sahara,Países de ingreso mediano bajo
+UGA,False,Solar,49.72,Geotérmica,24.85,Moderada,Solar,49.72,15.48,7.98,24.85,1.98,Todas mejoran: gran salto (y geotérmica madura),Uganda,África al sur del Sahara,Países de ingreso bajo
+UKR,False,Solar,54.95,Geotérmica,28.92,Clara,Solar,54.95,7.42,4.7,28.92,4.0,Todas mejoran: gran salto (y geotérmica madura),Ucrania,Europa y Asia central,Ingreso mediano alto
+URY,False,Solar,48.28,Geotérmica,22.78,Moderada,Solar,48.28,18.42,6.6,22.78,3.92,Todas mejoran: gran salto (y geotérmica madura),Uruguay,América Latina y el Caribe,Ingreso alto
+USA,False,Solar,49.45,Geotérmica,23.8,Moderada,Solar,49.45,16.2,7.78,23.8,2.78,Todas mejoran: gran salto (y geotérmica madura),Estados Unidos,América del Norte,Ingreso alto
+UZB,False,Solar,51.8,Geotérmica,23.5,Clara,Solar,51.8,18.27,6.42,23.5,0.0,Todas mejoran: gran salto (y geotérmica madura),Uzbekistán,Europa y Asia central,Países de ingreso mediano bajo
+VEN,False,Solar,49.9,Geotérmica,23.4,Moderada,Solar,49.9,16.0,10.05,23.4,0.65,Todas mejoran: gran salto (y geotérmica madura),Venezuela,América Latina y el Caribe,Países de ingreso mediano bajo
+VNM,False,Solar,53.1,Geotérmica,26.92,Clara,Solar,53.1,8.88,10.0,26.92,1.1,Todas mejoran: gran salto (y geotérmica madura),Viet Nam,Asia oriental y el Pacífico,Ingreso mediano alto
+YEM,False,Solar,55.62,Geotérmica,26.0,Clara,Solar,55.62,18.38,0.0,26.0,0.0,Todas mejoran: gran salto (y geotérmica madura),"Yemen, Rep. del","Oriente Medio, Norte de África, Afganistán y Pakistán",Países de ingreso bajo
+ZAF,False,Solar,52.6,Geotérmica,23.92,Clara,Solar,52.6,15.8,6.75,23.92,0.92,Todas mejoran: gran salto (y geotérmica madura),Sudáfrica,África al sur del Sahara,Ingreso mediano alto
+ZMB,False,Solar,46.82,Geotérmica,23.6,Moderada,Solar,46.82,16.73,12.2,23.6,0.65,Todas mejoran: gran salto (y geotérmica madura),Zambia,África al sur del Sahara,Países de ingreso mediano bajo
+ZWE,True,Solar,50.7,Geotérmica,18.75,Clara,Solar,50.7,12.02,17.92,18.75,0.6,Todas mejoran: gran salto (y geotérmica madura),Zimbabwe,África al sur del Sahara,Países de ingreso mediano bajo

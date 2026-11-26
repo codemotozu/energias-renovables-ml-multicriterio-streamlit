@@ -131,7 +131,10 @@ def fp_local():
 
 @st.cache_data(show_spinner=False)
 def recomendaciones():
-    return pd.read_csv(PROC / "recomendacion_pais.csv", encoding="utf-8")
+    """Recomendación de hoy y de los escenarios geotérmicos, más los escenarios de futuro si ya se calcularon."""
+    rec = pd.read_csv(PROC / "recomendacion_pais.csv", encoding="utf-8")
+    futuro = PROC / "recomendacion_pais_futuro.csv"
+    return pd.concat([rec, pd.read_csv(futuro, encoding="utf-8")], ignore_index=True) if futuro.exists() else rec
 
 
 @st.cache_data(show_spinner=False)
@@ -209,6 +212,13 @@ def simular_saltos(saltos, metodo="SAW", geo_madura=False, prioridad=None, n=200
 
 def saltos_a_tupla(saltos):
     return tuple(sorted((t, tuple(sorted(v.items()))) for t, v in saltos.items()))
+
+
+@st.cache_data(show_spinner=False)
+def recomendar_futuro(iso3, metodo, baterias, nivel, n=4000):
+    """Recomendación de un país si las cuatro tecnologías dan su salto (vista 9) y la geotérmica es la madura (vista 8)."""
+    d, fp = sa.aplicar_saltos_pais(criterios(), fp_local(), nivel)
+    return pa.recomendar_pais(d, fp, iso3, n=n, metodo=metodo, escenario=mc.ESCENARIOS_GEO[sa.GEO_MADURA], almacenamiento=baterias)
 
 
 def escenario_a_tupla(e):

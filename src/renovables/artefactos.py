@@ -16,6 +16,7 @@ from . import multicriterio as mc
 from . import paises as pa
 from .datos import NIVELES, PREDICTORES, SEMILLA, TECS, cargar_gppd, preparar_modelado
 from .geotermica import construir_geotermica
+from . import saltos as sa
 from .trayectoria import calcular_trayectoria, leer_serie_mundial
 
 VARS_CLUSTER = {"log_capacidad": "Escala (log₁₀ MW)", "latitud_abs": "Distancia al ecuador (°)", "edad_planta": "Edad (años)",
@@ -218,6 +219,10 @@ def construir(raiz, n_pais=4000, verbose=True, reusar_operacion=False):
     rec = pd.concat(filas, ignore_index=True).merge(nombres[["iso3", "pais", "region", "ingreso"]], on="iso3", how="left")
     rec["pais"], rec["region"] = rec["pais"].fillna(rec["iso3"]), rec["region"].fillna("Otros territorios")
     rec.round(2).to_csv(salida / "recomendacion_pais.csv", index=False, encoding="utf-8")
+    futuro = sa.recomendar_futuro(d, fp_tabla, n=n_pais).merge(nombres[["iso3", "pais", "region", "ingreso"]], on="iso3", how="left")
+    futuro["pais"], futuro["region"] = futuro["pais"].fillna(futuro["iso3"]), futuro["region"].fillna("Otros territorios")
+    futuro.round(2).to_csv(salida / "recomendacion_pais_futuro.csv", index=False, encoding="utf-8")
+    log("Recomendación por país: escenarios de futuro (vista 7)")
 
     resumen = {"verificacion_multicriterio": verif, "cortes_niveles": cortes.round(4).tolist(), "clustering": info_cluster,
                "calibracion": [c[1] for c in calibraciones], "recursos_validados": sorted(modelos), "fp_solar_descartados": n_solar_descartados, "fp_eolica_descartados": n_eolica_descartados,

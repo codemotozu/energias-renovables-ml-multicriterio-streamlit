@@ -4,7 +4,8 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from comun import TECS, colores_tec, criterios, encabezado, escenario_a_tupla, estilo_figura, estilo_mapa, fp_local, hallazgo, leer, mc, mostrar, pa, recomendaciones, recomendar, resumen, tinta
+from comun import (TECS, colores_tec, criterios, encabezado, escenario_a_tupla, estilo_figura, estilo_mapa, fp_local, hallazgo, leer, mc, mostrar, pa,
+                   recomendaciones, recomendar, recomendar_futuro, resumen, sa, tinta)
 
 encabezado("Qué le conviene a cada país", "Con el recurso y el rendimiento reales de cada país, ¿qué renovable conviene más?")
 rec, fp_t = recomendaciones(), fp_local()
@@ -15,17 +16,21 @@ rec = rec.assign(pct_mes_min=rec["iso3"].map(est["pct_mes_min"]), mes_min=rec["i
 color = colores_tec()
 
 c1, c2 = st.columns([1.1, 2])
-escenario = c1.selectbox("Escenario", list(mc.ESCENARIOS_GEO), help="Los otros dos suponen que la geotérmica de roca supercaliente se vuelve viable en todos los países.")
+escenario = c1.selectbox("Escenario", list(mc.ESCENARIOS_GEO) + list(sa.ESCENARIOS_FUTURO),
+                         help="«Prueba de concepto» y «Madura»: solo mejora la geotérmica de roca supercaliente (vista 8). «Todas mejoran»: además, la solar, la eólica, "
+                              "la hidroeléctrica y la biomasa dan su salto de la vista 9. Los escenarios de futuro son exploratorios.")
+futuro = escenario in sa.ESCENARIOS_FUTURO
 regiones = sorted(rec["region"].dropna().unique())
 region = c2.multiselect("Filtrar el mapa por región", regiones, placeholder="Todas las regiones")
 hoy = rec[rec["escenario"] == escenario]
 vista = hoy[hoy["region"].isin(region)] if region else hoy
 
 conteo = hoy["recomendada"].value_counts()
+top = (list(conteo.index[:2]) + [t for t in ("Solar", "Eólica") if t not in conteo.index[:2]])[:2]   # las dos más recomendadas en este escenario
 k = st.columns(4)
 k[0].metric("Países evaluados", len(hoy))
-k[1].metric("Recomiendan solar", int(conteo.get("Solar", 0)))
-k[2].metric("Recomiendan eólica", int(conteo.get("Eólica", 0)))
+k[1].metric(f"Recomiendan {top[0].lower()}", int(conteo.get(top[0], 0)))
+k[2].metric(f"Recomiendan {top[1].lower()}", int(conteo.get(top[1], 0)))
 k[3].metric("Con ventaja clara", int((hoy["certeza"] == "Clara").sum()), delta=f"{int(hoy['provisional'].sum())} provisionales", delta_color="off", delta_arrow="off",
             help="Provisional: la tecnología recomendada no tiene suficiente capacidad instalada en el país para conocer su rendimiento local.")
 
@@ -43,11 +48,17 @@ mostrar(estilo_mapa(fig, alto=440))
 st.caption("Color: la renovable que queda primera en más escenarios para ese país. En gris, territorios sin datos. Pasa el cursor para ver la segunda opción, qué tan clara es la ventaja "
            "y cuánto sol llega en su mes más oscuro.")
 
+if futuro:
+    st.info(f"**Escenario de futuro exploratorio.** Suma el nivel «{sa.ESCENARIOS_FUTURO[escenario].lower()}» de la vista 9 para la solar, la eólica, la hidroeléctrica "
+            "y la biomasa, y la geotérmica madura de la vista 8. En cada país, el rendimiento de la eólica y la hidroeléctrica sube en la misma proporción que el "
+            "mundial. Los niveles son supuestos ilustrativos, no un pronóstico.", icon=":material/rocket_launch:")
+
 st.subheader("¿Tiene en cuenta la geografía de cada país?")
+base = rec[rec["escenario"].str.startswith("Hoy")]          # el recuadro describe el método con el escenario de hoy
 fp_nor, fp_mundo = fp_t.query("iso3 == 'NOR' and tecnologia == 'Solar'")["fp_local"].iloc[0], criterios().loc["Solar", "fp_irena"]
-rec_nor = hoy.loc[hoy["iso3"] == "NOR", "recomendada"].iloc[0]
+rec_nor = base.loc[base["iso3"] == "NOR", "recomendada"].iloc[0]
 sin_hidro = fp_t.query("tecnologia == 'Hidroeléctrica' and not elegible")["iso3"].nunique()
-oscuros = hoy[hoy["invierno_oscuro"]]
+oscuros = base[base["invierno_oscuro"]]
 oscuros_solar = oscuros[oscuros["recomendada"] == "Solar"]
 si, no = st.columns(2)
 with si.container(border=True):
@@ -72,7 +83,10 @@ metodo = b.selectbox("Método", ["SAW", "TOPSIS"], format_func={"SAW": "Suma pon
 baterias = c_.toggle("Contar baterías", value=True)
 fila = hoy[hoy["pais"] == pais].iloc[0]
 iso = fila["iso3"]
-r = recomendar(iso, None, metodo, baterias, escenario_a_tupla(mc.ESCENARIOS_GEO[escenario]))
+if futuro:
+    r = recomendar_futuro(iso, metodo, baterias, sa.ESCENARIOS_FUTURO[escenario])
+else:
+    r = recomendar(iso, None, metodo, baterias, escenario_a_tupla(mc.ESCENARIOS_GEO[escenario]))
 orden = r[r["elegible"]].sort_values("% n.º 1", ascending=False)
 primera, segunda = orden.index[0], orden.index[1]
 ventaja = orden["% n.º 1"].iloc[0] - orden["% n.º 1"].iloc[1]
@@ -102,7 +116,10 @@ with der:
     t = pd.DataFrame({"Tecnología": TECS, "Viable": ["Sí" if e else "Sin evidencia" for e in r["elegible"]], "FP local": [f"{x:.3f}" if x == x else "—" for x in r["fp_local"].values],
                       "USD/MWh": [f"{x:.0f}" if x == x else "—" for x in r["costo_local"].values], "MW en 2025": datos_pais["cap_2025_mw"].values,
                       "Origen del dato": datos_pais["origen_fp"].values})
-    if mc.ESCENARIOS_GEO[escenario]:
+    if futuro:
+        otras = t["Tecnología"] != "Geotérmica"
+        t.loc[otras, "Origen del dato"] = t.loc[otras, "Origen del dato"] + " + salto (vista 9)"
+    if futuro or mc.ESCENARIOS_GEO.get(escenario):
         t.loc[t["Tecnología"] == "Geotérmica", "Origen del dato"] = "supuesto del escenario"
     st.dataframe(t, hide_index=True, width="stretch", column_config={"FP local": st.column_config.TextColumn("FP local", help="Factor de planta del país"),
                  "USD/MWh": st.column_config.TextColumn("USD/MWh", help="Costo mundial ajustado por el rendimiento local"), "MW en 2025": st.column_config.NumberColumn(format="%.0f")})

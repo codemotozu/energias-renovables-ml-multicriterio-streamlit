@@ -54,7 +54,7 @@ pytest tests -v
 | 4. Predicción en vivo | Cuánto rendiría una planta nueva | Predicción en vivo |
 | 5. Segmentación | Qué grupos naturales existen | Clustering 2D/3D en PCA y perfiles |
 | 6. Evaluación integral | Qué gana con distintas prioridades | Multicriterio |
-| 7. País | Qué renovable conviene a cada país | Recomendación |
+| 7. País | Qué renovable conviene a cada país, hoy y en escenarios de futuro | Recomendación |
 | 8. Geotérmica | Qué pasaría con las ondas milimétricas, cómo se comportaría y cuál sería su potencial | Escenario |
 | 9. Saltos tecnológicos | Cuánto pueden mejorar todavía la solar, la eólica, la hidroeléctrica y la biomasa, y qué pasaría si dan un gran salto | Escenario exploratorio |
 | 10. Método y limitaciones | De dónde salen los resultados | Respaldo |

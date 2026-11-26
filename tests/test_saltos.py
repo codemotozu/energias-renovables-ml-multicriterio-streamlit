@@ -48,3 +48,15 @@ def test_niveles_dentro_de_los_rangos_de_los_controles():
         for p in palancas:
             if p.get("tipo") != "toggle":
                 assert all(p["min"] <= v <= p["max"] for v in p["niveles"]), (t, p["clave"])
+
+
+def test_saltos_pais_suben_el_fp_local_en_proporcion():
+    fp = pd.read_csv(RAIZ / "data" / "processed" / "fp_local.csv")
+    d_f, fp_f = sa.aplicar_saltos_pais(D, fp, "Gran salto")
+    for tec in ("Eólica", "Hidroeléctrica"):
+        f = d_f.loc[tec, "fp_irena"] / D.loc[tec, "fp_irena"]
+        antes = fp.loc[fp["tecnologia"] == tec, "fp_local"].dropna()
+        despues = fp_f.loc[antes.index, "fp_local"]
+        assert np.allclose(despues, (antes * f).clip(upper=0.95))
+    solar = fp["tecnologia"] == "Solar"                              # la eficiencia del panel no cambia el FP
+    assert fp_f.loc[solar, "fp_local"].equals(fp.loc[solar, "fp_local"])

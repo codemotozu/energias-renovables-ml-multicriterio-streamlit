@@ -4,8 +4,16 @@ Cada salto se traduce en cambios de los criterios del multicriterio de la Fase 3
 Los niveles «Avance esperado» y «Gran salto» son supuestos ilustrativos; los datos reales que los anclan están en FUENTES.
 """
 import numpy as np
+import pandas as pd
+
+from .multicriterio import ESCENARIOS_GEO
+from .paises import recomendar_todos
 
 NIVELES = ["Hoy", "Avance esperado", "Gran salto"]
+# Escenarios de futuro por país (vista 7): las cuatro tecnologías dan su salto y la geotérmica es la madura de la vista 8
+ESCENARIOS_FUTURO = {"Todas mejoran: avance esperado (y geotérmica madura)": "Avance esperado",
+                     "Todas mejoran: gran salto (y geotérmica madura)": "Gran salto"}
+GEO_MADURA = "Madura (meta de la industria)"
 EFICIENCIA_PANEL_HOY = 23.0        # % de los paneles comerciales de referencia (los mejores rondan el 24–25 %, dic. 2025)
 EMISIONES_BECCS = (0.5, 1.0, 5.0)  # gCO2eq/kWh: las emisiones negativas no caben en la escala logarítmica del modelo
 
@@ -145,3 +153,27 @@ def aplicar_saltos(d, saltos):
     for t, v in saltos.items():
         d = aplicar_salto(d, t, v)
     return d
+
+
+def aplicar_saltos_pais(d, fp_tabla, nivel):
+    """Criterios y FP locales con el salto de las cuatro tecnologías. El FP local sube en la misma proporción que el mundial;
+    si no, el costo local, que se ajusta por la razón entre ambos, castigaría sin razón a la tecnología que mejora."""
+    e = aplicar_saltos(d, {t: valores_nivel(t, nivel) for t in PALANCAS})
+    fp = fp_tabla.copy()
+    for t in PALANCAS:
+        f = e.loc[t, "fp_irena"] / d.loc[t, "fp_irena"]
+        if not np.isclose(f, 1):
+            m = fp["tecnologia"] == t
+            fp.loc[m, "fp_local"] = (fp.loc[m, "fp_local"] * f).clip(upper=0.95)
+    return e, fp
+
+
+def recomendar_futuro(d, fp_tabla, n=4000):
+    """Recomendación de los países en los escenarios de futuro (mismo formato que la recomendación de hoy)."""
+    filas = []
+    for nombre, nivel in ESCENARIOS_FUTURO.items():
+        d_f, fp_f = aplicar_saltos_pais(d, fp_tabla, nivel)
+        r = recomendar_todos(d_f, fp_f, n=n, escenario=ESCENARIOS_GEO[GEO_MADURA])
+        r["escenario"] = nombre
+        filas.append(r)
+    return pd.concat(filas, ignore_index=True)

@@ -8,7 +8,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Renovables: desempeño integral", page_icon=":material/bolt:", layout="wide")
 
-ORDEN_RECARGA = ["datos", "preprocesamiento", "multicriterio", "trayectoria", "geotermica", "saltos", "paises"]
+ORDEN_RECARGA = ["datos", "preprocesamiento", "multicriterio", "trayectoria", "geotermica", "paises", "saltos"]
 
 
 def recargar_paquete():
