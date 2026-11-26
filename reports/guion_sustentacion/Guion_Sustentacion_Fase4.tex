@@ -15,71 +15,79 @@
 \renewcommand{\arraystretch}{1.18}
 \begin{document}
 
-{\Large\textbf{Guion de la sustentación · Proyecto integrador, Fase 4}}\\
-Carolina Rodríguez Chacón · 12 minutos de exposición con demostración en vivo + 5 minutos de preguntas
+{\Large\textbf{Guion del video · Proyecto integrador, Fase 4}}\\
+Carolina Rodríguez Chacón · video de 12 minutos con demostración del tablero · entrega hasta el 28 de noviembre de 2026
 
 \vspace{3pt}
-\textbf{Antes de empezar:} abre el tablero (doble clic en \texttt{ejecutar\_tablero.bat} o \url{https://renewable-energy-performance.streamlit.app}), recorre una vez las vistas para que carguen y deja abierta la vista 1. Selecciona «Colombia» en la vista 7. Si la conexión falla, usa la versión local.
+\textbf{Antes de grabar}
+\begin{itemize}
+\item Abre \url{https://renewable-energy-performance.streamlit.app} y recorre las diez vistas una vez para que carguen. Si la conexión falla, usa \texttt{ejecutar\_tablero.bat}.
+\item Navegador en pantalla completa (F11), zoom al 110~\%, sin pestañas ni marcadores a la vista. Activa «No molestar» en Windows para que no salgan notificaciones.
+\item Graba con la Xbox Game Bar (Windows + Alt + R) o con OBS. Prueba 20 segundos de audio antes de empezar.
+\item Puedes grabar bloque por bloque y unirlos después: si te equivocas, repites solo ese bloque.
+\item Al hablar, mueve el cursor despacio y espera a que cada gráfica termine de cargar.
+\end{itemize}
 
-\bloque{0:00--1:00}{Problema y pregunta}{Vista 1}
+\bloque{0:00--0:45}{Presentación y pregunta}{Vista 1}
 \haz{la pregunta de investigación, en grande.}
-\di{Todos hablan de energías renovables, pero ¿cuál es realmente la mejor? Mi pregunta es qué tecnología renovable tiene el mejor desempeño integral a escala de planta y qué factores técnicos y geográficos explican las diferencias entre plantas. La respuesta corta: la solar y la eólica, aunque ninguna es la mejor en todo. Les voy a mostrar cómo llegué a eso.}
+\di{Hola, soy Carolina Rodríguez Chacón, de la Maestría en Inteligencia Artificial de la Universidad de La Salle. En este video presento mi proyecto integrador de Ciencia de Datos. Mi pregunta es qué tecnología renovable tiene el mejor desempeño integral a escala de planta y qué factores técnicos y geográficos explican las diferencias entre plantas. La respuesta corta: la solar y la eólica, aunque ninguna es la mejor en todo.}
 
-\bloque{1:00--2:15}{Datos y calidad}{Vista 2}
+\bloque{0:45--2:00}{Datos y calidad}{Vista 2}
 \haz{filtra Tecnología = Geotérmica y luego vuelve a todas; señala el mapa y la caja de factor de planta.}
 \di{Uso la Global Power Plant Database del WRI: 24\,794 plantas renovables en 150 países, con licencia abierta. Mi métrica es el factor de planta: qué parte de la energía máxima posible entrega una planta. El gran reto de calidad es que el 76 \% no reporta generación y el 88 \% de las que sí reportan está en Estados Unidos. No imputé esa variable, porque sería inventar justo lo que quiero predecir.}
 
-\bloque{2:15--3:00}{Preparación sin fuga de datos}{Vista 10}
+\bloque{2:00--2:45}{Preparación sin fuga de datos}{Vista 10}
+\haz{la sección del método, con la partición 70/15/15.}
 \di{Quedaron 6\,011 plantas, partidas 70/15/15 por sitio, para que una central nunca quede en entrenamiento y en prueba a la vez. Todo el preprocesamiento se ajusta solo con entrenamiento, y el conjunto de prueba lo usé una sola vez.}
 
-\bloque{3:00--5:00}{Modelos y variables}{Vista 3}
+\bloque{2:45--4:30}{Modelos y variables}{Vista 3}
 \haz{pestaña «Comparación»; cambia a Clasificación; pestaña «Variables»; pestaña «Dónde acierta».}
-\di{Comparé regularizados, Random Forest, XGBoost, SVM y una red neuronal en PyTorch, con validación cruzada. Ganó Random Forest en las dos tareas: R$^2$ de 0.623 frente a 0.449 del modelo base, y F1 de 0.760 frente a 0.671. La regularización no ayudó, lo que indica que el problema era el sesgo. Lo que más pesa es la tecnología, después la edad y la ubicación. Donde más falla es en hidroeléctrica y biomasa, porque no tengo datos de hidrología ni de despacho.}
+\di{Comparé modelos regularizados, Random Forest, XGBoost, SVM y una red neuronal en PyTorch, con validación cruzada. Ganó Random Forest en las dos tareas: R$^2$ de 0.623 frente a 0.449 del modelo base, y F1 de 0.760 frente a 0.671. Lo que más pesa es la tecnología, después la edad y la ubicación. Donde más falla es en hidroeléctrica y biomasa, porque no tengo datos de hidrología ni de despacho.}
 
-\bloque{5:00--6:30}{Predicción en vivo}{Vista 4}
+\bloque{4:30--5:45}{Predicción en vivo}{Vista 4}
 \haz{Eólica, Estados Unidos, 100 MW, 2019 $\rightarrow$ FP 0.35, 306 GWh, nivel Alto. Cambia el año a 2000 $\rightarrow$ FP 0.267, 234 GWh, nivel Medio. Luego elige Solar, Colombia, 50 MW.}
-\di{Esto sirve para evaluar una planta antes de construirla. La misma planta eólica rinde menos si es del año 2000: el modelo aprendió el avance de las turbinas. Y si pongo Colombia, el tablero me advierte que el modelo no vio plantas solares de ese país. Prefiero que me diga cuándo no confiar en él.}
+\di{Esto sirve para evaluar una planta antes de construirla. La misma planta eólica rinde menos si es del año 2000: el modelo aprendió el avance de las turbinas. Y si pongo Colombia, el tablero advierte que el modelo no vio plantas solares de ese país. Prefiero que me diga cuándo no confiar en él.}
 
-\bloque{6:30--7:30}{Segmentación}{Vista 5}
-\haz{cambia «Colorear por» a Tecnología y vuelve a Grupo; muestra la vista 3D si hay tiempo.}
-\di{Sin decirle la tecnología, K-Means encontró dos parques: uno antiguo, casi todo hidroeléctrico, variable; y uno nuevo, solar y eólico, muy estable. La silueta fue 0.297 y no alcancé mi meta de 0.35: las plantas forman más un continuo que grupos nítidos.}
+\bloque{5:45--6:30}{Segmentación}{Vista 5}
+\haz{cambia «Colorear por» a Tecnología y vuelve a Grupo.}
+\di{Sin decirle la tecnología, K-Means encontró dos parques: uno antiguo, casi todo hidroeléctrico y variable, y uno nuevo, solar y eólico, muy estable. La silueta fue 0.297 y no alcancé mi meta de 0.35: las plantas forman más un continuo que grupos nítidos.}
 
-\bloque{7:30--9:15}{Evaluación integral}{Vista 6}
+\bloque{6:30--8:00}{Evaluación integral}{Vista 6}
 \haz{resultado inicial. Elige «Definir mis prioridades»: Materiales = 5, los demás = 1 $\rightarrow$ gana la hidroeléctrica (92.9 \%). Luego Economía = 5, los demás = 1 $\rightarrow$ gana la solar (95.6 \%).}
-\di{Rendir mucho no basta. Combiné 14 criterios: costo, emisiones, terreno, minerales, reciclaje, vida útil y trayectoria, en 20\,000 escenarios. La solar queda primera en el 45.7 \% y la eólica en el 35.9 \%. Si solo me importara el reciclaje y los materiales, ganaría la hidroeléctrica. Por eso digo que, de manera holística, la solar y la eólica son las mejores, aunque no en reciclaje ni en terreno.}
+\di{Rendir mucho no basta. Combiné 14 criterios, como costo, emisiones, terreno, minerales, reciclaje y trayectoria, en 20\,000 escenarios. La solar queda primera en el 45.7 \% y la eólica en el 35.9 \%. Pero si solo importaran los materiales, ganaría la hidroeléctrica. Por eso digo que, de manera holística, la solar y la eólica son las mejores, aunque no en reciclaje ni en terreno.}
 
-\clearpage
-\bloque{9:15--10:15}{Qué conviene a cada país}{Vista 7}
-\haz{mapa; Colombia $\rightarrow$ reñida: solar 41 \%, eólica 40 \%; luego Argentina $\rightarrow$ eólica 53 \%.}
-\di{Agregué el rendimiento real de IRENA y el recurso de NASA. La solar se recomienda en 141 países y la eólica en 25. Un hallazgo honesto: la radiación sí predice el rendimiento solar, pero el viento no, así que no lo usé. En Colombia está reñido: lo razonable es combinar ambas.}
+\bloque{8:00--9:15}{Qué conviene a cada país}{Vista 7}
+\haz{el mapa; luego, en «Análisis de un país», Colombia (reñida: solar 41 \%, eólica 40 \%) y Alemania (gráfico del sol mes a mes y aviso «Ojo con el invierno»).}
+\di{Agregué el rendimiento real de IRENA y el recurso de NASA. La solar se recomienda en 141 países y la eólica en 25. En Colombia está reñido, y lo razonable es combinar ambas. Pero el mapa usa promedios anuales: en Alemania, en diciembre llega solo el 19 \% del sol promedio. En 23 países del norte pasa algo así, y allí la solar necesita el respaldo de otras fuentes en invierno. Por eso el mapa es un punto de partida, no una receta.}
 
-\bloque{10:15--11:30}{¿Y si la geotérmica fuera un hecho?}{Vista 8}
+\bloque{9:15--10:30}{¿Y si la geotérmica fuera un hecho?}{Vista 8}
 \haz{pestaña 1: pasa de «Hoy» a «Madura»; pestaña 2: Colombia y Alemania; pestaña 3: curva de potencial.}
-\di{Si la perforación con ondas milimétricas funciona, pasa del 3.7 \% al primer lugar, pero solo si llega a todos los países, crece como la eólica y cuesta menos de 39 dólares por MWh. Con los 50 que proyecta la Agencia Internacional de la Energía, no gana. Su valor real es entregar energía a toda hora: cubrir 100 MW constantes con solar, eólica y baterías cuesta 52 dólares en Colombia y 129 en Alemania. Si despega en 2030, podría llegar a unos 780 GW en 2050, el equivalente al 18 \% de la electricidad actual. Sería un complemento, no un reemplazo, y todavía no ha producido electricidad.}
+\di{Si la perforación con ondas milimétricas funciona, la geotérmica pasa del 3.7 \% al primer lugar, pero solo si llega a todos los países, crece como la eólica y cuesta menos de 39 dólares por MWh. Su valor real es entregar energía a toda hora: cubrir 100 MW constantes con solar, eólica y baterías cuesta 52 dólares en Colombia y 129 en Alemania. Si despega en 2030, podría llegar a unos 780 GW en 2050. Sería un complemento, no un reemplazo, y todavía no ha producido electricidad.}
+
+\bloque{10:30--11:30}{¿Y si todas dan su gran salto?}{Vista 9}
+\haz{pestaña 1: el ejemplo del panel de 2 × 2 cm; pestaña 3: «Gran salto» y activa «Sumar la geotérmica madura»; baja a «¿Quién gana según lo que más importe?».}
+\di{¿Y si todas mejoran? Primero, la física pone techo: un panel de 2 por 2 centímetros recibe como máximo 0.4 vatios de sol, aunque fuera perfecto. Si solo la solar da un gran salto, queda primera en el 80 \% de los escenarios; pero si todas lo dan a la vez, baja al 49 \%. Y si lo que importa es tener energía a toda hora, gana la geotérmica madura. No hay una ganadora única: lo más probable es que se complementen.}
 
 \bloque{11:30--12:00}{Cierre}{Vista 1}
-\di{En conclusión: la solar y la eólica tienen el mejor desempeño integral; la tecnología, la edad y la ubicación explican el rendimiento de una planta; y cada país necesita su propia combinación. Mis límites son el sesgo hacia Estados Unidos y la falta de datos de hidrología. Como trabajo futuro: mejor dato de viento y simular el sistema completo en más países. Muchas gracias.}
+\di{En conclusión: la solar y la eólica tienen el mejor desempeño integral; la tecnología, la edad y la ubicación explican el rendimiento de una planta; y cada país necesita su propia combinación. Mis límites son el sesgo hacia Estados Unidos, la falta de datos de hidrología y que el mapa por país no ve las estaciones. El informe, el código y el tablero están en mi repositorio de GitHub. Muchas gracias.}
 
-\section*{Preguntas probables del profesor}
+\clearpage
+\section*{Respaldo: si el profesor pregunta después}
 \small
 \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{5.3cm}X@{}}
 \toprule
 Pregunta & Respuesta breve \\
 \midrule
-¿Cuál es tu pregunta problema? & ¿Qué tecnología renovable tiene el mejor desempeño integral a escala de planta y qué factores técnicos y geográficos explican las diferencias entre plantas? \\
 ¿Qué variables pesan más? & La tecnología (al desordenarla, el R$^2$ cae 0.56), luego la edad (0.11), la longitud (0.10), la irradiación y la capacidad (0.07). \\
-¿Cuál modelo fue mejor y por qué? & Random Forest. Captura interacciones que la física impone (la misma latitud favorece a la solar y no a la hidro) y reduce la varianza al promediar árboles. \\
-¿Por qué no ganó la red neuronal? & En datos tabulares de 4\,202 filas de entrenamiento, los árboles suelen ganar. La MLP dio 0.530 en prueba. \\
-¿Hay sobreajuste? & R$^2$ de entrenamiento 0.87, pero CV 0.609, validación 0.630 y prueba 0.623 coinciden. La brecha es normal en un bosque y no daña la generalización. \\
-¿Cómo evitaste la fuga de datos? & Partición por sitio antes de ajustar; todo el preprocesamiento dentro del \textit{pipeline}; ningún predictor usa la generación; prueba usada una sola vez. \\
+¿Por qué ganó Random Forest? & Captura interacciones que la física impone (la misma latitud favorece a la solar y no a la hidroeléctrica) y reduce la varianza al promediar árboles. \\
+¿Hay sobreajuste? & R$^2$ de entrenamiento 0.87, pero CV 0.609, validación 0.630 y prueba 0.623 coinciden. La brecha es normal en un bosque. \\
+¿Cómo evitaste la fuga de datos? & Partición por sitio antes de ajustar; preprocesamiento dentro del \textit{pipeline}; ningún predictor usa la generación; prueba usada una sola vez. \\
 ¿Por qué la silueta es baja? & Las plantas forman un continuo. Con PCA subía a 0.43, pero perdía el 42 \% de la información, así que no forcé el resultado. \\
-¿Por qué el mejor no es el de mayor factor de planta? & La geotérmica y la biomasa rinden más por MW, pero son las más caras y las que menos mejoran. El desempeño integral incluye 14 criterios. \\
-¿Cómo elegiste los pesos? & No los elegí: 20\,000 escenarios sortean todas las combinaciones posibles (Dirichlet). El tablero permite probar las propias prioridades. \\
-¿Qué tan confiable es la recomendación por país? & Es orientativa. Es estable en el 95 \% de los países con otras semillas, y SAW y TOPSIS coinciden en el 87 \%. No incluye red, demanda ni política. \\
-¿Qué pasaría si la geotérmica fuera un hecho? & Ganaría solo con menos de 39 USD/MWh, en todos los países y creciendo como la eólica. Si la solar y la eólica caen otro 40 \%, empata. Su principal aporte sería la energía firme. \\
-¿Cómo calculaste la energía a toda hora? & Simulé 26\,304 horas con datos de NASA y busqué la mezcla más barata para 100 MW constantes al 95 \%. Coincide con un optimizador exacto (0.03 \%). No incluye red, hidro ni gas. \\
-¿De dónde sale su potencial? & La AIE estima casi 600 TW técnicos. Los 780 GW en 2050 suponen que repite la expansión real de la eólica desde 2030. Es una analogía, no un pronóstico. \\
-¿Qué impacto práctico tiene? & Permite estimar una planta antes de construirla: en 100 MW, unos 15 GWh al año menos de error, equivalentes a USD 0.5--0.7 millones anuales. \\
+¿Cómo elegiste los pesos? & No los elegí: 20\,000 escenarios sortean todas las combinaciones posibles. El tablero permite probar las propias prioridades. \\
+¿Qué tan confiable es la recomendación por país? & Es orientativa: estable en el 95 \% de los países con otras semillas, y SAW y TOPSIS coinciden en el 87 \%. Usa promedios anuales: no ve el invierno ni la red. \\
+¿Cómo calculaste la energía a toda hora? & Simulé 26\,304 horas con datos de NASA y busqué la mezcla más barata para 100 MW constantes al 95 \%. Coincide con un optimizador exacto (0.03 \%). \\
+¿Qué tan reales son los saltos de la vista 9? & Son supuestos ilustrativos, no pronósticos. Los datos que los anclan sí son reales, por ejemplo el récord de 35.5 \% de la celda tándem. \\
+¿Qué impacto práctico tiene? & Estimar una planta antes de construirla: en 100 MW, unos 15 GWh al año menos de error, equivalentes a USD 0.5--0.7 millones anuales. \\
 \bottomrule
 \end{tabularx}
 \end{document}

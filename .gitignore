@@ -8,3 +8,4 @@ __pycache__/
 *.out
 *.toc
 .streamlit/secrets.toml
+reports/guion_video/capturas/
